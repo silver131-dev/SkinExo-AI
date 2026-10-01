@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "framework_version": "F1",
+  "source_checkpoint": "DEV-C1",
+  "validation_mode": "POST_EXP003_C4",
+  "counts": {
+    "contexts": 3,
+    "responses": 15,
+    "component_entries": 1017,
+    "comparisons": 15,
+    "phenotype_anchors": 5,
+    "cargo_datasets": 1,
+    "reliability_records": 39
+  },
+  "errors": []
+}

@@ -1,0 +1,6 @@
+# Preserve generated tabular artifacts byte-for-byte while recognizing CRLF EOLs.
+*.csv whitespace=cr-at-eol
+*.tsv whitespace=cr-at-eol
+data/metadata/exp003_d0_sources/GSE293957_brief.txt whitespace=cr-at-eol
+docs/checkpoints/EXP002_D0_ELIGIBILITY.md whitespace=-trailing-space
+docs/framework/ATLAS_SCHEMA.md whitespace=-trailing-space

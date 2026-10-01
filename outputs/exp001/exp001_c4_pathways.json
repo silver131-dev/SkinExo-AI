@@ -1,0 +1,386 @@
+{
+  "dataset": "GSE293186",
+  "experiment": "EXP001",
+  "checkpoint": "EXP001-C4 Pre-Specified Biological Pathway Analysis",
+  "c3_overall_pass": true,
+  "c3_5_overall_pass": true,
+  "tested_gene_universe_size": 16271,
+  "ranked_gene_count": 16271,
+  "gene_identifier_mapping": "Uppercase exact C3 gene_symbol to MSigDB HGNC symbols; each source symbol maps to every corresponding tested gene_id, preserving duplicate-symbol IDs; source terms restricted to tested IDs",
+  "unmapped_gene_id_count": 4411,
+  "gene_set_sources": {
+    "GO_BP": {
+      "source_terms": 7538,
+      "eligible_terms": 3527,
+      "filename": "c5.go.bp.v2026.1.Hs.symbols.gmt",
+      "sha256": "9be09dd06d6652566eb52eed530d62e6dfecc4365c1e81afd6f0b7f2e86dd4f9",
+      "source_url": "https://data.broadinstitute.org/gsea-msigdb/msigdb/release/2026.1.Hs/c5.go.bp.v2026.1.Hs.symbols.gmt"
+    },
+    "Reactome": {
+      "source_terms": 1839,
+      "eligible_terms": 1023,
+      "filename": "c2.cp.reactome.v2026.1.Hs.symbols.gmt",
+      "sha256": "5d61f289a2400cddfbb3a3353829fd2284a360bbe50f2093b566c4b7bea93341",
+      "source_url": "https://data.broadinstitute.org/gsea-msigdb/msigdb/release/2026.1.Hs/c2.cp.reactome.v2026.1.Hs.symbols.gmt"
+    },
+    "Hallmark": {
+      "source_terms": 50,
+      "eligible_terms": 50,
+      "filename": "h.all.v2026.1.Hs.symbols.gmt",
+      "sha256": "eecaf6dad908334ae885406ec72bdc0646d8917588ed7c219fac92fc5363f596",
+      "source_url": "https://data.broadinstitute.org/gsea-msigdb/msigdb/release/2026.1.Hs/h.all.v2026.1.Hs.symbols.gmt"
+    }
+  },
+  "ora_up_significant_count": 301,
+  "ora_down_significant_count": 438,
+  "gsea_significant_count": 640,
+  "gsea_primary": true,
+  "ora_secondary": true,
+  "mapping_qa_correction": "After the first run, review showed the lexical token CYTOKINE also matched CYTOKINESIS. Corrected Q5 matching to CYTOKINE followed by underscore or end of ID in both GO_BP and Reactome. This removes a cell-division false positive regardless of its significance, adds no terms, and preserves Q1-Q6 and all analysis thresholds. Full prepare and analyze rerun required.",
+  "Q1_status": "SUPPORTED",
+  "Q2_status": "SUPPORTED",
+  "Q3_status": "SUPPORTED",
+  "Q4_status": "SUPPORTED",
+  "Q5_status": "SUPPORTED",
+  "Q6_status": "NOT_YET_TESTABLE",
+  "Q1_top_evidence": {
+    "GSEA": [
+      {
+        "database": "Hallmark",
+        "term_id": "HALLMARK_E2F_TARGETS",
+        "direction": "UP",
+        "NES": 3.1773590469989497,
+        "padj": 0.0,
+        "leading_edge_n": 130,
+        "leading_edge_same_sign_fraction": 1.0
+      },
+      {
+        "database": "Hallmark",
+        "term_id": "HALLMARK_G2M_CHECKPOINT",
+        "direction": "UP",
+        "NES": 3.013141782495752,
+        "padj": 0.0,
+        "leading_edge_n": 118,
+        "leading_edge_same_sign_fraction": 1.0
+      },
+      {
+        "database": "Reactome",
+        "term_id": "REACTOME_CELL_CYCLE_MITOTIC",
+        "direction": "UP",
+        "NES": 2.8610335947015986,
+        "padj": 0.0,
+        "leading_edge_n": 240,
+        "leading_edge_same_sign_fraction": 1.0
+      }
+    ],
+    "ORA_up": [
+      {
+        "database": "Hallmark",
+        "term_id": "HALLMARK_E2F_TARGETS",
+        "direction": "UP",
+        "overlap_size": 83,
+        "padj": 4.486546482387108e-45
+      },
+      {
+        "database": "Hallmark",
+        "term_id": "HALLMARK_G2M_CHECKPOINT",
+        "direction": "UP",
+        "overlap_size": 80,
+        "padj": 5.5840509979111944e-43
+      }
+    ],
+    "ORA_down": [
+      {
+        "database": "GO_BP",
+        "term_id": "GOBP_REGULATION_OF_EPITHELIAL_CELL_PROLIFERATION",
+        "direction": "DOWN",
+        "overlap_size": 40,
+        "padj": 8.266140047675884e-06
+      },
+      {
+        "database": "GO_BP",
+        "term_id": "GOBP_EPITHELIAL_CELL_PROLIFERATION",
+        "direction": "DOWN",
+        "overlap_size": 45,
+        "padj": 1.3043681499766532e-05
+      }
+    ],
+    "mapped_eligible_terms": 178,
+    "coherent_significant_gsea_terms": 116
+  },
+  "Q2_top_evidence": {
+    "GSEA": [
+      {
+        "database": "GO_BP",
+        "term_id": "GOBP_NEGATIVE_CHEMOTAXIS",
+        "direction": "DOWN",
+        "NES": -2.1246892928603094,
+        "padj": 0.0014967955680446632,
+        "leading_edge_n": 21,
+        "leading_edge_same_sign_fraction": 1.0
+      },
+      {
+        "database": "GO_BP",
+        "term_id": "GOBP_REGULATION_OF_CHEMOTAXIS",
+        "direction": "DOWN",
+        "NES": -1.9345911669125964,
+        "padj": 0.024245195843737955,
+        "leading_edge_n": 49,
+        "leading_edge_same_sign_fraction": 1.0
+      },
+      {
+        "database": "GO_BP",
+        "term_id": "GOBP_REGULATION_OF_GRANULOCYTE_CHEMOTAXIS",
+        "direction": "DOWN",
+        "NES": -1.9009378367500227,
+        "padj": 0.028081295976918736,
+        "leading_edge_n": 11,
+        "leading_edge_same_sign_fraction": 1.0
+      }
+    ],
+    "ORA_up": [
+      {
+        "database": "GO_BP",
+        "term_id": "GOBP_LEUKOCYTE_MIGRATION",
+        "direction": "UP",
+        "overlap_size": 31,
+        "padj": 0.0024991095567854
+      },
+      {
+        "database": "GO_BP",
+        "term_id": "GOBP_GRANULOCYTE_MIGRATION",
+        "direction": "UP",
+        "overlap_size": 15,
+        "padj": 0.005261506920262366
+      }
+    ],
+    "ORA_down": [
+      {
+        "database": "GO_BP",
+        "term_id": "GOBP_POSITIVE_REGULATION_OF_LOCOMOTION",
+        "direction": "DOWN",
+        "overlap_size": 64,
+        "padj": 6.464673513564792e-07
+      },
+      {
+        "database": "GO_BP",
+        "term_id": "GOBP_CELL_CHEMOTAXIS",
+        "direction": "DOWN",
+        "overlap_size": 32,
+        "padj": 5.579824992611893e-05
+      }
+    ],
+    "mapped_eligible_terms": 85,
+    "coherent_significant_gsea_terms": 7
+  },
+  "Q3_top_evidence": {
+    "GSEA": [
+      {
+        "database": "GO_BP",
+        "term_id": "GOBP_COLLAGEN_FIBRIL_ORGANIZATION",
+        "direction": "DOWN",
+        "NES": -1.9948977960362837,
+        "padj": 0.014507403197971351,
+        "leading_edge_n": 31,
+        "leading_edge_same_sign_fraction": 1.0
+      },
+      {
+        "database": "Reactome",
+        "term_id": "REACTOME_EXTRACELLULAR_MATRIX_ORGANIZATION",
+        "direction": "DOWN",
+        "NES": -1.948866437079759,
+        "padj": 0.023160941947638475,
+        "leading_edge_n": 90,
+        "leading_edge_same_sign_fraction": 1.0
+      },
+      {
+        "database": "Reactome",
+        "term_id": "REACTOME_NON_INTEGRIN_MEMBRANE_ECM_INTERACTIONS",
+        "direction": "DOWN",
+        "NES": -1.9332364638622683,
+        "padj": 0.0236715447242619,
+        "leading_edge_n": 31,
+        "leading_edge_same_sign_fraction": 1.0
+      }
+    ],
+    "ORA_up": [
+      {
+        "database": "Reactome",
+        "term_id": "REACTOME_EXTRACELLULAR_MATRIX_ORGANIZATION",
+        "direction": "UP",
+        "overlap_size": 33,
+        "padj": 0.000583177567942604
+      },
+      {
+        "database": "Reactome",
+        "term_id": "REACTOME_INTEGRIN_CELL_SURFACE_INTERACTIONS",
+        "direction": "UP",
+        "overlap_size": 14,
+        "padj": 0.0006748049800422999
+      }
+    ],
+    "ORA_down": [
+      {
+        "database": "Reactome",
+        "term_id": "REACTOME_EXTRACELLULAR_MATRIX_ORGANIZATION",
+        "direction": "DOWN",
+        "overlap_size": 54,
+        "padj": 8.511154536931209e-13
+      },
+      {
+        "database": "Reactome",
+        "term_id": "REACTOME_ECM_PROTEOGLYCANS",
+        "direction": "DOWN",
+        "overlap_size": 18,
+        "padj": 2.5522092242125094e-06
+      }
+    ],
+    "mapped_eligible_terms": 28,
+    "coherent_significant_gsea_terms": 5
+  },
+  "Q4_top_evidence": {
+    "GSEA": [
+      {
+        "database": "GO_BP",
+        "term_id": "GOBP_VASCULAR_ASSOCIATED_SMOOTH_MUSCLE_CELL_PROLIFERATION",
+        "direction": "DOWN",
+        "NES": -2.064832052159359,
+        "padj": 0.005238784488156322,
+        "leading_edge_n": 22,
+        "leading_edge_same_sign_fraction": 1.0
+      },
+      {
+        "database": "GO_BP",
+        "term_id": "GOBP_POSITIVE_REGULATION_OF_ENDOTHELIAL_CELL_APOPTOTIC_PROCESS",
+        "direction": "DOWN",
+        "NES": -1.9042874059793182,
+        "padj": 0.027794662145496044,
+        "leading_edge_n": 11,
+        "leading_edge_same_sign_fraction": 1.0
+      },
+      {
+        "database": "GO_BP",
+        "term_id": "GOBP_ENDOTHELIAL_CELL_APOPTOTIC_PROCESS",
+        "direction": "DOWN",
+        "NES": -1.8603322999608662,
+        "padj": 0.03201479409428863,
+        "leading_edge_n": 20,
+        "leading_edge_same_sign_fraction": 1.0
+      }
+    ],
+    "ORA_up": [
+      {
+        "database": "GO_BP",
+        "term_id": "GOBP_BLOOD_VESSEL_MORPHOGENESIS",
+        "direction": "UP",
+        "overlap_size": 53,
+        "padj": 0.001690695824031082
+      },
+      {
+        "database": "GO_BP",
+        "term_id": "GOBP_VASCULAR_PROCESS_IN_CIRCULATORY_SYSTEM",
+        "direction": "UP",
+        "overlap_size": 22,
+        "padj": 0.04368811128049437
+      }
+    ],
+    "ORA_down": [
+      {
+        "database": "GO_BP",
+        "term_id": "GOBP_BLOOD_VESSEL_MORPHOGENESIS",
+        "direction": "DOWN",
+        "overlap_size": 73,
+        "padj": 1.2641055886952816e-08
+      },
+      {
+        "database": "GO_BP",
+        "term_id": "GOBP_VASCULAR_PROCESS_IN_CIRCULATORY_SYSTEM",
+        "direction": "DOWN",
+        "overlap_size": 30,
+        "padj": 0.0002118721331823889
+      }
+    ],
+    "mapped_eligible_terms": 61,
+    "coherent_significant_gsea_terms": 4
+  },
+  "Q5_top_evidence": {
+    "GSEA": [
+      {
+        "database": "Reactome",
+        "term_id": "REACTOME_GENE_AND_PROTEIN_EXPRESSION_BY_JAK_STAT_SIGNALING_AFTER_INTERLEUKIN_12_STIMULATION",
+        "direction": "UP",
+        "NES": 1.8497170903601692,
+        "padj": 0.0035943134762032075,
+        "leading_edge_n": 15,
+        "leading_edge_same_sign_fraction": 1.0
+      },
+      {
+        "database": "GO_BP",
+        "term_id": "GOBP_SOMATIC_DIVERSIFICATION_OF_IMMUNE_RECEPTORS_VIA_SOMATIC_MUTATION",
+        "direction": "UP",
+        "NES": 1.6354371647770647,
+        "padj": 0.03205171720693336,
+        "leading_edge_n": 6,
+        "leading_edge_same_sign_fraction": 1.0
+      },
+      {
+        "database": "Reactome",
+        "term_id": "REACTOME_INTERLEUKIN_12_SIGNALING",
+        "direction": "UP",
+        "NES": 1.6295233687677817,
+        "padj": 0.03332364447070224,
+        "leading_edge_n": 15,
+        "leading_edge_same_sign_fraction": 1.0
+      }
+    ],
+    "ORA_up": [
+      {
+        "database": "Hallmark",
+        "term_id": "HALLMARK_INFLAMMATORY_RESPONSE",
+        "direction": "UP",
+        "overlap_size": 24,
+        "padj": 9.171584964937017e-05
+      },
+      {
+        "database": "Hallmark",
+        "term_id": "HALLMARK_TNFA_SIGNALING_VIA_NFKB",
+        "direction": "UP",
+        "overlap_size": 27,
+        "padj": 0.0004216886859736881
+      }
+    ],
+    "ORA_down": [
+      {
+        "database": "GO_BP",
+        "term_id": "GOBP_HUMORAL_IMMUNE_RESPONSE",
+        "direction": "DOWN",
+        "overlap_size": 20,
+        "padj": 0.000178242461814349
+      },
+      {
+        "database": "GO_BP",
+        "term_id": "GOBP_LEUKOCYTE_CHEMOTAXIS",
+        "direction": "DOWN",
+        "overlap_size": 21,
+        "padj": 0.004134081153249297
+      }
+    ],
+    "mapped_eligible_terms": 262,
+    "coherent_significant_gsea_terms": 7
+  },
+  "Q6_top_evidence": {
+    "status": "NOT_YET_TESTABLE",
+    "reason": "GSE141814 has one pooled mouse scRNA-seq library per fate and no validated signed signature in the C3.5 catalog; deriving one requires new external analysis and ortholog handling."
+  },
+  "posthoc_findings": [],
+  "limitations": [
+    "n=3 biological replicates per condition; one bulk RNA-seq dataset.",
+    "GSEA gene-set permutations do not represent sample-label uncertainty and finite permutations limit nominal p resolution.",
+    "Overlapping GO/Reactome terms and HGNC symbol mapping limit independence and annotation coverage.",
+    "Enrichment is transcriptomic association, not direct phenotype measurement or therapeutic benefit.",
+    "The GSE293186 paper and author DEG table are same-dataset evidence, not independent validation.",
+    "C3.5 has zero direct angiogenesis studies in the verified set; Q4 cannot establish angiogenesis.",
+    "Q6 has no verified separate external signed regenerative-like and fibrotic-like signatures; not tested."
+  ],
+  "overall_pass": true
+}

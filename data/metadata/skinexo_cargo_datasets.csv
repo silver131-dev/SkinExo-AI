@@ -1,0 +1,2 @@
+cargo_dataset_id,context_id,data_status,evidence_layer,cargo_type,platform,sample_count,future_experiment,causal_link_status,source_provenance
+GSE293957,CTX003,AVAILABLE_NOT_ANALYZED,CARGO,hDF-EV miRNA profiling by Affymetrix miRNA-4 array,GPL19117,3,EXP006 candidate,NONE,docs/literature/EXP003_D0_SOURCE_LOG.md;https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE293957

@@ -1,0 +1,51 @@
+{
+  "dataset": "GSE293956",
+  "context_id": "CTX003",
+  "gene_set_release": "MSigDB 2026.1.Hs",
+  "frozen_plan_sha256": "f78b6e4aa90c2b0d0631242e315987c63f89336dbbf4bc70875e3cc30413d901",
+  "collections": {
+    "GO_BP": {
+      "filename": "c5.go.bp.v2026.1.Hs.symbols.gmt",
+      "sha256": "9be09dd06d6652566eb52eed530d62e6dfecc4365c1e81afd6f0b7f2e86dd4f9",
+      "source_terms": 7538,
+      "eligible_terms": 3383
+    },
+    "Reactome": {
+      "filename": "c2.cp.reactome.v2026.1.Hs.symbols.gmt",
+      "sha256": "5d61f289a2400cddfbb3a3353829fd2284a360bbe50f2093b566c4b7bea93341",
+      "source_terms": 1839,
+      "eligible_terms": 1000
+    },
+    "Hallmark": {
+      "filename": "h.all.v2026.1.Hs.symbols.gmt",
+      "sha256": "eecaf6dad908334ae885406ec72bdc0646d8917588ed7c219fac92fc5363f596",
+      "source_terms": 50,
+      "eligible_terms": 50
+    }
+  },
+  "gseapy_version": "1.3.1",
+  "permutations": 1000,
+  "weight": 1,
+  "seed": 42,
+  "gene_set_size_min": 15,
+  "gene_set_size_max": 500,
+  "source_gene_sets": 9427,
+  "tested_gene_sets": 4433,
+  "ranked_genes": 13874,
+  "genes_with_verified_symbol": 13771,
+  "genes_without_verified_symbol": 103,
+  "genes_mapped_to_at_least_one_gene_set": 11214,
+  "genes_absent_all_gene_sets": 2660,
+  "duplicate_symbol_groups": 2,
+  "gene_ids_in_duplicate_symbol_groups": 4,
+  "symbol_mapping": "Exact uppercase verified GENCODE v44 gene_symbol to MSigDB symbol; every stable gene ID sharing a symbol is retained; missing-symbol genes remain in the ranked universe but cannot enter symbol-defined sets",
+  "ranking": "All 13,874 C3-tested stable gene IDs by DESeq2 Wald statistic descending; gene_id ascending tie rule; positive = hDF-EV higher",
+  "thresholdB_up": 20,
+  "thresholdB_down": 0,
+  "gsea_FDR_lt_0_05": 92,
+  "gsea_qualified_FDR_coherent": 82,
+  "ora_up_FDR_lt_0_05": 102,
+  "ora_down_FDR_lt_0_05": 0,
+  "ora_power_note": "Secondary ORA has 20 UP and 0 DOWN threshold-B genes; power is limited and ORA cannot override GSEA",
+  "author_result_firewall": "No author DEG or pathway result was read or used"
+}

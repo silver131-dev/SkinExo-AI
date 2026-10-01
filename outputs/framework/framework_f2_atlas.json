@@ -1,0 +1,61 @@
+{
+  "framework_version": "F2",
+  "atlas_version": "F2-2026-10-01",
+  "component_universe_version": "F2-2026-10-01",
+  "contexts": 3,
+  "verified_contexts": 3,
+  "axes": 5,
+  "component_count": 339,
+  "response_records": 1017,
+  "tested_response_records": 1010,
+  "active_response_records": 158,
+  "observed_null_records": 852,
+  "not_tested_records": 7,
+  "unknown_records": 0,
+  "activity_states": [
+    "ACTIVE_NEGATIVE",
+    "ACTIVE_POSITIVE",
+    "NOT_TESTED",
+    "OBSERVED_NULL",
+    "UNKNOWN"
+  ],
+  "phenotype_anchor_count": 5,
+  "reliability_record_count": 39,
+  "global_NES_correlations": {
+    "CTX001_vs_CTX002": {
+      "shared_gene_sets": 4553,
+      "pearson": -0.07731744061299299,
+      "spearman": -0.13175259810821377,
+      "role": "SECONDARY_DESCRIPTIVE"
+    },
+    "CTX001_vs_CTX003": {
+      "shared_gene_sets": 4382,
+      "pearson": -0.16916499544897678,
+      "spearman": -0.17669257379801415,
+      "role": "SECONDARY_DESCRIPTIVE"
+    },
+    "CTX002_vs_CTX003": {
+      "shared_gene_sets": 4383,
+      "pearson": 0.18775393865235399,
+      "spearman": 0.1944747849767113,
+      "role": "SECONDARY_DESCRIPTIVE"
+    }
+  },
+  "broad_universal_EV_response": "NOT_SUPPORTED",
+  "P_interpretation": "TWO_CONTEXT_SHARED_COMPONENT",
+  "M_interpretation": "CONTEXT_DEPENDENT_DISCORDANT",
+  "E_interpretation": "NULL_NOT_TESTABLE",
+  "A_interpretation": "CONTEXT_DEPENDENT_DISCORDANT",
+  "I_interpretation": "CONSERVED_AXIS_CONTEXT_VARIANT",
+  "response_representation": "READY",
+  "retrieval_ready": true,
+  "retrieval_status": "NOT_IMPLEMENTED",
+  "explorer_status": "NOT_IMPLEMENTED",
+  "predictive_AI_status": "NOT_IMPLEMENTED",
+  "source_hashes": {
+    "contexts": "367a6bc0c60f3974ed2e19d13bbc545344a42fd790de6f61e4ef594a9f946e52",
+    "components": "296f73a03284f4e218f882fa5aee4956b484fdf97073f1ec6b62dc16ad3d5adc",
+    "responses": "413e1dcefee7b07e7b2fbddfad129b8e612f0393ee00cedb222901158195d50f",
+    "reliability": "ff4710bf86d5595b989146ca1d2ad030d829a8856625c7e79a7c8f10d3853a72"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "framework_version": "F1",
+  "contexts_registered": 3,
+  "verified_contexts": 2,
+  "planned_contexts": 1,
+  "axes": [
+    "P",
+    "M",
+    "E",
+    "A",
+    "I"
+  ],
+  "evidence_states": [
+    "CONSERVED_COMPONENT",
+    "CONSERVED_AXIS",
+    "CONTEXT_DEPENDENT",
+    "DISCORDANT",
+    "NULL_NOT_TESTABLE",
+    "SENSITIVITY_DEPENDENT",
+    "UNKNOWN"
+  ],
+  "evidence_layers": [
+    "TRANSCRIPTOME",
+    "FUNCTIONAL_ASSAY",
+    "IN_VIVO",
+    "CARGO",
+    "LITERATURE",
+    "SENSITIVITY"
+  ],
+  "comparison_count": 5,
+  "phenotype_anchor_count": 5,
+  "cargo_datasets_registered": [
+    "GSE293957"
+  ],
+  "reliability_dimension_count": 9,
+  "reliability_record_count": 27,
+  "reliability_model_status": "IMPLEMENTED_DIMENSIONAL",
+  "retrieval_status": "PLANNED",
+  "explorer_status": "PLANNED",
+  "predictive_ai_status": "NOT_IMPLEMENTED",
+  "source_checkpoint": "DEV-C1"
+}

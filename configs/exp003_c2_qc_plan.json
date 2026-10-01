@@ -1,0 +1,113 @@
+{
+  "checkpoint": "EXP003-C2",
+  "dataset": "GSE293956",
+  "context_id": "CTX003",
+  "frozen_before_qc_computation": true,
+  "input": {
+    "source_file": "data/raw/exp003/GSE293956_hDF_total_count.txt.gz",
+    "expected_sha256": "f30d382112d04c9e3f147fc350f8f58e6306da414a617b5cd4dd52c1fd8ec76d",
+    "expected_physical_data_rows": 1048575,
+    "expected_valid_gene_rows": 60675,
+    "expected_structural_padding_rows": 987900,
+    "structural_padding_rule": "Exclude only the single contiguous trailing block whose identifier is blank and whose six expression cells are all blank or one of NA, N/A, #N/A, NULL; retain every row with a nonblank gene identifier, including all-zero genes."
+  },
+  "filter_candidates": [
+    {
+      "filter_id": "CPM_0.5_IN_3",
+      "rule": "CPM >= 0.5 in at least 3 of 6 samples",
+      "cpm_threshold": 0.5,
+      "minimum_samples": 3,
+      "primary": false
+    },
+    {
+      "filter_id": "CPM_1_IN_2",
+      "rule": "CPM >= 1 in at least 2 of 6 samples",
+      "cpm_threshold": 1.0,
+      "minimum_samples": 2,
+      "primary": false
+    },
+    {
+      "filter_id": "CPM_1_IN_3",
+      "rule": "CPM >= 1 in at least 3 of 6 samples",
+      "cpm_threshold": 1.0,
+      "minimum_samples": 3,
+      "primary": true
+    },
+    {
+      "filter_id": "CPM_2_IN_3",
+      "rule": "CPM >= 2 in at least 3 of 6 samples",
+      "cpm_threshold": 2.0,
+      "minimum_samples": 3,
+      "primary": false
+    }
+  ],
+  "primary_filter": {
+    "filter_id": "CPM_1_IN_3",
+    "rule": "CPM >= 1 in at least 3 of 6 samples",
+    "selection_basis": "Library-size-aware expression requirement in half of the libraries; selected without condition labels or sample-separation results.",
+    "future_de_testing_filter": true
+  },
+  "qc_representation": {
+    "transformation": "log2(CPM + 1)",
+    "library_size_denominator": "raw column sum over all 60,675 valid gene rows",
+    "features": "genes passing the frozen primary filter",
+    "purpose": "unsupervised sample QC only",
+    "future_de_input": "untransformed raw integer counts"
+  },
+  "sample_correlation": {
+    "method": "Pearson",
+    "representation": "filtered log2(CPM + 1)"
+  },
+  "pca": {
+    "fit": "samples as observations and genes as features",
+    "condition_blind": true,
+    "centering": "feature centering performed by PCA",
+    "scaling": "no per-gene variance scaling",
+    "robustness_feature_sets": [
+      "all primary-filtered genes",
+      "top 5000 genes by across-sample variance",
+      "top 2000 genes by across-sample variance"
+    ]
+  },
+  "outlier_review": {
+    "symmetric": true,
+    "automatic_exclusion": false,
+    "review_flags": {
+      "library_size": "outside 0.67 to 1.50 times the six-sample median",
+      "detected_genes": "below 0.80 times the six-sample median",
+      "mean_correlation": "more than 0.05 below the median of the six mean off-diagonal correlations",
+      "pca_position": "two-dimensional nearest-neighbor distance greater than 3 times the median nearest-neighbor distance in at least two of three feature sets"
+    },
+    "technical_problem_confirmation": "requires independent evidence of corruption, sample identity failure, or another documented technical defect; an isolated QC flag is insufficient"
+  },
+  "frozen_de_plan": {
+    "framework": "DESeq2",
+    "design": "~ condition",
+    "contrast": "hDF-EV vs control",
+    "positive_log2fc": "higher expression in hDF-EV",
+    "input": "official raw integer gene-count matrix after the frozen condition-blind testing filter",
+    "testing_filter": "CPM >= 1 in at least 3 of 6 samples",
+    "threshold_a": "padj < 0.05",
+    "threshold_b": "padj < 0.05 AND |log2FC| >= 1",
+    "pairing_term": false,
+    "batch_term": false
+  },
+  "frozen_pathway_plan": {
+    "primary_method": "GSEA",
+    "ranking": "DESeq2 Wald statistic",
+    "release": "MSigDB 2026.1.Hs",
+    "databases": [
+      "GO Biological Process",
+      "Reactome",
+      "Hallmark"
+    ],
+    "ora_role": "secondary/supportive only",
+    "axes": [
+      "P",
+      "M",
+      "E",
+      "A",
+      "I"
+    ]
+  }
+}

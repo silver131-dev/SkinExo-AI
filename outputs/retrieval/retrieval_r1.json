@@ -1,0 +1,280 @@
+{
+  "atlas_version": "F2-2026-10-01",
+  "retrieval_version": "R1",
+  "contexts": 3,
+  "component_count": 339,
+  "primary_metric": "MASK_AWARE_COSINE_OF_SHARED_TESTED_COMPONENT_NES",
+  "secondary_metrics": [
+    "ACTIVE_UNION_COSINE",
+    "DIRECTIONAL_CONCORDANCE",
+    "AXIS_AWARE_NES_COSINE"
+  ],
+  "mask_policy": {
+    "NOT_TESTED": "EXCLUDED; never imputed as zero",
+    "UNKNOWN": "EXCLUDED; never imputed as zero",
+    "OBSERVED_NULL": "INCLUDED in primary NES cosine because it was tested; excluded from active masks",
+    "minimum_primary_overlap": 2,
+    "minimum_axis_overlap": 2
+  },
+  "pairwise_results": [
+    {
+      "query_context": "CTX001",
+      "target_context": "CTX002",
+      "shared_tested_components": 339,
+      "primary_cosine": "-0.17487481885757922",
+      "active_union_components": 124,
+      "active_union_cosine": "0.01076819490865594",
+      "shared_active_components": 2,
+      "same_direction_active": 1,
+      "opposite_direction_active": 1,
+      "directional_concordance": "0.5",
+      "P_similarity": "0.20899806535100393",
+      "M_similarity": "-0.7210457993747426",
+      "E_similarity": "-0.6347524210338057",
+      "A_similarity": "-0.7056654948859695",
+      "I_similarity": "-0.1485265926406226"
+    },
+    {
+      "query_context": "CTX001",
+      "target_context": "CTX003",
+      "shared_tested_components": 332,
+      "primary_cosine": "-0.27545513114944153",
+      "active_union_components": 113,
+      "active_union_cosine": "-0.23023566630599746",
+      "shared_active_components": 3,
+      "same_direction_active": 0,
+      "opposite_direction_active": 3,
+      "directional_concordance": "0.0",
+      "P_similarity": "-0.26572677107725223",
+      "M_similarity": "-0.5198020865562981",
+      "E_similarity": "-0.408524659156795",
+      "A_similarity": "-0.46448614402872757",
+      "I_similarity": "-0.21485825627642835"
+    },
+    {
+      "query_context": "CTX002",
+      "target_context": "CTX001",
+      "shared_tested_components": 339,
+      "primary_cosine": "-0.17487481885757922",
+      "active_union_components": 124,
+      "active_union_cosine": "0.01076819490865594",
+      "shared_active_components": 2,
+      "same_direction_active": 1,
+      "opposite_direction_active": 1,
+      "directional_concordance": "0.5",
+      "P_similarity": "0.20899806535100393",
+      "M_similarity": "-0.7210457993747426",
+      "E_similarity": "-0.6347524210338057",
+      "A_similarity": "-0.7056654948859695",
+      "I_similarity": "-0.1485265926406226"
+    },
+    {
+      "query_context": "CTX002",
+      "target_context": "CTX003",
+      "shared_tested_components": 332,
+      "primary_cosine": "0.6052640111147991",
+      "active_union_components": 64,
+      "active_union_cosine": "0.8563132844914937",
+      "shared_active_components": 9,
+      "same_direction_active": 9,
+      "opposite_direction_active": 0,
+      "directional_concordance": "1.0",
+      "P_similarity": "0.34650034183281175",
+      "M_similarity": "0.3584432711734036",
+      "E_similarity": "0.20027677297930613",
+      "A_similarity": "0.5973109774577301",
+      "I_similarity": "0.8044861327516134"
+    },
+    {
+      "query_context": "CTX003",
+      "target_context": "CTX001",
+      "shared_tested_components": 332,
+      "primary_cosine": "-0.27545513114944153",
+      "active_union_components": 113,
+      "active_union_cosine": "-0.23023566630599746",
+      "shared_active_components": 3,
+      "same_direction_active": 0,
+      "opposite_direction_active": 3,
+      "directional_concordance": "0.0",
+      "P_similarity": "-0.26572677107725223",
+      "M_similarity": "-0.5198020865562981",
+      "E_similarity": "-0.408524659156795",
+      "A_similarity": "-0.46448614402872757",
+      "I_similarity": "-0.21485825627642835"
+    },
+    {
+      "query_context": "CTX003",
+      "target_context": "CTX002",
+      "shared_tested_components": 332,
+      "primary_cosine": "0.6052640111147991",
+      "active_union_components": 64,
+      "active_union_cosine": "0.8563132844914937",
+      "shared_active_components": 9,
+      "same_direction_active": 9,
+      "opposite_direction_active": 0,
+      "directional_concordance": "1.0",
+      "P_similarity": "0.34650034183281175",
+      "M_similarity": "0.3584432711734036",
+      "E_similarity": "0.20027677297930613",
+      "A_similarity": "0.5973109774577301",
+      "I_similarity": "0.8044861327516134"
+    }
+  ],
+  "leave_one_context_out_results": [
+    {
+      "query": "CTX001",
+      "results": [
+        {
+          "rank": 1,
+          "target": "CTX002",
+          "primary_similarity": -0.17487481885757922,
+          "active_similarity": 0.01076819490865594,
+          "shared_tested_components": 339,
+          "shared_active_components": 2,
+          "same_direction_active": 1,
+          "opposite_direction_active": 1,
+          "top_shared_positive": [
+            "P081"
+          ],
+          "top_discordant": [
+            "M026"
+          ]
+        },
+        {
+          "rank": 2,
+          "target": "CTX003",
+          "primary_similarity": -0.27545513114944153,
+          "active_similarity": -0.23023566630599746,
+          "shared_tested_components": 332,
+          "shared_active_components": 3,
+          "same_direction_active": 0,
+          "opposite_direction_active": 3,
+          "top_shared_positive": [],
+          "top_discordant": [
+            "M003",
+            "A008",
+            "M025"
+          ]
+        }
+      ]
+    },
+    {
+      "query": "CTX002",
+      "results": [
+        {
+          "rank": 1,
+          "target": "CTX003",
+          "primary_similarity": 0.6052640111147991,
+          "active_similarity": 0.8563132844914937,
+          "shared_tested_components": 332,
+          "shared_active_components": 9,
+          "same_direction_active": 9,
+          "opposite_direction_active": 0,
+          "top_shared_positive": [
+            "I118",
+            "I117",
+            "I115",
+            "I131",
+            "I114"
+          ],
+          "top_discordant": []
+        },
+        {
+          "rank": 2,
+          "target": "CTX001",
+          "primary_similarity": -0.17487481885757922,
+          "active_similarity": 0.01076819490865594,
+          "shared_tested_components": 339,
+          "shared_active_components": 2,
+          "same_direction_active": 1,
+          "opposite_direction_active": 1,
+          "top_shared_positive": [
+            "P081"
+          ],
+          "top_discordant": [
+            "M026"
+          ]
+        }
+      ]
+    },
+    {
+      "query": "CTX003",
+      "results": [
+        {
+          "rank": 1,
+          "target": "CTX002",
+          "primary_similarity": 0.6052640111147991,
+          "active_similarity": 0.8563132844914937,
+          "shared_tested_components": 332,
+          "shared_active_components": 9,
+          "same_direction_active": 9,
+          "opposite_direction_active": 0,
+          "top_shared_positive": [
+            "I118",
+            "I117",
+            "I115",
+            "I131",
+            "I114"
+          ],
+          "top_discordant": []
+        },
+        {
+          "rank": 2,
+          "target": "CTX001",
+          "primary_similarity": -0.27545513114944153,
+          "active_similarity": -0.23023566630599746,
+          "shared_tested_components": 332,
+          "shared_active_components": 3,
+          "same_direction_active": 0,
+          "opposite_direction_active": 3,
+          "top_shared_positive": [],
+          "top_discordant": [
+            "M003",
+            "A008",
+            "M025"
+          ]
+        }
+      ]
+    }
+  ],
+  "sanity_tests": {
+    "identical_vector_cosine_one": true,
+    "sign_reversal_cosine_negative_one": true,
+    "nonoverlap_is_undefined": true,
+    "jointly_null_not_active_similarity": true,
+    "not_tested_excluded_not_zero": true,
+    "unknown_excluded_not_zero": true,
+    "ordered_explanations_reproducible": true
+  },
+  "artifact_checks": {
+    "explanation_engine": true,
+    "phenotype_attachment": true,
+    "reliability_attachment": true,
+    "matrix_mask_alignment": true
+  },
+  "frozen_global_NES_correlations": {
+    "CTX001_vs_CTX002": {
+      "shared_gene_sets": 4553,
+      "pearson": -0.07731744061299299,
+      "spearman": -0.13175259810821377,
+      "role": "SECONDARY_DESCRIPTIVE"
+    },
+    "CTX001_vs_CTX003": {
+      "shared_gene_sets": 4382,
+      "pearson": -0.16916499544897678,
+      "spearman": -0.17669257379801415,
+      "role": "SECONDARY_DESCRIPTIVE"
+    },
+    "CTX002_vs_CTX003": {
+      "shared_gene_sets": 4383,
+      "pearson": 0.18775393865235399,
+      "spearman": 0.1944747849767113,
+      "role": "SECONDARY_DESCRIPTIVE"
+    }
+  },
+  "predictive_model": false,
+  "trained_parameters": "NONE",
+  "phenotype_in_similarity": false,
+  "reliability_in_similarity": false,
+  "overall_pass": true
+}

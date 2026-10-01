@@ -1,0 +1,92 @@
+[
+  {
+    "question": "Q1",
+    "database": "Hallmark",
+    "term_id": "HALLMARK_E2F_TARGETS",
+    "term_name": "E2F Targets",
+    "NES": 3.1773590469989497,
+    "padj": 0.0,
+    "leading_edge_n": 130
+  },
+  {
+    "question": "Q1",
+    "database": "Hallmark",
+    "term_id": "HALLMARK_G2M_CHECKPOINT",
+    "term_name": "G2M Checkpoint",
+    "NES": 3.013141782495752,
+    "padj": 0.0,
+    "leading_edge_n": 118
+  },
+  {
+    "question": "Q2",
+    "database": "GO_BP",
+    "term_id": "GOBP_NEGATIVE_CHEMOTAXIS",
+    "term_name": "Negative Chemotaxis",
+    "NES": -2.1246892928603094,
+    "padj": 0.0014967955680446632,
+    "leading_edge_n": 21
+  },
+  {
+    "question": "Q2",
+    "database": "GO_BP",
+    "term_id": "GOBP_REGULATION_OF_CHEMOTAXIS",
+    "term_name": "Regulation Of Chemotaxis",
+    "NES": -1.9345911669125964,
+    "padj": 0.024245195843737955,
+    "leading_edge_n": 49
+  },
+  {
+    "question": "Q3",
+    "database": "GO_BP",
+    "term_id": "GOBP_COLLAGEN_FIBRIL_ORGANIZATION",
+    "term_name": "Collagen Fibril Organization",
+    "NES": -1.9948977960362837,
+    "padj": 0.014507403197971351,
+    "leading_edge_n": 31
+  },
+  {
+    "question": "Q3",
+    "database": "Reactome",
+    "term_id": "REACTOME_EXTRACELLULAR_MATRIX_ORGANIZATION",
+    "term_name": "Extracellular Matrix Organization",
+    "NES": -1.948866437079759,
+    "padj": 0.023160941947638475,
+    "leading_edge_n": 90
+  },
+  {
+    "question": "Q4",
+    "database": "GO_BP",
+    "term_id": "GOBP_VASCULAR_ASSOCIATED_SMOOTH_MUSCLE_CELL_PROLIFERATION",
+    "term_name": "Vascular Associated Smooth Muscle Cell Proliferation",
+    "NES": -2.064832052159359,
+    "padj": 0.005238784488156322,
+    "leading_edge_n": 22
+  },
+  {
+    "question": "Q4",
+    "database": "GO_BP",
+    "term_id": "GOBP_POSITIVE_REGULATION_OF_ENDOTHELIAL_CELL_APOPTOTIC_PROCESS",
+    "term_name": "Positive Regulation Of Endothelial Cell Apoptotic Process",
+    "NES": -1.9042874059793182,
+    "padj": 0.027794662145496044,
+    "leading_edge_n": 11
+  },
+  {
+    "question": "Q5",
+    "database": "Reactome",
+    "term_id": "REACTOME_GENE_AND_PROTEIN_EXPRESSION_BY_JAK_STAT_SIGNALING_AFTER_INTERLEUKIN_12_STIMULATION",
+    "term_name": "Gene And Protein Expression By Jak Stat Signaling After Interleukin 12 Stimulation",
+    "NES": 1.8497170903601692,
+    "padj": 0.0035943134762032075,
+    "leading_edge_n": 15
+  },
+  {
+    "question": "Q5",
+    "database": "GO_BP",
+    "term_id": "GOBP_SOMATIC_DIVERSIFICATION_OF_IMMUNE_RECEPTORS_VIA_SOMATIC_MUTATION",
+    "term_name": "Somatic Diversification Of Immune Receptors Via Somatic Mutation",
+    "NES": 1.6354371647770647,
+    "padj": 0.03205171720693336,
+    "leading_edge_n": 6
+  }
+]

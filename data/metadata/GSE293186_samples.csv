@@ -1,0 +1,7 @@
+gsm_id,count_column,sample_name,condition,time_h,replicate,cell_type,species,treatment,source_accession
+GSM8878107,CTRL_72h_1,CTRL_72h_1,CTRL,72,1,Dermal fibroblasts,Homo sapiens,Exosome-depleted media,GSE293186
+GSM8878108,CTRL_72h_2,CTRL_72h_2,CTRL,72,2,Dermal fibroblasts,Homo sapiens,Exosome-depleted media,GSE293186
+GSM8878109,CTRL_72h_3,CTRL_72h_3,CTRL,72,3,Dermal fibroblasts,Homo sapiens,Exosome-depleted media,GSE293186
+GSM8878110,ECEV_72h_1,ECEV_72h_1,ECEV,72,1,Dermal fibroblasts,Homo sapiens,ECEVs in exosome-depleted media,GSE293186
+GSM8878111,ECEV_72h_2,ECEV_72h_2,ECEV,72,2,Dermal fibroblasts,Homo sapiens,ECEVs in exosome-depleted media,GSE293186
+GSM8878112,ECEV_72h_3,ECEV_72h_3,ECEV,72,3,Dermal fibroblasts,Homo sapiens,ECEVs in exosome-depleted media,GSE293186

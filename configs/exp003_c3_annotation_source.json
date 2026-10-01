@@ -1,0 +1,19 @@
+{
+  "dataset": "GSE293956",
+  "context_id": "CTX003",
+  "annotation": "GENCODE v44 comprehensive chromosome, patch, haplotype, and scaffold gene annotation",
+  "genome_build": "GRCh38.p14",
+  "source_url": "https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_44/gencode.v44.chr_patch_hapl_scaff.annotation.gtf.gz",
+  "source_sha256": "7b1daec735b6fbd376f530d7f3ee021ca18da72b29e3b9f72b3a0f89ee8e306d",
+  "source_gene_features": 70116,
+  "mapping_key": "versionless stable Ensembl gene ID; GENCODE version suffix removed only from annotation IDs",
+  "valid_matrix_gene_rows": 60675,
+  "valid_matrix_annotation_coverage": 56614,
+  "tested_genes": 13874,
+  "tested_gene_annotation_coverage": 13771,
+  "tested_gene_annotation_fraction": 0.9925760415165057,
+  "analysis_universe_changed_for_annotation": false,
+  "use": "Gene symbol and biotype display annotation only; the original count-generation annotation release is unknown",
+  "local_source_reused": "data/raw/exp002/gencode.v44.chr_patch_hapl_scaff.annotation.gtf.gz",
+  "local_derived_annotation_ignored_by_git": "data/processed/exp003/gencode_v44_gene_annotation_versionless.csv"
+}

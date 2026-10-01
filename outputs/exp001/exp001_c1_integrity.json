@@ -1,0 +1,99 @@
+{
+  "dataset": "GSE293186",
+  "experiment": "EXP001",
+  "checkpoint": "EXP001-C1 Dataset Integrity",
+  "matrix_rows": 58735,
+  "matrix_columns": 16,
+  "gene_identifier_column": "gene_id",
+  "sample_count": 6,
+  "ctrl_count": 3,
+  "ecev_count": 3,
+  "sample_mapping": [
+    {
+      "gsm_id": "GSM8878107",
+      "count_column": "CTRL_72h_1",
+      "sample_name": "CTRL_72h_1",
+      "condition": "CTRL"
+    },
+    {
+      "gsm_id": "GSM8878108",
+      "count_column": "CTRL_72h_2",
+      "sample_name": "CTRL_72h_2",
+      "condition": "CTRL"
+    },
+    {
+      "gsm_id": "GSM8878109",
+      "count_column": "CTRL_72h_3",
+      "sample_name": "CTRL_72h_3",
+      "condition": "CTRL"
+    },
+    {
+      "gsm_id": "GSM8878110",
+      "count_column": "ECEV_72h_1",
+      "sample_name": "ECEV_72h_1",
+      "condition": "ECEV"
+    },
+    {
+      "gsm_id": "GSM8878111",
+      "count_column": "ECEV_72h_2",
+      "sample_name": "ECEV_72h_2",
+      "condition": "ECEV"
+    },
+    {
+      "gsm_id": "GSM8878112",
+      "count_column": "ECEV_72h_3",
+      "sample_name": "ECEV_72h_3",
+      "condition": "ECEV"
+    }
+  ],
+  "library_sizes": {
+    "CTRL_72h_1": 23645819,
+    "CTRL_72h_2": 24214469,
+    "CTRL_72h_3": 19055060,
+    "ECEV_72h_1": 18646894,
+    "ECEV_72h_2": 19390686,
+    "ECEV_72h_3": 20970952
+  },
+  "missing_values": 0,
+  "missing_gene_ids": 0,
+  "missing_count_values": 0,
+  "non_numeric_counts": 0,
+  "non_integer_counts": 0,
+  "negative_counts": 0,
+  "duplicate_gene_ids": 0,
+  "zero_count_genes": 26636,
+  "unexpected_sample_columns": [],
+  "gzip_ok": true,
+  "metadata_ok": true,
+  "sample_mapping_ok": true,
+  "numeric_ok": true,
+  "overall_pass": true,
+  "delimiter": ",",
+  "matrix_header": [
+    "gene_id",
+    "CTRL_72h_1",
+    "CTRL_72h_2",
+    "CTRL_72h_3",
+    "ECEV_72h_1",
+    "ECEV_72h_2",
+    "ECEV_72h_3",
+    "gene_name",
+    "gene_chr",
+    "gene_start",
+    "gene_end",
+    "gene_strand",
+    "gene_length",
+    "gene_biotype",
+    "gene_description",
+    "tf_family"
+  ],
+  "count_file_bytes": 2368199,
+  "warnings": [
+    "26636 genes have zero counts in all six samples; retained for C1"
+  ],
+  "source_urls": {
+    "series": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE293186",
+    "samples": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE293186&targ=gsm&view=brief&form=text",
+    "count_file": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE293nnn/GSE293186/suppl/GSE293186_gene_count.csv.gz"
+  }
+}

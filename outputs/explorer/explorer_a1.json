@@ -1,0 +1,56 @@
+{
+  "version": "A1",
+  "framework_version": "F2-2026-10-01",
+  "retrieval_version": "R1",
+  "technology": "Streamlit 1.64.0",
+  "contexts_loaded": 3,
+  "components_loaded": 339,
+  "offline_capable": true,
+  "raw_data_required": false,
+  "licensed_pdf_required": false,
+  "internet_required": false,
+  "default_context": "CTX003",
+  "default_retrieval": [
+    {
+      "rank": 1,
+      "target": "CTX002",
+      "primary_similarity": 0.6052640111147991
+    },
+    {
+      "rank": 2,
+      "target": "CTX001",
+      "primary_similarity": -0.27545513114944153
+    }
+  ],
+  "retrieval_verified": true,
+  "phenotype_verified": true,
+  "reliability_verified": true,
+  "provenance_verified": true,
+  "ui_checks": {
+    "app_rendered_without_exception": true,
+    "header_rendered": true,
+    "default_context_CTX003": true,
+    "default_target_CTX002": true,
+    "required_tabs_rendered": true
+  },
+  "artifact_checks": {
+    "response_atlas": true,
+    "retrieval": true,
+    "why_explanations": true,
+    "phenotype": true,
+    "reliability": true,
+    "provenance": true,
+    "offline_artifacts": true
+  },
+  "tests": {
+    "command": "python -m unittest -q tests/test_explorer_data.py tests/test_retrieval.py",
+    "passed": true,
+    "test_count": 17
+  },
+  "local_server_health_smoke_test": true,
+  "launch_command": "streamlit run app/streamlit_app.py",
+  "screenshot_status": "DEFERRED_TO_DEMO_VIDEO_STAGE; automated browser screenshot not required for A1 validation",
+  "predictive_AI": "NOT_IMPLEMENTED",
+  "agent": "NOT_IMPLEMENTED",
+  "overall_pass": true
+}

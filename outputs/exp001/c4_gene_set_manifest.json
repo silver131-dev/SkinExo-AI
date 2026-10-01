@@ -1,0 +1,51 @@
+{
+  "database_release": "MSigDB v2026.1.Hs",
+  "frozen_plan_sha256": "f78b6e4aa90c2b0d0631242e315987c63f89336dbbf4bc70875e3cc30413d901",
+  "release_note_url": "https://docs.gsea-msigdb.org/MSigDB/Release_Notes/MSigDB_2026.1.Hs/",
+  "collection_page_url": "https://www.gsea-msigdb.org/gsea/msigdb/collections.jsp",
+  "license_url": "https://www.gsea-msigdb.org/gsea/msigdb_license_terms.jsp",
+  "license_summary": "CC BY 4.0 base terms; additional terms apply to some collections. Only GO BP, Reactome, Hallmark used; GMT cached under ignored data/raw.",
+  "source_release_details": {
+    "GO_BP": "GO-basic 2025-10-10; NCBI gene2go 2025-12-14 per MSigDB 2026.1 notes",
+    "Reactome": "Reactome architecture release 95 per MSigDB 2026.1 notes",
+    "Hallmark": "MSigDB Hallmark 2026.1.Hs"
+  },
+  "collections": {
+    "GO_BP": {
+      "source_terms": 7538,
+      "eligible_terms": 3527,
+      "filename": "c5.go.bp.v2026.1.Hs.symbols.gmt",
+      "sha256": "9be09dd06d6652566eb52eed530d62e6dfecc4365c1e81afd6f0b7f2e86dd4f9",
+      "source_url": "https://data.broadinstitute.org/gsea-msigdb/msigdb/release/2026.1.Hs/c5.go.bp.v2026.1.Hs.symbols.gmt"
+    },
+    "Reactome": {
+      "source_terms": 1839,
+      "eligible_terms": 1023,
+      "filename": "c2.cp.reactome.v2026.1.Hs.symbols.gmt",
+      "sha256": "5d61f289a2400cddfbb3a3353829fd2284a360bbe50f2093b566c4b7bea93341",
+      "source_url": "https://data.broadinstitute.org/gsea-msigdb/msigdb/release/2026.1.Hs/c2.cp.reactome.v2026.1.Hs.symbols.gmt"
+    },
+    "Hallmark": {
+      "source_terms": 50,
+      "eligible_terms": 50,
+      "filename": "h.all.v2026.1.Hs.symbols.gmt",
+      "sha256": "eecaf6dad908334ae885406ec72bdc0646d8917588ed7c219fac92fc5363f596",
+      "source_url": "https://data.broadinstitute.org/gsea-msigdb/msigdb/release/2026.1.Hs/h.all.v2026.1.Hs.symbols.gmt"
+    }
+  },
+  "source_term_count": 9427,
+  "eligible_term_count": 4600,
+  "tested_gene_universe_size": 16271,
+  "ranked_gene_count": 16271,
+  "c3_gene_ids_with_symbol": 16271,
+  "c3_duplicate_symbol_groups": 11,
+  "c3_gene_ids_in_duplicate_symbol_groups": 25,
+  "gene_ids_in_at_least_one_source_set": 11860,
+  "gene_ids_absent_all_source_sets": 4411,
+  "predefined_mapped_term_rows": 1182,
+  "predefined_eligible_term_rows": 614,
+  "ranking_method": "DESeq2 Wald stat descending; positive=ECEV higher; all C3-tested gene IDs; no ties in observed C3 stats",
+  "symbol_mapping": "Uppercase exact C3 gene_symbol to MSigDB HGNC symbols; each source symbol maps to every corresponding tested gene_id, preserving duplicate-symbol IDs; source terms restricted to tested IDs",
+  "q6_signature_status": "NOT_YET_TESTABLE",
+  "q6_reason": "C3.5 verified GSE141814 as two pooled mouse scRNA-seq libraries without replicate libraries, and did not verify independently defined signed regenerative-like and fibrotic-like gene lists. No signature derived from EXP001 or review narrative."
+}

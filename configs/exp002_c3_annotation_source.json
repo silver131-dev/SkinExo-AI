@@ -1,0 +1,12 @@
+{
+  "dataset": "GSE251807",
+  "annotation": "GENCODE v44 comprehensive chromosome, patch, haplotype, and scaffold gene annotation",
+  "genome_build": "GRCh38.p14",
+  "source_url": "https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_44/gencode.v44.chr_patch_hapl_scaff.annotation.gtf.gz",
+  "source_sha256": "7b1daec735b6fbd376f530d7f3ee021ca18da72b29e3b9f72b3a0f89ee8e306d",
+  "compressed_bytes": 53730612,
+  "gene_features": 70116,
+  "use": "Annotation of stable gene IDs only; original author Salmon index release remains unverified",
+  "local_source_ignored_by_git": "data/raw/exp002/gencode.v44.chr_patch_hapl_scaff.annotation.gtf.gz",
+  "local_derived_annotation_ignored_by_git": "data/processed/exp002/gencode_v44_gene_annotation.csv"
+}

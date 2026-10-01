@@ -1,0 +1,136 @@
+{
+  "contrast": "ECEV_72h vs CTRL_72h",
+  "genes_tested": 16271,
+  "padj_lt_0_05": 6612,
+  "threshold_b_total": 2032,
+  "upregulated": 995,
+  "downregulated": 1037,
+  "strongest_up": [
+    {
+      "gene_symbol": "HGF",
+      "log2FoldChange": 3.64507584738765,
+      "padj": 1.0789520995683199e-217
+    },
+    {
+      "gene_symbol": "ETV1",
+      "log2FoldChange": 3.21176867161981,
+      "padj": 7.89758784364812e-202
+    },
+    {
+      "gene_symbol": "TOP2A",
+      "log2FoldChange": 2.04659042245814,
+      "padj": 4.10078251424144e-172
+    },
+    {
+      "gene_symbol": "NBL1",
+      "log2FoldChange": 1.97829700049533,
+      "padj": 7.844349577404079e-160
+    },
+    {
+      "gene_symbol": "HMGA2",
+      "log2FoldChange": 2.05360680842025,
+      "padj": 3.04293239696745e-157
+    },
+    {
+      "gene_symbol": "PHLDA1",
+      "log2FoldChange": 2.63524881606522,
+      "padj": 1.65527569887694e-137
+    },
+    {
+      "gene_symbol": "AL109918.1",
+      "log2FoldChange": 2.90625913578231,
+      "padj": 1.91140905172232e-135
+    },
+    {
+      "gene_symbol": "SLC14A1",
+      "log2FoldChange": 2.63297094398759,
+      "padj": 3.6695293936604197e-135
+    },
+    {
+      "gene_symbol": "CENPF",
+      "log2FoldChange": 2.07871822760373,
+      "padj": 2.95045633520522e-133
+    },
+    {
+      "gene_symbol": "ANPEP",
+      "log2FoldChange": 2.20936074176172,
+      "padj": 1.68636740264189e-131
+    }
+  ],
+  "strongest_down": [
+    {
+      "gene_symbol": "PSAT1",
+      "log2FoldChange": -3.19764510588164,
+      "padj": 0.0
+    },
+    {
+      "gene_symbol": "CCDC80",
+      "log2FoldChange": -2.63088650135553,
+      "padj": 1.5811858187752e-186
+    },
+    {
+      "gene_symbol": "TAGLN",
+      "log2FoldChange": -2.21590134620823,
+      "padj": 8.692698775993039e-185
+    },
+    {
+      "gene_symbol": "OXTR",
+      "log2FoldChange": -3.03403893983508,
+      "padj": 2.6149536065079797e-175
+    },
+    {
+      "gene_symbol": "GFRA1",
+      "log2FoldChange": -5.03243370558231,
+      "padj": 5.11425691633628e-172
+    },
+    {
+      "gene_symbol": "IGFBP5",
+      "log2FoldChange": -2.39193215492658,
+      "padj": 7.9298399039342e-171
+    },
+    {
+      "gene_symbol": "GRIA1",
+      "log2FoldChange": -2.32985734097431,
+      "padj": 1.1610896467921001e-156
+    },
+    {
+      "gene_symbol": "ADM2",
+      "log2FoldChange": -3.88461662465379,
+      "padj": 2.4617917518885603e-154
+    },
+    {
+      "gene_symbol": "SLC7A11",
+      "log2FoldChange": -2.14794437903315,
+      "padj": 1.41306910416516e-150
+    },
+    {
+      "gene_symbol": "SEMA3D",
+      "log2FoldChange": -4.63037552314633,
+      "padj": 4.91448673951567e-146
+    }
+  ],
+  "author_concordance": {
+    "author_source_url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE293nnn/GSE293186/suppl/GSE293186_ECEV_72hvsCTRL_72h_deg_all.csv.gz",
+    "author_file_rows": 2095,
+    "author_all_padj_lt_0_05": true,
+    "author_all_abs_log2fc_ge_1": true,
+    "author_raw_count_mismatches": 0,
+    "our_tested_genes": 16271,
+    "genes_compared": 1952,
+    "author_rows_not_tested_after_our_filter": 143,
+    "log2fc_pearson": 0.9999997911424662,
+    "log2fc_spearman": 0.999999001305705,
+    "direction_concordance": 1.0,
+    "median_absolute_log2fc_difference": 0.0012449766322799594,
+    "max_absolute_log2fc_difference": 0.03315432347252001,
+    "author_padj_lt_0_05": 2095,
+    "author_threshold_b_total": 2095,
+    "our_threshold_a_overlap_with_author": 1951,
+    "threshold_b_overlap": 1949,
+    "threshold_b_jaccard": 0.8948576675849403,
+    "our_threshold_b_not_in_author_file": 83,
+    "author_threshold_b_not_in_our_significant_table": 146,
+    "author_tested_but_not_our_threshold_b": 3
+  },
+  "interpretation": "Computational C3 evidence only; no phenotype inferred"
+}

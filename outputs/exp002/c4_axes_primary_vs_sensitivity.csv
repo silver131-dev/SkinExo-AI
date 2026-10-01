@@ -1,0 +1,6 @@
+comparison,axis,common_eligible_terms,eligible_components,active_components_first,active_components_second,dominant_first,dominant_second,outcome,not_testable_reason
+primary_vs_sensitivity,P,176,100,3,2,POSITIVE,POSITIVE,CONCORDANT,
+primary_vs_sensitivity,M,84,34,6,6,POSITIVE,POSITIVE,CONCORDANT,
+primary_vs_sensitivity,E,28,22,0,0,MIXED,MIXED,NOT_TESTABLE,NULL_GSEA_BOTH
+primary_vs_sensitivity,A,59,37,7,6,POSITIVE,POSITIVE,CONCORDANT,
+primary_vs_sensitivity,I,261,146,25,24,POSITIVE,POSITIVE,PARTIALLY_CONCORDANT,

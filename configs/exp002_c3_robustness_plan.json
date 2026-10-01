@@ -1,0 +1,20 @@
+{
+  "checkpoint": "EXP002-C3",
+  "declared_before_model_fit": true,
+  "comparison_gene_universe": "intersection of primary and sensitivity tested stable gene_ids with finite log2FoldChange in both fits",
+  "primary_direction_concordance": "same sign among genes with nonzero log2FoldChange in both fits; report exact-zero exclusions",
+  "effect_size_direction_subset": "genes with abs(log2FoldChange) >= 1 in either fit, using the already frozen threshold-B magnitude; report subset size and zero exclusions",
+  "sign_reversal_definition": "opposite signs among shared tested genes with finite nonzero log2FoldChange in both fits",
+  "significance_overlap": "intersection, union, and Jaccard of the two tested-gene sets for padj < 0.05 and threshold B; use stable gene_id",
+  "material_sensitivity_warning_guide": {
+    "fraction_shared_genes_abs_delta_log2fc_ge_0_5": 0.10,
+    "fraction_shared_genes_abs_delta_log2fc_ge_1": 0.05,
+    "log2fc_pearson_below": 0.90,
+    "effect_size_subset_direction_concordance_below": 0.80
+  },
+  "interpretation": "Any trigger warrants PASS WITH SENSITIVITY WARNING if both count-based models remain technically valid. A critical model/diagnostic failure instead requires REVIEW REQUIRED. DEG count alone does not decide status.",
+  "pending_future_metrics": [
+    "P/M/E/A/I GSEA direction stability",
+    "GSEA NES correlation"
+  ]
+}

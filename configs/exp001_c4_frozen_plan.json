@@ -1,0 +1,52 @@
+{
+  "frozen_before_enrichment": true,
+  "frozen_date": "2026-09-30",
+  "input_checkpoints": ["EXP001-C3", "EXP001-C3.5"],
+  "questions": ["Q1", "Q2", "Q3", "Q4", "Q5", "Q6"],
+  "interpretation_priority": "GSEA_PRIMARY_ORA_SECONDARY",
+  "gene_set_release": "MSigDB v2026.1.Hs",
+  "gene_set_collections": {
+    "GO_BP": "c5.go.bp.v2026.1.Hs.symbols.gmt",
+    "Reactome": "c2.cp.reactome.v2026.1.Hs.symbols.gmt",
+    "Hallmark": "h.all.v2026.1.Hs.symbols.gmt"
+  },
+  "gene_set_sha256": {
+    "GO_BP": "9be09dd06d6652566eb52eed530d62e6dfecc4365c1e81afd6f0b7f2e86dd4f9",
+    "Reactome": "5d61f289a2400cddfbb3a3353829fd2284a360bbe50f2093b566c4b7bea93341",
+    "Hallmark": "eecaf6dad908334ae885406ec72bdc0646d8917588ed7c219fac92fc5363f596"
+  },
+  "gene_set_source_base": "https://data.broadinstitute.org/gsea-msigdb/msigdb/release/2026.1.Hs/",
+  "gene_set_size_min": 15,
+  "gene_set_size_max": 500,
+  "gene_set_size_basis": "C3-tested gene IDs after mapping source symbols",
+  "ranking": "All 16271 C3-tested gene IDs sorted by DESeq2 Wald stat descending; ties by gene_id ascending. Positive = higher in ECEV. Gene sets use C3 gene_symbol to map to all corresponding tested gene_ids, including duplicate symbols. No significant-gene filter on ranking.",
+  "ora": "Separate threshold-B UP and DOWN gene IDs; hypergeometric upper-tail with N=16271 tested IDs; BH correction across all eligible terms in each direction and all three collections together.",
+  "gsea": "GSEApy 1.3.1 prerank with gene-set permutations, weight=1, 1000 permutations, seed=42, threads=4; FDR threshold 0.05 across all three collections in one run.",
+  "significance": {"ora_padj_lt": 0.05, "gsea_fdr_lt": 0.05},
+  "leading_edge_coherence": "At least five leading-edge gene IDs and >=80% with Wald-stat sign matching NES for a coherent GSEA term; record counts and fractions for every term.",
+  "evidence_status_rule": "For Q1-Q5: SUPPORTED means at least one coherent mapped GSEA term with FDR<0.05 and at least one same-direction mapped ORA term with padj<0.05; PARTIALLY_SUPPORTED means only one method supports, or GSEA is significant without coherent leading edge; NOT_SUPPORTED means neither method has a mapped significant term; CONFLICTING is reserved for independently documented contradictory evidence and is not inferred from mixed NES signs alone. Status describes transcriptomic program association, never phenotype. Q6 is NOT_TESTABLE without external signed signatures.",
+  "term_mapping": {
+    "GO_BP": {
+      "Q1": "(?:CELL_CYCLE|MITOTIC|MEIOSIS|DNA_REPLICATION|CELL_PROLIFERATION|CYTOKINESIS|CHROMOSOME_SEGREGATION|SPINDLE)",
+      "Q2": "(?:MIGRATION|MOTILITY|LOCOMOTION|CHEMOTAXIS)",
+      "Q3": "(?:EXTRACELLULAR_MATRIX|ECM|COLLAGEN|BASEMENT_MEMBRANE|ELASTIC_FIBER|MATRIX_ORGANIZATION|MATRIX_DISASSEMBLY|TISSUE_REMODELING)",
+      "Q4": "(?:ANGIOGENESIS|BLOOD_VESSEL|VASCULAR|ENDOTHELIAL|SPROUTING)",
+      "Q5": "(?:IMMUN|INFLAMM|CYTOKINE(?:_|$)|INTERLEUKIN|INTERFERON|LEUKOCYTE|MACROPHAGE|NEUTROPHIL|TNF|NFKB|TOLL_LIKE)"
+    },
+    "Reactome": {
+      "Q1": "(?:CELL_CYCLE|MITOTIC|MEIOSIS|DNA_REPLICATION|CELL_PROLIFERATION|CYTOKINESIS|CHROMOSOME_SEGREGATION|SPINDLE)",
+      "Q2": "(?:MIGRATION|MOTILITY|LOCOMOTION|CHEMOTAXIS)",
+      "Q3": "(?:EXTRACELLULAR_MATRIX|ECM|COLLAGEN|BASEMENT_MEMBRANE|ELASTIC_FIBER|MATRIX_ORGANIZATION|MATRIX_DISASSEMBLY|INTEGRIN_CELL_SURFACE_INTERACTIONS)",
+      "Q4": "(?:ANGIOGENESIS|BLOOD_VESSEL|VASCULAR|ENDOTHELIAL|SPROUTING)",
+      "Q5": "(?:IMMUN|INFLAMM|CYTOKINE(?:_|$)|INTERLEUKIN|INTERFERON|LEUKOCYTE|MACROPHAGE|NEUTROPHIL|TNF|NFKB|TOLL_LIKE)"
+    },
+    "Hallmark": {
+      "Q1": ["HALLMARK_E2F_TARGETS", "HALLMARK_G2M_CHECKPOINT", "HALLMARK_MITOTIC_SPINDLE"],
+      "Q5": ["HALLMARK_ALLOGRAFT_REJECTION", "HALLMARK_COMPLEMENT", "HALLMARK_IL2_STAT5_SIGNALING", "HALLMARK_IL6_JAK_STAT3_SIGNALING", "HALLMARK_INFLAMMATORY_RESPONSE", "HALLMARK_INTERFERON_ALPHA_RESPONSE", "HALLMARK_INTERFERON_GAMMA_RESPONSE", "HALLMARK_TNFA_SIGNALING_VIA_NFKB"]
+    }
+  },
+  "figure_selection": "For each Q1-Q5, use significant mapped GSEA terms at FDR < 0.05; rank by FDR then |NES| then term_id. Greedily retain at most two terms per question, skipping a term if leading-edge Jaccard > 0.5 with a retained term for that question. Display all questions, including those with no significant term. No manual term deletion.",
+  "q6": "Test regenerative-like and fibrotic-like signatures separately only if externally defined directional gene lists are reproducible without deriving a contrast from the two pooled GSE141814 libraries; otherwise NOT_YET_TESTABLE. Never infer one as the inverse of the other.",
+  "posthoc_policy": "No posthoc pathway enters primary Q1-Q6 inference. Any discussion outside the frozen map is labeled POSTHOC_EXPLORATORY.",
+  "mapping_qa_correction": "After the first run, review showed the lexical token CYTOKINE also matched CYTOKINESIS. Corrected Q5 matching to CYTOKINE followed by underscore or end of ID in both GO_BP and Reactome. This removes a cell-division false positive regardless of its significance, adds no terms, and preserves Q1-Q6 and all analysis thresholds. Full prepare and analyze rerun required."
+}

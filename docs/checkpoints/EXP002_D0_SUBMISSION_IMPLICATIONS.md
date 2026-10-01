@@ -1,0 +1,9 @@
+# EXP002-D0 submission implications
+
+Discovery date: **2026-09-30**. [EXP002-D0 report](../../reports/EXP002_D0_dataset_discovery.md) recommends independent **GSE251807** for a future integrity checkpoint. Its primary human dermal fibroblasts, explicit MSC small-EV and media-control arms, eight libraries per arm, and public sample-level quantification make independent **transcriptomic comparison feasible in principle**. EXP002-C1 must first verify the count and sample mappings, batches, and recipient donor structure. This document does not update current competition claims or mark validation complete.
+
+If analyzed later with a frozen, appropriate comparison, EXP002 could assess whether **gene-direction or pathway-level response patterns** recur in human dermal fibroblasts under a **different EV producer and time point**. It could also test limited P/M/E/A/I *transcriptional-program* overlap. The secondary GSE212873 study could probe dermal fibroblast EV responses in an autologous/FGF2-bearing context. The source-matched Hagey/Dryad HUVEC arm remains unresolved until its sample-to-count-column map is verified.
+
+EXP002 could **not**, by transcriptomic concordance alone, establish improved wound healing, regenerative or antifibrotic effects, angiogenesis, therapeutic efficacy, endothelial-EV-specific action, prediction, or generalization across donors. Author results from any selected study are not a substitute for an independently generated analysis, and different EV sources, doses, durations, controls, sequencing/processing, and donor structure must remain explicit.
+
+**Roadmap:** keep cross-dataset validation and predictive AI unchecked in the submission checklist. Proceed next to **EXP002-C1 — Independent Dataset Integrity** for GSE251807. If the raw quantification or sample relationships fail the locked criteria on closer inspection, return to **EXP002-D1 — Alternative Validation Strategy** rather than forcing an analysis.

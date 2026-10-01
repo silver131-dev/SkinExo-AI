@@ -1,0 +1,190 @@
+{
+  "dataset": "GSE293956",
+  "context_id": "CTX003",
+  "gene_set_release": "MSigDB 2026.1.Hs",
+  "ranked_genes": 13874,
+  "mapping_loss": {
+    "genes_without_verified_symbol": 103,
+    "genes_absent_all_gene_sets": 2660,
+    "duplicate_symbol_groups": 2,
+    "gene_ids_in_duplicate_symbol_groups": 4
+  },
+  "tested_gene_sets": 4433,
+  "significant_gene_sets": 92,
+  "qualified_gene_sets": 82,
+  "ora_up_significant_gene_sets": 102,
+  "ora_down_significant_gene_sets": 0,
+  "P_status": "OBSERVED_NULL",
+  "M_status": "QUALIFIED",
+  "E_status": "OBSERVED_NULL",
+  "A_status": "QUALIFIED",
+  "I_status": "QUALIFIED",
+  "P_direction": "NO_QUALIFIED_COMPONENT",
+  "M_direction": "POSITIVE",
+  "E_direction": "NO_QUALIFIED_COMPONENT",
+  "A_direction": "POSITIVE",
+  "I_direction": "POSITIVE",
+  "P_components": [],
+  "M_components": [
+    "M003",
+    "M010",
+    "M011",
+    "M025"
+  ],
+  "E_components": [],
+  "A_components": [
+    "A008"
+  ],
+  "I_components": [
+    "I004",
+    "I008",
+    "I009",
+    "I012",
+    "I015",
+    "I025",
+    "I041",
+    "I043",
+    "I044",
+    "I076",
+    "I080",
+    "I093",
+    "I102",
+    "I108",
+    "I111",
+    "I112",
+    "I114",
+    "I115",
+    "I116",
+    "I117",
+    "I118",
+    "I123",
+    "I131",
+    "I136",
+    "I142",
+    "I144",
+    "I145"
+  ],
+  "P_three_context_interpretation": "NULL_NOT_TESTABLE",
+  "M_three_context_interpretation": "DISCORDANT",
+  "E_three_context_interpretation": "NULL_NOT_TESTABLE",
+  "A_three_context_interpretation": "DISCORDANT",
+  "I_three_context_interpretation": "CONSERVED_AXIS_CONTEXT_VARIANT",
+  "P_validation_endpoint": "TWO_CONTEXT_ONLY; CTX003 primary GSEA observed null; secondary ORA cannot override",
+  "phenotype_anchor_summary": {
+    "P": "hDF CCK-8 at 24 h; same source/recipient, different time from 72 h RNA-seq",
+    "M": "hDF scratch assay at 24 h; same source/recipient, different time; mouse wound closure is a different-model IN_VIVO layer",
+    "E": "Mouse scar length and collagen deposition are different-model IN_VIVO evidence",
+    "A": "No direct angiogenesis phenotype anchor registered",
+    "I": "No direct CTX003 inflammatory phenotype anchor registered"
+  },
+  "pairwise_NES_correlations": {
+    "CTX001_vs_CTX002": {
+      "shared_gene_sets": 4553,
+      "pearson": -0.07731744061299299,
+      "spearman": -0.13175259810821377
+    },
+    "CTX001_vs_CTX003": {
+      "shared_gene_sets": 4382,
+      "pearson": -0.16916499544897678,
+      "spearman": -0.17669257379801415
+    },
+    "CTX002_vs_CTX003": {
+      "shared_gene_sets": 4383,
+      "pearson": 0.18775393865235399,
+      "spearman": 0.1944747849767113
+    }
+  },
+  "three_way_shared_gene_sets": 4348,
+  "reliability_limitations": [
+    "n=3 per condition in CTX003",
+    "recipient donor count UNKNOWN",
+    "EV preparation count UNKNOWN",
+    "pairing UNKNOWN",
+    "batch NOT_DOCUMENTED",
+    "control medium/vehicle UNKNOWN",
+    "unexplained dominant replicate-label-associated PC1 structure",
+    "no Cook cutoff exceedances or convergence failures",
+    "GSEA permutations do not capture sample-label uncertainty",
+    "phenotype anchors differ in time or model and do not set transcriptomic significance"
+  ],
+  "post_hoc_findings": {
+    "significant_unmapped_term_count": 45,
+    "top_10": [
+      {
+        "label": "POST_HOC_EXPLORATORY",
+        "database": "GO_BP",
+        "term_id": "GOBP_CELLULAR_RESPONSE_TO_MOLECULE_OF_BACTERIAL_ORIGIN",
+        "NES": 2.621000289683275,
+        "FDR": 0.0
+      },
+      {
+        "label": "POST_HOC_EXPLORATORY",
+        "database": "GO_BP",
+        "term_id": "GOBP_CELLULAR_RESPONSE_TO_BIOTIC_STIMULUS",
+        "NES": 2.537664498017259,
+        "FDR": 0.0
+      },
+      {
+        "label": "POST_HOC_EXPLORATORY",
+        "database": "GO_BP",
+        "term_id": "GOBP_CELL_KILLING",
+        "NES": 2.512747581366176,
+        "FDR": 0.0
+      },
+      {
+        "label": "POST_HOC_EXPLORATORY",
+        "database": "Reactome",
+        "term_id": "REACTOME_PEPTIDE_LIGAND_BINDING_RECEPTORS",
+        "NES": 2.510222125649772,
+        "FDR": 0.0
+      },
+      {
+        "label": "POST_HOC_EXPLORATORY",
+        "database": "GO_BP",
+        "term_id": "GOBP_RESPONSE_TO_MOLECULE_OF_BACTERIAL_ORIGIN",
+        "NES": 2.458005933905252,
+        "FDR": 0.0003312857760705
+      },
+      {
+        "label": "POST_HOC_EXPLORATORY",
+        "database": "Reactome",
+        "term_id": "REACTOME_CHEMOKINE_RECEPTORS_BIND_CHEMOKINES",
+        "NES": 2.461320254525048,
+        "FDR": 0.0003644143536776
+      },
+      {
+        "label": "POST_HOC_EXPLORATORY",
+        "database": "GO_BP",
+        "term_id": "GOBP_DISRUPTION_OF_ANATOMICAL_STRUCTURE_IN_ANOTHER_ORGANISM",
+        "NES": 2.4209257610155013,
+        "FDR": 0.0004049048374195
+      },
+      {
+        "label": "POST_HOC_EXPLORATORY",
+        "database": "GO_BP",
+        "term_id": "GOBP_ANTIMICROBIAL_HUMORAL_RESPONSE",
+        "NES": 2.3732288312362986,
+        "FDR": 0.0009589851412568
+      },
+      {
+        "label": "POST_HOC_EXPLORATORY",
+        "database": "GO_BP",
+        "term_id": "GOBP_REGULATION_OF_BIOLOGICAL_PROCESS_INVOLVED_IN_SYMBIOTIC_INTERACTION",
+        "NES": 2.3511171244836677,
+        "FDR": 0.0014576574147104
+      },
+      {
+        "label": "POST_HOC_EXPLORATORY",
+        "database": "Reactome",
+        "term_id": "REACTOME_CLASS_A_1_RHODOPSIN_LIKE_RECEPTORS",
+        "NES": 2.2948630236420744,
+        "FDR": 0.0031886255946791
+      }
+    ]
+  },
+  "broad_universal_ev_response": "NOT_SUPPORTED",
+  "key_context_aware_finding": "CTX003 does not extend the two-context P conserved-component candidate; it adds positive chemotaxis/migration and endothelial-apoptosis components that preserve M/A discordance, while its inflammatory response shares exact components with CTX002 and broad axis direction with both prior contexts.",
+  "framework_update_status": "UPDATED",
+  "overall_pass": true,
+  "decision": "PASS_WITH_LIMITATIONS"
+}

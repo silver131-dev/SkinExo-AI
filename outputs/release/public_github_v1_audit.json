@@ -1,0 +1,157 @@
+{
+  "source_checkpoint": "DEV-C2",
+  "source_commit": "afcf6dd1c81520bbfdcad333f7f01ab6b9c3089b",
+  "history_scope": "INDEX",
+  "commits_audited": 0,
+  "tracked_file_count": 289,
+  "reachable_blob_count": 282,
+  "current_path_findings": {},
+  "current_content_findings": {},
+  "history_findings": {},
+  "files_over_10_mb_current": [],
+  "files_over_50_mb_current": [],
+  "blobs_over_10_mb_history": [],
+  "blobs_over_50_mb_history": [],
+  "largest_history_blobs": [
+    {
+      "bytes": 8583556,
+      "paths": [
+        "outputs/exp002/gse251807_transcript_universe_comparison.csv"
+      ]
+    },
+    {
+      "bytes": 4182158,
+      "paths": [
+        "outputs/exp001/differential_expression_all.csv"
+      ]
+    },
+    {
+      "bytes": 3774731,
+      "paths": [
+        "outputs/exp002/c4_common_terms_exp001_vs_primary.csv"
+      ]
+    },
+    {
+      "bytes": 3774017,
+      "paths": [
+        "outputs/exp002/c4_common_terms_exp001_vs_sensitivity.csv"
+      ]
+    },
+    {
+      "bytes": 3762637,
+      "paths": [
+        "outputs/exp002/c4_common_terms_primary_vs_sensitivity.csv"
+      ]
+    },
+    {
+      "bytes": 3181342,
+      "paths": [
+        "outputs/exp001/c4_gsea_all.csv"
+      ]
+    },
+    {
+      "bytes": 3043594,
+      "paths": [
+        "outputs/exp002/c4_gsea_primary_all.csv"
+      ]
+    },
+    {
+      "bytes": 3036611,
+      "paths": [
+        "outputs/exp002/c4_gsea_sensitivity_all.csv"
+      ]
+    },
+    {
+      "bytes": 2511905,
+      "paths": [
+        "outputs/exp003/c4_gsea_all.csv"
+      ]
+    },
+    {
+      "bytes": 2499097,
+      "paths": [
+        "outputs/exp002/differential_expression_primary_all.csv"
+      ]
+    },
+    {
+      "bytes": 2482409,
+      "paths": [
+        "outputs/exp002/differential_expression_sensitivity_all.csv"
+      ]
+    },
+    {
+      "bytes": 1873986,
+      "paths": [
+        "outputs/exp003/differential_expression_all.csv"
+      ]
+    },
+    {
+      "bytes": 1627984,
+      "paths": [
+        "outputs/exp001/author_deg_concordance.csv"
+      ]
+    },
+    {
+      "bytes": 1356688,
+      "paths": [
+        "outputs/exp001/c4_ranked_genes.csv"
+      ]
+    },
+    {
+      "bytes": 1300002,
+      "paths": [
+        "outputs/exp003/c4_ranked_genes.csv"
+      ]
+    },
+    {
+      "bytes": 1191795,
+      "paths": [
+        "outputs/exp001/c4_ora_down_all.csv"
+      ]
+    },
+    {
+      "bytes": 1185084,
+      "paths": [
+        "outputs/exp001/c4_ora_up_all.csv"
+      ]
+    },
+    {
+      "bytes": 674844,
+      "paths": [
+        "data/metadata/skinexo_response_atlas_long.csv"
+      ]
+    },
+    {
+      "bytes": 561891,
+      "paths": [
+        "outputs/exp002/c4_term_coverage_primary.csv"
+      ]
+    },
+    {
+      "bytes": 561879,
+      "paths": [
+        "outputs/exp002/c4_term_coverage_sensitivity.csv"
+      ]
+    }
+  ],
+  "commit_author_emails": {
+    "count": 0,
+    "all_github_noreply": false
+  },
+  "explorer_required_artifacts": {
+    "required": [
+      "data/metadata/skinexo_component_universe.csv",
+      "data/metadata/skinexo_context_features.csv",
+      "data/metadata/skinexo_contexts.csv",
+      "data/metadata/skinexo_response_atlas_long.csv",
+      "data/metadata/skinexo_axis_summary.csv",
+      "data/metadata/skinexo_phenotype_anchors.csv",
+      "data/metadata/skinexo_reliability.csv",
+      "outputs/framework/framework_f2_atlas.json",
+      "outputs/framework/framework_f2_validation.json",
+      "outputs/retrieval/retrieval_r1.json"
+    ],
+    "all_tracked": true,
+    "missing": []
+  }
+}

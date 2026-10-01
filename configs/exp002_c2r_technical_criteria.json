@@ -1,0 +1,28 @@
+{
+  "checkpoint": "EXP002-C2R",
+  "declared_before_metrics_and_decision": true,
+  "primary_rule": "Retain EV_8 unless an affirmative technical defect is documented independently of treatment outcomes.",
+  "technical_exclusion_criteria": [
+    "Confirmed GSM/BioSample/SRX/SRR or condition/batch/quantification-file identity mismatch",
+    "Confirmed duplicated biological sample or repeated sequencing represented as independent cultures",
+    "Unreadable, incomplete, or corrupted Salmon quantification; missing, nonfinite, or negative expression estimates",
+    "Confirmed incompatible sequencing or library metadata that invalidates the common quantification representation",
+    "Severe quantification failure supported by both an extreme efficiency proxy and independent technical provenance",
+    "Catastrophic expression-distribution abnormality supported by independent evidence of technical failure"
+  ],
+  "review_triggers_not_exclusion_criteria": {
+    "estimated_gene_total_ratio_to_all_sample_median": 1.75,
+    "nearest_pc1_pc2_neighbor_ratio_to_all_sample_median": 2.0,
+    "same_batch_expressed_gene_count_below_median_fraction": 0.5,
+    "same_batch_top10_expression_fraction_above_median_multiple": 2.0,
+    "quantification_proxy_ratio_outside_median_fold": 2.0
+  },
+  "insufficient_alone": [
+    "High sequencing depth or estimated-count total",
+    "PCA or distance extremeness",
+    "Distinct biology or weaker treatment separation",
+    "Any later differential-expression or GSEA result"
+  ],
+  "distance_method": "Euclidean nearest-neighbor distance in the first two PCs, divided by the median nearest-neighbor distance across all 16 samples; repeat on all, top-5000, and top-2000 condition-blind feature sets; also report distances within batch.",
+  "quantification_proxy_note": "Salmon NumReads sum divided by ENA read_count is a cross-sample descriptive ratio only. ENA read_count and Salmon estimated fragments may use different read/fragment units; this is not an absolute mapping rate."
+}

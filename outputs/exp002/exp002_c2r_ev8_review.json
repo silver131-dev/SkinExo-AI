@@ -1,0 +1,313 @@
+{
+  "dataset": "GSE251807",
+  "experiment": "EXP002",
+  "checkpoint": "EXP002-C2R",
+  "source_urls": {
+    "geo_sample": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM7988524",
+    "ena_biosample": "https://www.ebi.ac.uk/ena/browser/view/SAMN39054792",
+    "ena_run": "https://www.ebi.ac.uk/ena/browser/view/SRR27319309",
+    "geo_quantification": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM7988nnn/GSM7988524/suppl/GSM7988524_EV_8.quant.sf.gz.tabular.txt.gz"
+  },
+  "EV8_identity_mapping": {
+    "GSM": "GSM7988524",
+    "BioSample": "SAMN39054792",
+    "SRA_experiment": "SRX22996563",
+    "SRA_run": "SRR27319309",
+    "quantification_file": "GSM7988524_EV_8.quant.sf.gz.tabular.txt.gz",
+    "checks": {
+      "sample_name_match": "PASS",
+      "condition_match": "PASS",
+      "batch_match": "PASS",
+      "gsm_to_biosample_match": "PASS",
+      "gsm_to_experiment_match": "PASS",
+      "experiment_to_run_match": "PASS",
+      "run_to_biosample_match": "PASS",
+      "run_unique_in_selected_metadata": "PASS",
+      "run_unique_in_ena_project": "PASS",
+      "quantification_file_match": "PASS",
+      "quantification_not_byte_duplicate": "PASS",
+      "quantification_sum_match": "PASS"
+    }
+  },
+  "EV8_read_count": 54035352,
+  "EV8_base_count": 16210605600,
+  "EV8_fastq_bytes_total": 7880774013,
+  "EV8_salmon_total": 95330727.15,
+  "EV8_gene_count_total": 92722948.48200001,
+  "depth_ratios": {
+    "read_count": {
+      "overall_median": 1.8370764975122964,
+      "ev_median": 1.8370764975122964,
+      "same_batch_ev_median": 1.6537636198184567
+    },
+    "base_count": {
+      "overall_median": 1.8370764975122964,
+      "ev_median": 1.8370764975122964,
+      "same_batch_ev_median": 1.6537636198184567
+    },
+    "fastq_bytes_total": {
+      "overall_median": 1.8419474088348247,
+      "ev_median": 1.8419474088348247,
+      "same_batch_ev_median": 1.6498749812834912
+    },
+    "salmon_numreads_sum": {
+      "overall_median": 1.811453595581809,
+      "ev_median": 1.811453595581809,
+      "same_batch_ev_median": 1.6085837258239637
+    },
+    "gene_count_total": {
+      "overall_median": 1.8026373164718124,
+      "ev_median": 1.8026373164718124,
+      "same_batch_ev_median": 1.6082521662733475
+    }
+  },
+  "quantification_efficiency_summary": {
+    "EV8_value": 1.7642288542878375,
+    "overall_median": 1.7782793041407623,
+    "EV_median": 1.7782288317534074,
+    "same_batch_EV_median": 1.804958600266085,
+    "EV8_to_overall_median": 0.9920988509396651,
+    "EV8_to_same_batch_EV_median": 0.9774345262144832,
+    "interpretation": "Salmon NumReads sum divided by ENA read_count is a cross-sample descriptive ratio only. ENA read_count and Salmon estimated fragments may use different read/fragment units; this is not an absolute mapping rate."
+  },
+  "expression_distribution_summary": {
+    "expressed_genes_cpm_ge_1": {
+      "EV8": 13206.0,
+      "overall_median": 13235.0,
+      "same_batch_EV_median": 13209.5,
+      "EV8_to_same_batch_EV_median": 0.9997350391763503
+    },
+    "nonzero_genes": {
+      "EV8": 18932.0,
+      "overall_median": 18465.5,
+      "same_batch_EV_median": 18442.5,
+      "EV8_to_same_batch_EV_median": 1.0265419547241426
+    },
+    "zero_gene_fraction": {
+      "EV8": 0.4925349130190045,
+      "overall_median": 0.5050392687699359,
+      "same_batch_EV_median": 0.5056557750556196,
+      "EV8_to_same_batch_EV_median": 0.9740517903999575
+    },
+    "median_log2_cpm_expressed": {
+      "EV8": 4.615032205116876,
+      "overall_median": 4.66821022569188,
+      "same_batch_EV_median": 4.659707757839723,
+      "EV8_to_same_batch_EV_median": 0.9904123702505415
+    },
+    "p90_log2_cpm_expressed": {
+      "EV8": 6.999475300340619,
+      "overall_median": 7.025904534499695,
+      "same_batch_EV_median": 7.020073010671085,
+      "EV8_to_same_batch_EV_median": 0.9970658837452038
+    },
+    "p99_log2_cpm_expressed": {
+      "EV8": 9.492193705665915,
+      "overall_median": 9.552428198284279,
+      "same_batch_EV_median": 9.521495093530277,
+      "EV8_to_same_batch_EV_median": 0.9969226064208896
+    },
+    "top10_count_fraction": {
+      "EV8": 0.14048282551679953,
+      "overall_median": 0.12616633662578833,
+      "same_batch_EV_median": 0.13490939028398707,
+      "EV8_to_same_batch_EV_median": 1.0413124336347548
+    },
+    "top100_count_fraction": {
+      "EV8": 0.32158996471934476,
+      "overall_median": 0.302529538023422,
+      "same_batch_EV_median": 0.30549981722280206,
+      "EV8_to_same_batch_EV_median": 1.0526682720887133
+    },
+    "normalized_count_entropy": {
+      "EV8": 0.7449599541555852,
+      "overall_median": 0.753305326931586,
+      "same_batch_EV_median": 0.7513761849702075,
+      "EV8_to_same_batch_EV_median": 0.9914606944657466
+    }
+  },
+  "correlation_summary": {
+    "EV8_by_group": {
+      "same_batch_EV": {
+        "EV_5": 0.985034468778716,
+        "EV_6": 0.9846046942644692,
+        "EV_7": 0.9839700616501552
+      },
+      "other_batch_EV": {
+        "EV_1": 0.949622674947685,
+        "EV_2": 0.9501848062563872,
+        "EV_3": 0.9447849370280764,
+        "EV_4": 0.9477148591236594
+      },
+      "controls": {
+        "DMEM_1": 0.9501554395772313,
+        "DMEM_2": 0.9497547320666748,
+        "DMEM_3": 0.9546137818446848,
+        "DMEM_4": 0.9504775147066,
+        "DMEM_5": 0.9823807466339444,
+        "DMEM_6": 0.9795810718759016,
+        "DMEM_7": 0.979457967040692,
+        "DMEM_8": 0.979294814637047
+      }
+    },
+    "EV8_group_means": {
+      "same_batch_EV": 0.9845364082311135,
+      "other_batch_EV": 0.9480768193389519,
+      "controls": 0.965714508547847
+    },
+    "nearest_neighbor": "EV_5",
+    "nearest_neighbor_r": 0.985034468778716,
+    "lowest_correlation_sample": "EV_3",
+    "lowest_correlation_r": 0.9447849370280764,
+    "EV8_mean_to_all_other_samples": 0.9647755046954616,
+    "all_sample_mean_correlation_range": [
+      0.9634170600218017,
+      0.9707539325069323
+    ],
+    "EV8_mean_within_batch": 0.9820462606972751,
+    "all_sample_within_batch_mean_range": [
+      0.9820462606972751,
+      0.9894800746598298
+    ]
+  },
+  "pca_extremeness_summary": {
+    "all_filtered_genes": {
+      "features": 13724,
+      "EV8_nearest_distance": 11.232231640729092,
+      "all_sample_median_nearest_distance": 2.1583317040957466,
+      "EV8_nearest_to_median_ratio": 5.204126696287835,
+      "EV8_nearest_distance_rank_descending": 1,
+      "second_highest_nearest_sample": "EV_3",
+      "second_highest_nearest_distance": 5.508288540056556,
+      "second_highest_nearest_to_median_ratio": 2.5521047249613127,
+      "EV8_same_batch_nearest_distance": 11.232231640729092,
+      "EV8_same_batch_rank_descending": 1,
+      "EV8_distance_to_same_batch_peers_centroid": 18.162774406313975,
+      "highest_batch_peer_centroid_distance_sample": "EV_8",
+      "all_sample_nearest_distance_ranking": [
+        "EV_8",
+        "EV_3",
+        "DMEM_5",
+        "DMEM_3",
+        "DMEM_4",
+        "EV_4",
+        "DMEM_1",
+        "DMEM_2",
+        "EV_1",
+        "EV_2",
+        "DMEM_6",
+        "DMEM_7",
+        "DMEM_8",
+        "EV_5",
+        "EV_6",
+        "EV_7"
+      ]
+    },
+    "top_5000_variable_genes": {
+      "features": 5000,
+      "EV8_nearest_distance": 13.299337538208237,
+      "all_sample_median_nearest_distance": 2.1040652667670097,
+      "EV8_nearest_to_median_ratio": 6.320781844682633,
+      "EV8_nearest_distance_rank_descending": 1,
+      "second_highest_nearest_sample": "EV_3",
+      "second_highest_nearest_distance": 4.7237067187937525,
+      "second_highest_nearest_to_median_ratio": 2.245038114265314,
+      "EV8_same_batch_nearest_distance": 13.299337538208237,
+      "EV8_same_batch_rank_descending": 1,
+      "EV8_distance_to_same_batch_peers_centroid": 22.025916158755674,
+      "highest_batch_peer_centroid_distance_sample": "EV_8",
+      "all_sample_nearest_distance_ranking": [
+        "EV_8",
+        "EV_3",
+        "DMEM_5",
+        "DMEM_4",
+        "DMEM_3",
+        "EV_4",
+        "DMEM_1",
+        "DMEM_2",
+        "DMEM_8",
+        "DMEM_6",
+        "DMEM_7",
+        "EV_7",
+        "EV_6",
+        "EV_5",
+        "EV_1",
+        "EV_2"
+      ]
+    },
+    "top_2000_variable_genes": {
+      "features": 2000,
+      "EV8_nearest_distance": 14.719569642406974,
+      "all_sample_median_nearest_distance": 1.8076551302619372,
+      "EV8_nearest_to_median_ratio": 8.142908122233495,
+      "EV8_nearest_distance_rank_descending": 1,
+      "second_highest_nearest_sample": "EV_3",
+      "second_highest_nearest_distance": 3.507670625887822,
+      "second_highest_nearest_to_median_ratio": 1.9404534455527174,
+      "EV8_same_batch_nearest_distance": 14.719569642406974,
+      "EV8_same_batch_rank_descending": 1,
+      "EV8_distance_to_same_batch_peers_centroid": 22.70243013126888,
+      "highest_batch_peer_centroid_distance_sample": "EV_8",
+      "all_sample_nearest_distance_ranking": [
+        "EV_8",
+        "EV_3",
+        "DMEM_5",
+        "DMEM_8",
+        "DMEM_3",
+        "DMEM_4",
+        "EV_7",
+        "DMEM_7",
+        "DMEM_6",
+        "DMEM_2",
+        "DMEM_1",
+        "EV_6",
+        "EV_5",
+        "EV_4",
+        "EV_1",
+        "EV_2"
+      ]
+    }
+  },
+  "technical_exclusion_criteria": [
+    "Confirmed GSM/BioSample/SRX/SRR or condition/batch/quantification-file identity mismatch",
+    "Confirmed duplicated biological sample or repeated sequencing represented as independent cultures",
+    "Unreadable, incomplete, or corrupted Salmon quantification; missing, nonfinite, or negative expression estimates",
+    "Confirmed incompatible sequencing or library metadata that invalidates the common quantification representation",
+    "Severe quantification failure supported by both an extreme efficiency proxy and independent technical provenance",
+    "Catastrophic expression-distribution abnormality supported by independent evidence of technical failure"
+  ],
+  "review_triggers_not_exclusion_criteria": {
+    "estimated_gene_total_ratio_to_all_sample_median": 1.75,
+    "nearest_pc1_pc2_neighbor_ratio_to_all_sample_median": 2.0,
+    "same_batch_expressed_gene_count_below_median_fraction": 0.5,
+    "same_batch_top10_expression_fraction_above_median_multiple": 2.0,
+    "quantification_proxy_ratio_outside_median_fold": 2.0
+  },
+  "expression_review_trigger": false,
+  "quantification_proxy_review_trigger": false,
+  "technical_defect_found": false,
+  "EV8_decision": "RETAIN",
+  "primary_sample_count": 16,
+  "sensitivity_sample_count": 15,
+  "primary_design": "~ batch + condition",
+  "sensitivity_design": "~ batch + condition",
+  "preregistered_robustness_metrics": [
+    "log2FC Pearson correlation across shared tested genes",
+    "log2FC Spearman correlation across shared tested genes",
+    "log2FC direction concordance across shared tested genes",
+    "overlap of padj < 0.05 genes",
+    "overlap of padj < 0.05 and abs(log2FC) >= 1 genes",
+    "P/M/E/A/I GSEA direction stability",
+    "GSEA NES correlation across common eligible terms"
+  ],
+  "batch_interaction_decision": "No interaction in primary model; estimate average condition effect across two balanced batches with additive batch adjustment.",
+  "remaining_limitations": [
+    "One documented recipient NHDF donor lot; no donor-level generalization",
+    "Independent EV-preparation count unknown; no EV-preparation-level generalization",
+    "Original Salmon index release and mapping-rate logs unavailable; GENCODE v44 is compatible, not confirmed original",
+    "ENA read_count and Salmon NumReads units may differ; their ratio is not an absolute mapping efficiency",
+    "PCA extremeness persists; no FASTQ-level sequence-quality or contamination analysis was performed"
+  ],
+  "c2_final_status": "PASS WITH LIMITATIONS",
+  "overall_pass": true
+}

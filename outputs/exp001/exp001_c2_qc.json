@@ -1,0 +1,122 @@
+{
+  "dataset": "GSE293186",
+  "experiment": "EXP001",
+  "checkpoint": "EXP001-C2 Filtering / normalization / sample-level QC",
+  "c1_overall_pass": true,
+  "original_gene_count": 58735,
+  "zero_count_gene_count": 26636,
+  "nonzero_gene_count": 32099,
+  "filter_rules_evaluated": [
+    {
+      "rule": "A",
+      "definition": "count >= 10 in at least 2 samples",
+      "genes_retained": 16906,
+      "genes_removed": 41829,
+      "primary": false
+    },
+    {
+      "rule": "B",
+      "definition": "count >= 10 in at least 3 samples",
+      "genes_retained": 16271,
+      "genes_removed": 42464,
+      "primary": false
+    },
+    {
+      "rule": "C",
+      "definition": "CPM >= 1 in at least 2 samples",
+      "genes_retained": 14755,
+      "genes_removed": 43980,
+      "primary": true
+    }
+  ],
+  "primary_filter_rule": "C: CPM >= 1 in at least 2 samples",
+  "filtered_gene_count": 14755,
+  "library_sizes": {
+    "CTRL_72h_1": 23645819,
+    "CTRL_72h_2": 24214469,
+    "CTRL_72h_3": 19055060,
+    "ECEV_72h_1": 18646894,
+    "ECEV_72h_2": 19390686,
+    "ECEV_72h_3": 20970952
+  },
+  "library_size_min": 18646894,
+  "library_size_max": 24214469,
+  "library_size_median": 20180819.0,
+  "library_size_ratio": 1.2985792164636105,
+  "mean_within_ctrl_correlation": 0.9960508223363803,
+  "mean_within_ecev_correlation": 0.9922514681896103,
+  "mean_between_condition_correlation": 0.9531607408903455,
+  "pca_pc1_variance": 0.8659249151108638,
+  "pca_pc2_variance": 0.05896374475700056,
+  "pca_coordinates": [
+    {
+      "sample": "CTRL_72h_1",
+      "condition": "CTRL",
+      "PC1": -37.3778959076351,
+      "PC2": 0.6814141411800492
+    },
+    {
+      "sample": "CTRL_72h_2",
+      "condition": "CTRL",
+      "PC1": -37.39101412337886,
+      "PC2": -0.8625403790906248
+    },
+    {
+      "sample": "CTRL_72h_3",
+      "condition": "CTRL",
+      "PC1": -40.59580786704791,
+      "PC2": -4.166404748264448
+    },
+    {
+      "sample": "ECEV_72h_1",
+      "condition": "ECEV",
+      "PC1": 47.2925271483885,
+      "PC2": -15.536746233236286
+    },
+    {
+      "sample": "ECEV_72h_2",
+      "condition": "ECEV",
+      "PC1": 27.46106251852504,
+      "PC2": 18.910243009964425
+    },
+    {
+      "sample": "ECEV_72h_3",
+      "condition": "ECEV",
+      "PC1": 40.61112823114833,
+      "PC2": 0.974034209446863
+    }
+  ],
+  "pca_robustness_summary": {
+    "all_filtered": {
+      "gene_count": 14755,
+      "pc1_variance": 0.8659249151108638,
+      "pc2_variance": 0.05896374475700056,
+      "pairwise_distance_spearman_vs_all": 1.0,
+      "nearest_neighbor_agreement_vs_all": "6/6",
+      "nearest_neighbor_same_condition": "6/6",
+      "centroid_distance_to_mean_within_spread": 9.41446137382372
+    },
+    "top_5000_variable": {
+      "gene_count": 5000,
+      "pc1_variance": 0.9103096591184568,
+      "pc2_variance": 0.042701466144486416,
+      "pairwise_distance_spearman_vs_all": 1.0,
+      "nearest_neighbor_agreement_vs_all": "6/6",
+      "nearest_neighbor_same_condition": "6/6",
+      "centroid_distance_to_mean_within_spread": 10.74501904494787
+    },
+    "top_2000_variable": {
+      "gene_count": 2000,
+      "pc1_variance": 0.9514235931468776,
+      "pc2_variance": 0.026373478005049158,
+      "pairwise_distance_spearman_vs_all": 1.0,
+      "nearest_neighbor_agreement_vs_all": "6/6",
+      "nearest_neighbor_same_condition": "6/6",
+      "centroid_distance_to_mean_within_spread": 12.886607211324305
+    }
+  },
+  "pca_qualitative_structure": "The sample layout is stable across the three unsupervised feature sets: all six nearest neighbors match the all-gene PCA, and sample-pair distance ranks remain similar. CTRL and ECEV occupy distinct regions in these plots.",
+  "sample_warnings": [],
+  "overall_pass": true,
+  "normalization_note": "Library-size CPM and log2(CPM + 1) are for sample QC only; C3 requires a count-based differential-expression framework."
+}

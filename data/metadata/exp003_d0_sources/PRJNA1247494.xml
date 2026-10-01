@@ -1,0 +1,65 @@
+<PROJECT_SET>
+<PROJECT accession="PRJNA1247494" alias="PRJNA1247494" center_name="Sun Yat-sen university" broker_name="NCBI">
+  <IDENTIFIERS>
+    <PRIMARY_ID>PRJNA1247494</PRIMARY_ID>
+    <SECONDARY_ID>SRP576981</SECONDARY_ID>
+    <EXTERNAL_ID namespace="GEO">GSE293956</EXTERNAL_ID>
+    <SUBMITTER_ID namespace="Sun Yat-sen university">PRJNA1247494</SUBMITTER_ID>
+  </IDENTIFIERS>
+  <NAME>Mechanism of action of hDF-EVs on fibroblasts and keratinocytes [RNA-seq]</NAME>
+  <TITLE>Mechanism of action of hDF-EVs on fibroblasts and keratinocytes [RNA-seq]</TITLE>
+  <DESCRIPTION>hDF-EVs miRNA array, hDFs and HaCaT cells were co-cultured with hDF-EVs for transcriptome sequencing Overall design: hDFs were maintained in extracellular vesicles (EV)-depleted medium for 72 h, after which conditioned supernatant was harvested for hDF-EVs isolation and miRNA profiling. hDFs and HaCaT cells were then co-cultured with purified exosomes for 3 days, followed by whole-transcriptome sequencing (RNA-seq) to assess cellular responses.</DESCRIPTION>
+  <SUBMISSION_PROJECT>
+    <SEQUENCING_PROJECT/>
+    <ORGANISM>
+      <TAXON_ID>9606</TAXON_ID>
+      <SCIENTIFIC_NAME>Homo sapiens</SCIENTIFIC_NAME>
+    </ORGANISM>
+  </SUBMISSION_PROJECT>
+  <RELATED_PROJECTS>
+    <RELATED_PROJECT>
+      <PARENT_PROJECT accession="PRJNA9558"/>
+    </RELATED_PROJECT>
+  </RELATED_PROJECTS>
+  <PROJECT_LINKS>
+    <PROJECT_LINK>
+      <XREF_LINK>
+        <DB>ENA-FASTQ-FILES</DB>
+        <ID><![CDATA[https://www.ebi.ac.uk/ena/portal/api/filereport?accession=PRJNA1247494&result=read_run&fields=run_accession,fastq_ftp,fastq_md5,fastq_bytes]]></ID>
+      </XREF_LINK>
+    </PROJECT_LINK>
+    <PROJECT_LINK>
+      <XREF_LINK>
+        <DB>ENA-SUBMITTED-FILES</DB>
+        <ID><![CDATA[https://www.ebi.ac.uk/ena/portal/api/filereport?accession=PRJNA1247494&result=read_run&fields=run_accession,submitted_ftp,submitted_md5,submitted_bytes,submitted_format]]></ID>
+      </XREF_LINK>
+    </PROJECT_LINK>
+  </PROJECT_LINKS>
+  <PROJECT_ATTRIBUTES>
+    <PROJECT_ATTRIBUTE>
+      <TAG>ENA-REFSEQ</TAG>
+      <VALUE>N</VALUE>
+    </PROJECT_ATTRIBUTE>
+    <PROJECT_ATTRIBUTE>
+      <TAG>PROJECT-ID</TAG>
+      <VALUE>1247494</VALUE>
+    </PROJECT_ATTRIBUTE>
+    <PROJECT_ATTRIBUTE>
+      <TAG>NCBI-PROJECT-TYPE</TAG>
+      <VALUE>SUBMISSION</VALUE>
+    </PROJECT_ATTRIBUTE>
+    <PROJECT_ATTRIBUTE>
+      <TAG>ENA-STATUS</TAG>
+      <VALUE>PUBLIC</VALUE>
+    </PROJECT_ATTRIBUTE>
+    <PROJECT_ATTRIBUTE>
+      <TAG>ENA-FIRST-PUBLIC</TAG>
+      <VALUE>2026-05-02</VALUE>
+    </PROJECT_ATTRIBUTE>
+    <PROJECT_ATTRIBUTE>
+      <TAG>ENA-LAST-UPDATE</TAG>
+      <VALUE>2026-09-28</VALUE>
+    </PROJECT_ATTRIBUTE>
+  </PROJECT_ATTRIBUTES>
+</PROJECT>
+</PROJECT_SET>

@@ -1,0 +1,426 @@
+{
+  "checkpoint": "EXP002-C4",
+  "primary_fit": "all 16, including EV_8",
+  "sensitivity_fit": "15, excluding EV_8",
+  "design_unchanged": "~ batch + condition",
+  "endpoint": "pre-specified P/M/E/A/I GSEA directional concordance",
+  "gsea_primary_evidence": true,
+  "source_release": "MSigDB v2026.1.Hs",
+  "input_sha256": {
+    "configs/exp001_c4_frozen_plan.json": "f78b6e4aa90c2b0d0631242e315987c63f89336dbbf4bc70875e3cc30413d901",
+    "data/metadata/skinexo_c4_term_map.csv": "0149a54c0312598759b3bc71509b6e1e83c232937018d0eb5cb2cd29e6544406",
+    "docs/checkpoints/EXP002_VALIDATION_ENDPOINTS.md": "9ea940deb71e7a03e2168f3c11f0a50e6ddbd71dd3376be4e42370bdf6aa4771",
+    "outputs/exp002/differential_expression_primary_all.csv": "e31fe4ebcdbd1f84a89eb3add2dd583681dd6abba3dec4706215269f9f41ee4e",
+    "outputs/exp002/differential_expression_sensitivity_all.csv": "8c3703c10b31ecd4c46924080ccf43d135d2d15c25696b50c1b30a456f46c455",
+    "outputs/exp001/c4_gsea_all.csv": "7b5cd8c1d2a238a416c322e5abcb8cd5b88b96f29daf59a9adb2a58261a5a180"
+  },
+  "comparisons": {
+    "EXP001_vs_primary": {
+      "common_eligible_terms": 4553,
+      "nes": {
+        "n": 4553,
+        "pearson": -0.07731744061299299,
+        "spearman": -0.13175259810821377
+      },
+      "nes_by_database": {
+        "GO_BP": {
+          "n": 3486,
+          "pearson": -0.11425677039171335,
+          "spearman": -0.19084975732908022
+        },
+        "Hallmark": {
+          "n": 50,
+          "pearson": 0.04930594981209307,
+          "spearman": 0.020888355342136854
+        },
+        "Reactome": {
+          "n": 1017,
+          "pearson": 0.0557695256686116,
+          "spearman": 0.07961501009150461
+        }
+      },
+      "nes_by_axis": {
+        "P": {
+          "n": 176,
+          "pearson": -0.2943403964228702,
+          "spearman": -0.3767708562623817
+        },
+        "M": {
+          "n": 84,
+          "pearson": -0.33439152597194194,
+          "spearman": -0.33566872532145386
+        },
+        "E": {
+          "n": 28,
+          "pearson": -0.3713205455337859,
+          "spearman": -0.21893814997263272
+        },
+        "A": {
+          "n": 59,
+          "pearson": -0.28898637335174554,
+          "spearman": -0.21426066627703103
+        },
+        "I": {
+          "n": 261,
+          "pearson": 0.002991073735267167,
+          "spearman": 0.017226530598470586
+        }
+      },
+      "qualified_leading_edges_first": 634,
+      "qualified_leading_edges_second": 340,
+      "qualified_leading_edges_both": 40,
+      "leading_edge_jaccard_median": 0.2821969696969697,
+      "retrieval_performance": "NOT_ESTIMABLE_TWO_INDEPENDENT_STUDIES",
+      "nes_correlation_distance": 1.077317440612993,
+      "genes": {
+        "first_tested_ids": 16271,
+        "second_tested_ids": 16217,
+        "shared_tested_stable_ids": 13138,
+        "first_only_ids": 3133,
+        "second_only_ids": 3079,
+        "zero_effect_exclusions": 0,
+        "direction_concordance": 0.48393971685188003,
+        "log2fc": {
+          "n": 13138,
+          "pearson": -0.05191715463541696,
+          "spearman": -0.04667961427453874
+        },
+        "wald_spearman": -0.05555493090653284
+      }
+    },
+    "EXP001_vs_sensitivity": {
+      "common_eligible_terms": 4555,
+      "nes": {
+        "n": 4555,
+        "pearson": -0.04840596050077218,
+        "spearman": -0.09724372243708981
+      },
+      "nes_by_database": {
+        "GO_BP": {
+          "n": 3488,
+          "pearson": -0.08721461207275896,
+          "spearman": -0.15353608609141892
+        },
+        "Hallmark": {
+          "n": 50,
+          "pearson": 0.11471909419272343,
+          "spearman": 0.03346938775510204
+        },
+        "Reactome": {
+          "n": 1017,
+          "pearson": 0.10311965843357035,
+          "spearman": 0.12169196855504592
+        }
+      },
+      "nes_by_axis": {
+        "P": {
+          "n": 176,
+          "pearson": -0.29403709547820045,
+          "spearman": -0.35878054149240596
+        },
+        "M": {
+          "n": 84,
+          "pearson": -0.3509652100933349,
+          "spearman": -0.3881137997367622
+        },
+        "E": {
+          "n": 28,
+          "pearson": -0.30866269369849236,
+          "spearman": -0.13409961685823754
+        },
+        "A": {
+          "n": 59,
+          "pearson": -0.34270347181800825,
+          "spearman": -0.22174167153711283
+        },
+        "I": {
+          "n": 261,
+          "pearson": -0.02015463172915512,
+          "spearman": -0.04999156323188964
+        }
+      },
+      "qualified_leading_edges_first": 634,
+      "qualified_leading_edges_second": 317,
+      "qualified_leading_edges_both": 41,
+      "leading_edge_jaccard_median": 0.33653846153846156,
+      "retrieval_performance": "NOT_ESTIMABLE_TWO_INDEPENDENT_STUDIES",
+      "nes_correlation_distance": 1.0484059605007723,
+      "genes": {
+        "first_tested_ids": 16271,
+        "second_tested_ids": 16104,
+        "shared_tested_stable_ids": 13109,
+        "first_only_ids": 3162,
+        "second_only_ids": 2995,
+        "zero_effect_exclusions": 0,
+        "direction_concordance": 0.4942405980623999,
+        "log2fc": {
+          "n": 13109,
+          "pearson": -0.03706496480991859,
+          "spearman": -0.0348659962248802
+        },
+        "wald_spearman": -0.041600280588614674
+      }
+    },
+    "primary_vs_sensitivity": {
+      "common_eligible_terms": 4881,
+      "nes": {
+        "n": 4881,
+        "pearson": 0.911015108977225,
+        "spearman": 0.9575948146154217
+      },
+      "nes_by_database": {
+        "GO_BP": {
+          "n": 3747,
+          "pearson": 0.9106366163537748,
+          "spearman": 0.9560712576242266
+        },
+        "Hallmark": {
+          "n": 50,
+          "pearson": 0.9110409398677928,
+          "spearman": 0.9837695078031212
+        },
+        "Reactome": {
+          "n": 1084,
+          "pearson": 0.9116729291633208,
+          "spearman": 0.9596631301595194
+        }
+      },
+      "nes_by_axis": {
+        "P": {
+          "n": 180,
+          "pearson": 0.8570729130885921,
+          "spearman": 0.9567908474541394
+        },
+        "M": {
+          "n": 89,
+          "pearson": 0.9056110095569774,
+          "spearman": 0.9637895812053118
+        },
+        "E": {
+          "n": 29,
+          "pearson": 0.9368066939984198,
+          "spearman": 0.9206896551724136
+        },
+        "A": {
+          "n": 66,
+          "pearson": 0.8614564449605797,
+          "spearman": 0.965807327001357
+        },
+        "I": {
+          "n": 286,
+          "pearson": 0.8391147891948991,
+          "spearman": 0.9389775821098029
+        }
+      },
+      "qualified_leading_edges_first": 355,
+      "qualified_leading_edges_second": 331,
+      "qualified_leading_edges_both": 277,
+      "leading_edge_jaccard_median": 0.8461538461538461,
+      "retrieval_performance": "NOT_ESTIMABLE_TWO_INDEPENDENT_STUDIES",
+      "nes_correlation_distance": 0.08898489102277496,
+      "genes": {
+        "first_tested_ids": 16217,
+        "second_tested_ids": 16104,
+        "shared_tested_stable_ids": 16104,
+        "first_only_ids": 113,
+        "second_only_ids": 0,
+        "zero_effect_exclusions": 0,
+        "direction_concordance": 0.9203924490809736,
+        "log2fc": {
+          "n": 16104,
+          "pearson": 0.8822009692380847,
+          "spearman": 0.9534082945438839
+        },
+        "wald_spearman": 0.9636202816700277
+      }
+    }
+  },
+  "axes_primary": [
+    {
+      "comparison": "EXP001_vs_primary",
+      "axis": "P",
+      "common_eligible_terms": 176,
+      "eligible_components": 100,
+      "active_components_first": 65,
+      "active_components_second": 3,
+      "dominant_first": "POSITIVE",
+      "dominant_second": "POSITIVE",
+      "outcome": "PARTIALLY_CONCORDANT",
+      "not_testable_reason": ""
+    },
+    {
+      "comparison": "EXP001_vs_primary",
+      "axis": "M",
+      "common_eligible_terms": 84,
+      "eligible_components": 34,
+      "active_components_first": 6,
+      "active_components_second": 6,
+      "dominant_first": "NEGATIVE",
+      "dominant_second": "POSITIVE",
+      "outcome": "DISCORDANT",
+      "not_testable_reason": ""
+    },
+    {
+      "comparison": "EXP001_vs_primary",
+      "axis": "E",
+      "common_eligible_terms": 28,
+      "eligible_components": 22,
+      "active_components_first": 5,
+      "active_components_second": 0,
+      "dominant_first": "NEGATIVE",
+      "dominant_second": "MIXED",
+      "outcome": "NOT_TESTABLE",
+      "not_testable_reason": "NULL_GSEA_SECOND"
+    },
+    {
+      "comparison": "EXP001_vs_primary",
+      "axis": "A",
+      "common_eligible_terms": 59,
+      "eligible_components": 37,
+      "active_components_first": 4,
+      "active_components_second": 7,
+      "dominant_first": "NEGATIVE",
+      "dominant_second": "POSITIVE",
+      "outcome": "DISCORDANT",
+      "not_testable_reason": ""
+    },
+    {
+      "comparison": "EXP001_vs_primary",
+      "axis": "I",
+      "common_eligible_terms": 261,
+      "eligible_components": 146,
+      "active_components_first": 5,
+      "active_components_second": 25,
+      "dominant_first": "POSITIVE",
+      "dominant_second": "POSITIVE",
+      "outcome": "PARTIALLY_CONCORDANT",
+      "not_testable_reason": ""
+    }
+  ],
+  "axes_sensitivity": [
+    {
+      "comparison": "EXP001_vs_sensitivity",
+      "axis": "P",
+      "common_eligible_terms": 176,
+      "eligible_components": 100,
+      "active_components_first": 65,
+      "active_components_second": 2,
+      "dominant_first": "POSITIVE",
+      "dominant_second": "POSITIVE",
+      "outcome": "PARTIALLY_CONCORDANT",
+      "not_testable_reason": ""
+    },
+    {
+      "comparison": "EXP001_vs_sensitivity",
+      "axis": "M",
+      "common_eligible_terms": 84,
+      "eligible_components": 34,
+      "active_components_first": 6,
+      "active_components_second": 6,
+      "dominant_first": "NEGATIVE",
+      "dominant_second": "POSITIVE",
+      "outcome": "DISCORDANT",
+      "not_testable_reason": ""
+    },
+    {
+      "comparison": "EXP001_vs_sensitivity",
+      "axis": "E",
+      "common_eligible_terms": 28,
+      "eligible_components": 22,
+      "active_components_first": 5,
+      "active_components_second": 0,
+      "dominant_first": "NEGATIVE",
+      "dominant_second": "MIXED",
+      "outcome": "NOT_TESTABLE",
+      "not_testable_reason": "NULL_GSEA_SECOND"
+    },
+    {
+      "comparison": "EXP001_vs_sensitivity",
+      "axis": "A",
+      "common_eligible_terms": 59,
+      "eligible_components": 37,
+      "active_components_first": 4,
+      "active_components_second": 6,
+      "dominant_first": "NEGATIVE",
+      "dominant_second": "POSITIVE",
+      "outcome": "DISCORDANT",
+      "not_testable_reason": ""
+    },
+    {
+      "comparison": "EXP001_vs_sensitivity",
+      "axis": "I",
+      "common_eligible_terms": 261,
+      "eligible_components": 146,
+      "active_components_first": 5,
+      "active_components_second": 24,
+      "dominant_first": "POSITIVE",
+      "dominant_second": "POSITIVE",
+      "outcome": "PARTIALLY_CONCORDANT",
+      "not_testable_reason": ""
+    }
+  ],
+  "axes_robustness": [
+    {
+      "comparison": "primary_vs_sensitivity",
+      "axis": "P",
+      "common_eligible_terms": 176,
+      "eligible_components": 100,
+      "active_components_first": 3,
+      "active_components_second": 2,
+      "dominant_first": "POSITIVE",
+      "dominant_second": "POSITIVE",
+      "outcome": "CONCORDANT",
+      "not_testable_reason": ""
+    },
+    {
+      "comparison": "primary_vs_sensitivity",
+      "axis": "M",
+      "common_eligible_terms": 84,
+      "eligible_components": 34,
+      "active_components_first": 6,
+      "active_components_second": 6,
+      "dominant_first": "POSITIVE",
+      "dominant_second": "POSITIVE",
+      "outcome": "CONCORDANT",
+      "not_testable_reason": ""
+    },
+    {
+      "comparison": "primary_vs_sensitivity",
+      "axis": "E",
+      "common_eligible_terms": 28,
+      "eligible_components": 22,
+      "active_components_first": 0,
+      "active_components_second": 0,
+      "dominant_first": "MIXED",
+      "dominant_second": "MIXED",
+      "outcome": "NOT_TESTABLE",
+      "not_testable_reason": "NULL_GSEA_BOTH"
+    },
+    {
+      "comparison": "primary_vs_sensitivity",
+      "axis": "A",
+      "common_eligible_terms": 59,
+      "eligible_components": 37,
+      "active_components_first": 7,
+      "active_components_second": 6,
+      "dominant_first": "POSITIVE",
+      "dominant_second": "POSITIVE",
+      "outcome": "CONCORDANT",
+      "not_testable_reason": ""
+    },
+    {
+      "comparison": "primary_vs_sensitivity",
+      "axis": "I",
+      "common_eligible_terms": 261,
+      "eligible_components": 146,
+      "active_components_first": 25,
+      "active_components_second": 24,
+      "dominant_first": "POSITIVE",
+      "dominant_second": "POSITIVE",
+      "outcome": "PARTIALLY_CONCORDANT",
+      "not_testable_reason": ""
+    }
+  ],
+  "decision": "ANALYSIS_COMPLETE",
+  "interpretation": "Report five frozen axis outcomes; broad five-axis directional concordance is not supported. No composite score was pre-specified."
+}

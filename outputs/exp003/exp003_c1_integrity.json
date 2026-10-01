@@ -1,0 +1,141 @@
+{
+  "dataset": "GSE293956",
+  "context_id": "CTX003",
+  "source_file": "data/raw/exp003/GSE293956_hDF_total_count.txt.gz",
+  "source_url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE293nnn/GSE293956/suppl/GSE293956_hDF_total_count.txt.gz",
+  "sha256": "f30d382112d04c9e3f147fc350f8f58e6306da414a617b5cd4dd52c1fd8ec76d",
+  "file_size_bytes": 491697,
+  "gzip_integrity": "PASS",
+  "delimiter": "TAB",
+  "header": [
+    "name",
+    "hdfcon-2",
+    "hdfcon-3",
+    "hdfexo10-2",
+    "hdfexo10-3",
+    "hdfcon",
+    "hdfexo10"
+  ],
+  "original_physical_data_rows": 1048575,
+  "valid_gene_rows": 60675,
+  "matrix_rows": 60675,
+  "matrix_columns": 7,
+  "structural_padding_rows": 987900,
+  "structural_padding_first_physical_row": 60676,
+  "structural_padding_last_physical_row": 1048575,
+  "structural_padding_pattern_count": 1,
+  "structural_padding_patterns": [
+    {
+      "expression_cells": [
+        "",
+        "",
+        "",
+        "",
+        "#N/A",
+        "#N/A"
+      ],
+      "row_count": 987900
+    }
+  ],
+  "structural_padding_rule": "exclude only a contiguous trailing row with blank gene identifier and every expression cell blank or one of NA/N/A/#N/A/NULL; retain every nonblank gene identifier including all-zero genes",
+  "original_source_preserved": true,
+  "gene_identifier_column": "name",
+  "gene_identifier_namespace": "Ensembl gene ID",
+  "gene_identifier_versioned": false,
+  "expression_columns": [
+    "hdfcon-2",
+    "hdfcon-3",
+    "hdfexo10-2",
+    "hdfexo10-3",
+    "hdfcon",
+    "hdfexo10"
+  ],
+  "annotation_columns": [],
+  "hdf_samples": 6,
+  "ev_samples": 3,
+  "control_samples": 3,
+  "sample_mapping_complete": true,
+  "mapping_basis": {
+    "hdfcon-2": "EXPLICIT_ARM_AND_REPLICATE_LABEL",
+    "hdfcon-3": "EXPLICIT_ARM_AND_REPLICATE_LABEL",
+    "hdfexo10-2": "EXPLICIT_ARM_AND_REPLICATE_LABEL",
+    "hdfexo10-3": "EXPLICIT_ARM_AND_REPLICATE_LABEL",
+    "hdfcon": "UNSUFFIXED_ARM_MATCHES_ONLY_REMAINING_REPLICATE_1",
+    "hdfexo10": "UNSUFFIXED_ARM_MATCHES_ONLY_REMAINING_REPLICATE_1"
+  },
+  "missing_values": 0,
+  "negative_values": 0,
+  "non_numeric_values": 0,
+  "non_integer_values": 0,
+  "missing_gene_ids": 0,
+  "invalid_blank_identifier_rows": 0,
+  "biological_rows_after_padding": 0,
+  "duplicate_gene_ids": 0,
+  "duplicate_gene_id_examples": [],
+  "duplicate_sample_columns": 0,
+  "duplicate_sample_column_pairs": [],
+  "duplicate_sample_column_names": 0,
+  "malformed_rows": 0,
+  "count_type": "RAW_INTEGER_COUNTS_COMPATIBLE",
+  "zero_count_genes": 29470,
+  "nonzero_genes": 31205,
+  "library_sizes": [
+    {
+      "matrix_column": "hdfcon-2",
+      "sample": "hDF_con_2",
+      "condition": "CONTROL",
+      "library_size": 16185815
+    },
+    {
+      "matrix_column": "hdfcon-3",
+      "sample": "hDF_con_3",
+      "condition": "CONTROL",
+      "library_size": 15651359
+    },
+    {
+      "matrix_column": "hdfexo10-2",
+      "sample": "hDF_EVs_2",
+      "condition": "HDF_EV",
+      "library_size": 16580504
+    },
+    {
+      "matrix_column": "hdfexo10-3",
+      "sample": "hDF_EVs_3",
+      "condition": "HDF_EV",
+      "library_size": 16735394
+    },
+    {
+      "matrix_column": "hdfcon",
+      "sample": "hDF_con_1",
+      "condition": "CONTROL",
+      "library_size": 14756355
+    },
+    {
+      "matrix_column": "hdfexo10",
+      "sample": "hDF_EVs_1",
+      "condition": "HDF_EV",
+      "library_size": 15728751
+    }
+  ],
+  "library_size_min": 14756355,
+  "library_size_max": 16735394,
+  "library_size_ratio": 1.1341143527653001,
+  "recipient_donor_count": "UNKNOWN",
+  "recipient_donor_mapping": "UNKNOWN",
+  "ev_preparation_count": "UNKNOWN",
+  "ev_preparation_to_library_mapping": "UNKNOWN",
+  "control_definition": "control-labeled hDF without recorded EV; exact RNA-seq medium and vehicle UNKNOWN",
+  "pairing": "UNKNOWN",
+  "de_suitability": "SUITABLE_WITH_LIMITATIONS",
+  "limitations": [
+    "Donor number, pooling, and donor-to-library map remain unknown",
+    "Independent EV preparation number and preparation-to-library map remain unknown",
+    "Exact RNA-seq control medium, vehicle, and recipient EV-depleted-serum status remain unknown",
+    "Pairing and batch structure remain unknown",
+    "Unnumbered hdfcon and hdfexo10 columns map to replicate-1 labels by one-to-one elimination, not a deposited column-to-GSM key",
+    "The deposited worksheet-sized file contains a contiguous trailing structural padding block; the parser excludes only blank-identifier blank/NA rows and preserves all zero-count genes",
+    "C1 assesses matrix integrity only; no filtering, normalization, or DE design has been selected"
+  ],
+  "errors": [],
+  "overall_pass": true
+}

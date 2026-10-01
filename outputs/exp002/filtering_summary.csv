@@ -1,0 +1,4 @@
+rule,definition,genes_retained,genes_excluded,primary
+A,estimated gene count >= 10 in at least 4 of 16 samples,16217,21090,False
+B,CPM >= 1 in at least 2 of 16 samples,14046,23261,False
+C,CPM >= 1 in at least 4 of 16 samples,13724,23583,True

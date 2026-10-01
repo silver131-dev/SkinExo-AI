@@ -1,0 +1,100 @@
+{
+  "dataset": "GSE293186",
+  "experiment": "EXP001",
+  "checkpoint": "EXP001-C3.5 SkinExo Evidence Framework",
+  "papers_screened": 16,
+  "papers_verified": 16,
+  "papers_corrected": 5,
+  "papers_unverified": 0,
+  "primary_research_count": 9,
+  "review_count": 7,
+  "public_datasets_found": 4,
+  "EXP002_dataset_candidates": [
+    "10.17632/gm29wd7b94.1"
+  ],
+  "EXP003_dataset_candidates": [
+    "altoslabs/scGeneScope"
+  ],
+  "EXP004_dataset_candidates": [
+    "GSE141814",
+    "10.17632/gm29wd7b94.1"
+  ],
+  "EXP005_dataset_candidates": [
+    "altoslabs/scGeneScope"
+  ],
+  "EXP006_dataset_candidates": [
+    "10.17632/gm29wd7b94.1",
+    "GSE293186"
+  ],
+  "direct_P_evidence_count": 3,
+  "direct_M_evidence_count": 2,
+  "direct_E_evidence_count": 3,
+  "direct_A_evidence_count": 0,
+  "direct_I_evidence_count": 2,
+  "circularity_risks": [
+    "P00 and GSE293186 are the same study/dataset; no independent validation.",
+    "Reviews may cite P00 or overlapping primary papers; do not count them as independent experiments.",
+    "C4 terms or gene sets chosen after inspecting DEGs could bias interpretation.",
+    "Gene examples chosen for narrative fit could bias biological interpretation.",
+    "L10 reuses GSE141814; L15 reuses scGeneScope, so each shared dataset counts once."
+  ],
+  "C4_questions": [
+    {
+      "id": "Q1",
+      "question": "Are cell-cycle and proliferation programs represented in the ECEV response?",
+      "methods": "ORA;GSEA",
+      "databases": "GO Biological Process;Reactome;MSigDB Hallmark",
+      "rationale": "Direct proliferation measurements in P00, L06, L11; P00 is same study."
+    },
+    {
+      "id": "Q2",
+      "question": "Are migration and motility programs represented?",
+      "methods": "ORA;GSEA",
+      "databases": "GO Biological Process;Reactome",
+      "rationale": "L11 directly measured fibroblast migration; this is external EV evidence."
+    },
+    {
+      "id": "Q3",
+      "question": "Are ECM organization/remodeling programs altered, and in which direction?",
+      "methods": "ORA;GSEA",
+      "databases": "GO Biological Process;Reactome",
+      "rationale": "P00, L06, L11 measured ECM-related outcomes; more collagen does not imply regeneration."
+    },
+    {
+      "id": "Q4",
+      "question": "Are angiogenesis or endothelial-interaction programs represented?",
+      "methods": "ORA;GSEA",
+      "databases": "GO Biological Process;Reactome",
+      "rationale": "Endothelial EV source in P00 motivates the question but angiogenesis was not directly measured in EXP001."
+    },
+    {
+      "id": "Q5",
+      "question": "Are inflammatory/immune programs altered in fibroblasts?",
+      "methods": "ORA;GSEA",
+      "databases": "GO Biological Process;Reactome;MSigDB Hallmark",
+      "rationale": "L05 directly measured macrophage inflammatory response in a different model; applicability to fibroblasts is unresolved."
+    },
+    {
+      "id": "Q6",
+      "question": "Does the ranked response overlap externally defined regenerative or fibrotic skin-repair programs?",
+      "methods": "GSEA;ORA",
+      "databases": "Externally defined skin-repair signatures; GO Biological Process;Reactome",
+      "rationale": "Use independent signatures with species and cell-type mapping and non-overlapping training data; GSE141814 has pooled mouse libraries."
+    }
+  ],
+  "bridge_gene_count": 19,
+  "bridge_evidence_counts": {
+    "DIRECT": 1,
+    "INDIRECT": 1,
+    "CONFLICTING": 0,
+    "INSUFFICIENT": 17
+  },
+  "important_corrections": {
+    "L04": "Supplied year 2025; journal record is 2026.",
+    "L05": "Supplied title omitted the M2 macrophage/p38 MAPK clause.",
+    "L10": "Supplied title omitted the final word 'Fates'.",
+    "L11": "Supplied PMCID points to this EV-fibroblast paper, not the supplied scarless-versus-fibrotic landscape title; that title was not verified.",
+    "L15": "Supplied ICLR-related venue; official accepted-paper list identifies ICML 2026 FM4LS workshop."
+  },
+  "overall_pass": true
+}

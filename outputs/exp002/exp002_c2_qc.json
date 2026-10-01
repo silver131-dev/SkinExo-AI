@@ -1,0 +1,270 @@
+{
+  "dataset": "GSE251807",
+  "experiment": "EXP002",
+  "checkpoint": "EXP002-C2",
+  "c1r_decision": "LIMITED_GO",
+  "shared_transcripts_used": 189509,
+  "mapped_gene_count": 37307,
+  "unmapped_transcript_count": 0,
+  "ambiguous_mapping_count": 0,
+  "tximport_version": "1.30.0",
+  "counts_from_abundance": "no",
+  "count_representation": "estimated gene-level counts derived from Salmon transcript quantification",
+  "sample_count": 16,
+  "ev_count": 8,
+  "control_count": 8,
+  "batch_count": 2,
+  "aggregation_information_loss": {
+    "per_sample": {
+      "DMEM_1": {
+        "retained_percentage": 98.1802,
+        "excluded_percentage": 1.8198
+      },
+      "DMEM_2": {
+        "retained_percentage": 98.172,
+        "excluded_percentage": 1.828
+      },
+      "DMEM_3": {
+        "retained_percentage": 98.1665,
+        "excluded_percentage": 1.8335
+      },
+      "DMEM_4": {
+        "retained_percentage": 98.2009,
+        "excluded_percentage": 1.7991
+      },
+      "EV_1": {
+        "retained_percentage": 98.2331,
+        "excluded_percentage": 1.7669
+      },
+      "EV_2": {
+        "retained_percentage": 98.2596,
+        "excluded_percentage": 1.7404
+      },
+      "EV_3": {
+        "retained_percentage": 98.2455,
+        "excluded_percentage": 1.7545
+      },
+      "EV_4": {
+        "retained_percentage": 98.2144,
+        "excluded_percentage": 1.7856
+      },
+      "DMEM_5": {
+        "retained_percentage": 97.167,
+        "excluded_percentage": 2.833
+      },
+      "DMEM_6": {
+        "retained_percentage": 97.1824,
+        "excluded_percentage": 2.8176
+      },
+      "DMEM_7": {
+        "retained_percentage": 97.1724,
+        "excluded_percentage": 2.8276
+      },
+      "DMEM_8": {
+        "retained_percentage": 97.1714,
+        "excluded_percentage": 2.8286
+      },
+      "EV_5": {
+        "retained_percentage": 97.278,
+        "excluded_percentage": 2.722
+      },
+      "EV_6": {
+        "retained_percentage": 97.2916,
+        "excluded_percentage": 2.7084
+      },
+      "EV_7": {
+        "retained_percentage": 97.2788,
+        "excluded_percentage": 2.7212
+      },
+      "EV_8": {
+        "retained_percentage": 97.2645,
+        "excluded_percentage": 2.7355
+      }
+    },
+    "min_excluded_percentage": 1.7404,
+    "max_excluded_percentage": 2.833
+  },
+  "filter_rules": [
+    {
+      "rule": "A",
+      "definition": "estimated gene count >= 10 in at least 4 of 16 samples",
+      "genes_retained": 16217,
+      "genes_excluded": 21090,
+      "primary": false
+    },
+    {
+      "rule": "B",
+      "definition": "CPM >= 1 in at least 2 of 16 samples",
+      "genes_retained": 14046,
+      "genes_excluded": 23261,
+      "primary": false
+    },
+    {
+      "rule": "C",
+      "definition": "CPM >= 1 in at least 4 of 16 samples",
+      "genes_retained": 13724,
+      "genes_excluded": 23583,
+      "primary": true
+    }
+  ],
+  "primary_filter": "CPM >= 1 in at least 4 of 16 samples",
+  "filtered_gene_count": 13724,
+  "qc_transformation": "log2(library-size CPM + 1) on genes retained by primary filter",
+  "library_sizes": {
+    "DMEM_1": 45337115.696,
+    "DMEM_2": 53863064.850999996,
+    "DMEM_3": 47022449.915,
+    "DMEM_4": 37678522.315000005,
+    "EV_1": 44121825.704,
+    "EV_2": 47778843.506,
+    "EV_3": 38978691.711,
+    "EV_4": 50978385.419,
+    "DMEM_5": 67246296.364,
+    "DMEM_6": 59696371.908,
+    "DMEM_7": 57015265.77599999,
+    "DMEM_8": 49201651.86,
+    "EV_5": 59671484.555,
+    "EV_6": 55637483.063999996,
+    "EV_7": 51896383.271,
+    "EV_8": 92722948.48200001
+  },
+  "library_size_min": 37678522.315000005,
+  "library_size_median": 51437384.345,
+  "library_size_max": 92722948.48200001,
+  "library_size_ratio": 2.460896627177084,
+  "correlation_summary": {
+    "within_ev": 0.9649203619101085,
+    "within_control": 0.9688081433712549,
+    "within_batch_1": 0.9874138212518035,
+    "within_batch_2": 0.9882110633982112,
+    "between_batches": 0.9486863852160223
+  },
+  "pca_pc1_variance": 0.6608775346733384,
+  "pca_pc2_variance": 0.06624438195998474,
+  "pca_coordinates": {
+    "DMEM_1": {
+      "PC1": 35.324336941230705,
+      "PC2": -10.364317918804637
+    },
+    "DMEM_2": {
+      "PC1": 34.95042467699543,
+      "PC2": -13.245395870916427
+    },
+    "DMEM_3": {
+      "PC1": 27.170621875782455,
+      "PC2": -14.329599709201501
+    },
+    "DMEM_4": {
+      "PC1": 31.46883546853454,
+      "PC2": -14.814245349328907
+    },
+    "EV_1": {
+      "PC1": 35.31148993148066,
+      "PC2": 11.336540393757286
+    },
+    "EV_2": {
+      "PC1": 35.614344798895,
+      "PC2": 9.95799244864111
+    },
+    "EV_3": {
+      "PC1": 40.80466561369717,
+      "PC2": 12.234558126765203
+    },
+    "EV_4": {
+      "PC1": 35.9456740052862,
+      "PC2": 14.829060620483448
+    },
+    "DMEM_5": {
+      "PC1": -30.13004073242388,
+      "PC2": -9.394931194155983
+    },
+    "DMEM_6": {
+      "PC1": -37.60727597643985,
+      "PC2": -7.415312238639059
+    },
+    "DMEM_7": {
+      "PC1": -36.24362647119213,
+      "PC2": -7.633573871833131
+    },
+    "DMEM_8": {
+      "PC1": -34.974243242472554,
+      "PC2": -7.126372111797722
+    },
+    "EV_5": {
+      "PC1": -35.80466260696454,
+      "PC2": 6.331973273523719
+    },
+    "EV_6": {
+      "PC1": -36.39109862404601,
+      "PC2": 7.0609235241556485
+    },
+    "EV_7": {
+      "PC1": -36.60853404279237,
+      "PC2": 7.204755224783668
+    },
+    "EV_8": {
+      "PC1": -28.83091161557077,
+      "PC2": 15.36794465256732
+    }
+  },
+  "pca_robustness_summary": {
+    "all_filtered_genes": {
+      "feature_count": 13724,
+      "pc1_variance": 0.6608775346733384,
+      "pc2_variance": 0.06624438195998474,
+      "pairwise_distance_spearman_vs_all": 1.0,
+      "pc1_batch_eta_squared_descriptive": 0.9906084374063094,
+      "pc1_condition_eta_squared_descriptive": 0.0013055062588527555
+    },
+    "top_5000_variable_genes": {
+      "feature_count": 5000,
+      "pc1_variance": 0.6873962800903288,
+      "pc2_variance": 0.05867936032746167,
+      "pairwise_distance_spearman_vs_all": 0.9862559899993053,
+      "pc1_batch_eta_squared_descriptive": 0.9918265320603805,
+      "pc1_condition_eta_squared_descriptive": 0.0008479433445999656
+    },
+    "top_2000_variable_genes": {
+      "feature_count": 2000,
+      "pc1_variance": 0.6729283139008033,
+      "pc2_variance": 0.056834976966712164,
+      "pairwise_distance_spearman_vs_all": 0.9493298145704563,
+      "pc1_batch_eta_squared_descriptive": 0.9932290888547719,
+      "pc1_condition_eta_squared_descriptive": 0.00011337313159260347
+    }
+  },
+  "EV8_status": "QC_REVIEW_NEEDED",
+  "EV8_qc": {
+    "ena_read_depth_ratio_to_median": 1.8371,
+    "estimated_gene_total_ratio_to_median": 1.8026373164718124,
+    "mean_within_ev_correlation": 0.9637023574355926,
+    "nearest_pca_neighbor_ratio_to_median": 5.204126696287837
+  },
+  "batch_effect_summary": {
+    "pc1_batch_eta_squared_descriptive": 0.9906084374063094,
+    "pc2_batch_eta_squared_descriptive": 0.0024957324020845185,
+    "pc1_condition_eta_squared_descriptive": 0.0013055062588527555,
+    "pc2_condition_eta_squared_descriptive": 0.9185431896974986,
+    "batch_balanced_with_condition": true,
+    "recommended_de_design": "~ batch + condition",
+    "interpretation": "Descriptive unsupervised QC only; labels applied after PCA fitting",
+    "qualitative": "PC1 aligns strongly with batch; PC2 aligns descriptively with condition; neither axis establishes a biological effect"
+  },
+  "recommended_de_design": "~ batch + condition",
+  "primary_validation_endpoint": "Directional concordance of PREDEFINED P/M/E/A/I GSEA program families across EXP001 and EXP002",
+  "secondary_validation_endpoints": [
+    "GSEA NES correlation across shared eligible gene sets",
+    "Leading-edge gene overlap for pre-specified pathways",
+    "Gene-level log2FC directional concordance across shared tested genes",
+    "Global signed-Wald response similarity",
+    "Pathway-level clustering/retrieval (descriptive only with two studies)"
+  ],
+  "sample_warnings": [
+    "EV_8: estimated gene total is 1.80 times the median; review depth, no removal",
+    "EV_8: nearest-neighbor distance in PC1/PC2 exceeds twice the sample median; review, no removal",
+    "EV_8 requires sample-level review; it remains included",
+    "Strong batch alignment on PC1; batch adjustment remains planned for later DE"
+  ],
+  "overall_pass": false,
+  "decision": "REVIEW REQUIRED"
+}

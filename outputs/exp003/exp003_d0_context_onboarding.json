@@ -1,0 +1,123 @@
+{
+  "dataset": "GSE293956",
+  "context_id": "CTX003",
+  "study_verified": true,
+  "study_title": "Mechanism of action of hDF-EVs on fibroblasts and keratinocytes [RNA-seq]",
+  "primary_paper": "Liu et al. 2025; DOI 10.1002/cbin.70063; PMID 40728022",
+  "bioproject": "PRJNA1247494",
+  "sra_study": "SRP576981",
+  "platform": "Illumina NovaSeq 6000 (GPL24676)",
+  "independence_status": "INDEPENDENT",
+  "independence_from": {
+    "CTX001": "INDEPENDENT",
+    "CTX002": "INDEPENDENT"
+  },
+  "total_samples": 12,
+  "hdf_samples": 6,
+  "hdf_ev_samples": 3,
+  "hdf_control_samples": 3,
+  "hacaT_samples": 6,
+  "hacaT_ev_samples": 3,
+  "hacaT_control_samples": 3,
+  "recipient_donor_count": "UNKNOWN",
+  "ev_preparation_count": "UNKNOWN",
+  "dose": "10 ug/mL EV protein by BCA in paper; numeric dose not in GEO",
+  "duration_h": "72 h in paper; 3 days in GEO",
+  "control_definition": "GEO control label; paper calls untreated control; exact RNA-seq medium, vehicle, and EV-depleted-serum status UNKNOWN",
+  "raw_data_available": true,
+  "processed_data_available": true,
+  "processed_files": [
+    {
+      "filename": "GSE293956_hDF_total_count.txt.gz",
+      "bytes": 491697,
+      "format": "gzip text; author-described raw counts",
+      "scope": "hDF sample-resolved matrix; header uninspected",
+      "data_level": "processed"
+    },
+    {
+      "filename": "GSE293956_HaCaT_total_count.txt.gz",
+      "bytes": 467504,
+      "format": "gzip text; author-described raw counts",
+      "scope": "HaCaT sample-resolved matrix; header uninspected",
+      "data_level": "processed"
+    }
+  ],
+  "normalized_counts_available": "NOT_LISTED_IN_GEO",
+  "tpm_fpkm_available": "NOT_LISTED_IN_GEO",
+  "deg_table_available": "NOT_LISTED_IN_GEO",
+  "preferred_reconstruction_route": "A",
+  "preferred_reconstruction_description": "Official hDF raw gene-count matrix, subject to C1 header, integer, gene-ID, and sample mapping checks",
+  "phenotype_anchor_linkage": {
+    "CCK-8 proliferation": {
+      "classification": "SAME_EV_DIFFERENT_TIME",
+      "recipient": "hDF",
+      "dose": "graded; 10 ug/mL among tested doses",
+      "time": "24 h",
+      "note": "Human hDF assay; 24 h differs from 72 h RNA-seq"
+    },
+    "scratch migration": {
+      "classification": "SAME_EV_DIFFERENT_TIME",
+      "recipient": "hDF",
+      "dose": "10 ug/mL",
+      "time": "24 h",
+      "note": "Human hDF assay; 24 h differs from 72 h RNA-seq"
+    },
+    "ERK1/ERK2 qPCR": {
+      "classification": "SAME_EV_DIFFERENT_TIME",
+      "recipient": "hDF",
+      "dose": "10 ug/mL",
+      "time": "24 h",
+      "note": "Targeted mRNA assay, not a functional phenotype or 72 h transcriptome result"
+    },
+    "mouse wound closure": {
+      "classification": "SAME_EV_DIFFERENT_MODEL",
+      "recipient": "mouse excisional wound",
+      "dose": "5 uL of 10 ug/uL EV preparation",
+      "time": "days 0-8",
+      "note": "Whole-wound in-vivo model"
+    },
+    "scar length": {
+      "classification": "SAME_EV_DIFFERENT_MODEL",
+      "recipient": "mouse excisional wound",
+      "dose": "5 uL of 10 ug/uL EV preparation",
+      "time": "day 14",
+      "note": "Mouse histology, not hDF RNA-seq phenotype"
+    },
+    "collagen deposition": {
+      "classification": "SAME_EV_DIFFERENT_MODEL",
+      "recipient": "mouse excisional wound",
+      "dose": "5 uL of 10 ug/uL EV preparation",
+      "time": "day 14",
+      "note": "Mouse histology, not hDF RNA-seq phenotype"
+    },
+    "cytokine array": {
+      "classification": "SAME_EV_DIFFERENT_MODEL",
+      "recipient": "mouse wound tissue",
+      "dose": "5 uL of 10 ug/uL EV preparation",
+      "time": "day 1",
+      "note": "Mouse growth-factor array, not recipient hDF assay"
+    }
+  },
+  "cargo_companion_dataset": {
+    "dataset_id": "GSE293957",
+    "status": "AVAILABLE_NOT_ANALYZED",
+    "same_study": true,
+    "same_ev_source": true,
+    "exact_ev_preparation_linkage": "UNKNOWN",
+    "platform": "Affymetrix miRNA-4 Array (GPL19117)",
+    "sample_count": 3,
+    "source": "data/metadata/exp003_d0_sources/GSE293957_brief.txt"
+  },
+  "framework_schema_complete": true,
+  "eligibility_decision": "ELIGIBLE_WITH_LIMITATIONS",
+  "limitations": [
+    "Exact RNA-seq control medium, vehicle, and EV-depleted-serum status unresolved",
+    "Recipient donor count, pooling, and donor-to-library mapping unresolved",
+    "Independent EV preparation count, pooling, and preparation-to-library mapping unresolved",
+    "GEO gives three-day exposure but no numeric dose; 10 ug/mL is from the primary paper",
+    "Replicate labels 1-3 do not demonstrate independent biological replicates or pairing",
+    "Official hDF count matrix is listed but remains uninspected until EXP003-C1"
+  ],
+  "overall_pass": true,
+  "source_checkpoint": "FRAMEWORK-F1"
+}

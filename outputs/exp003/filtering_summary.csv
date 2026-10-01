@@ -1,0 +1,5 @@
+filter_id,rule,primary,genes_before_filtering,zero_count_genes,genes_retained,genes_removed
+CPM_0.5_IN_3,CPM >= 0.5 in at least 3 of 6 samples,FALSE,60675,29470,15504,45171
+CPM_1_IN_2,CPM >= 1 in at least 2 of 6 samples,FALSE,60675,29470,14235,46440
+CPM_1_IN_3,CPM >= 1 in at least 3 of 6 samples,TRUE,60675,29470,13874,46801
+CPM_2_IN_3,CPM >= 2 in at least 3 of 6 samples,FALSE,60675,29470,12393,48282

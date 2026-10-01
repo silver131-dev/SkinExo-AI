@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "framework_version": "F2",
+  "atlas_version": "F2-2026-10-01",
+  "counts": {
+    "contexts": 3,
+    "components": 339,
+    "response_records": 1017,
+    "tested_response_records": 1010,
+    "activity_states": {
+      "ACTIVE_NEGATIVE": 19,
+      "ACTIVE_POSITIVE": 139,
+      "NOT_TESTED": 7,
+      "OBSERVED_NULL": 852
+    },
+    "axis_summaries": 15,
+    "phenotype_anchors": 5,
+    "reliability_records": 39
+  },
+  "checks": {
+    "no_fourth_context": true,
+    "null_unknown_distinct": true,
+    "GSE293957_analysis_leakage": "NONE",
+    "retrieval_implemented": false
+  },
+  "errors": []
+}

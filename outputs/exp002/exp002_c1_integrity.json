@@ -1,0 +1,198 @@
+{
+  "dataset": "GSE251807",
+  "checkpoint": "EXP002-C1",
+  "study_independent_from_EXP001": true,
+  "expected_library_count": 16,
+  "verified_library_count": 16,
+  "treatment_library_count": 8,
+  "control_library_count": 8,
+  "recipient_donor_count": 1,
+  "recipient_donor_count_basis": "One documented adult NHDF commercial donor lot 412Z029.2",
+  "ev_donor_count": 1,
+  "ev_donor_count_basis": "One documented individual-donor hBM-MSC commercial lot 438Z012.1",
+  "ev_preparation_count": null,
+  "batch_count": 2,
+  "batch_condition_counts": {
+    "1": {
+      "CTRL_DMEM": 4,
+      "MSC_sEV": 4
+    },
+    "2": {
+      "CTRL_DMEM": 4,
+      "MSC_sEV": 4
+    }
+  },
+  "biological_unit_count": 16,
+  "biological_unit_count_basis": "Author-reported biological replicates: separately cultured NHDF wells; not independent human donors",
+  "technical_replicate_count": 0,
+  "technical_replicate_count_basis": "No repeats identified: one unique GSM, BioSample, SRX, and SRR per library; undisclosed technical splits cannot be ruled out",
+  "paired_design": "NOT_DOCUMENTED",
+  "condition_batch_confounding": false,
+  "condition_donor_confounding": false,
+  "condition_donor_confounding_note": "Both arms share the only documented recipient donor lot; donor effect is not estimable",
+  "quantification_type": "Salmon transcript-level TPM, effective length, and estimated NumReads",
+  "sequencing_platform": "Illumina NovaSeq 6000",
+  "library_strategy": "RNA-Seq; cDNA selection per ENA",
+  "salmon_version": null,
+  "reference_annotation": "GRCh38.p14 assembly reported; exact transcriptome/annotation release unknown",
+  "transcript_identifier_type": "versioned Ensembl transcript ID (ENST)",
+  "transcript_count_per_library_by_batch": {
+    "1": 194142,
+    "2": 194182
+  },
+  "transcript_set_sha256_by_batch": {
+    "1": "1588ae6567f3d00da3517c02d3a90ba9643fb1a2c0506f669c828fa568fbcc03",
+    "2": "d8262a245d142c3dc7c4cce02e31116d1b819ff445fa136c3c54eaa37fea2b10"
+  },
+  "transcript_ids_shared_between_batches": 189509,
+  "transcript_ids_unique_to_batch_1": 4633,
+  "transcript_ids_unique_to_batch_2": 4673,
+  "transcript_reference_same_between_batches": false,
+  "tx2gene_mapping_status": "BLOCKED_DIFFERENT_BATCH_TRANSCRIPT_SETS_AND_UNKNOWN_EXACT_ANNOTATION_RELEASE",
+  "gene_level_counts_reconstructed": false,
+  "normalized_gene_matrix_is_raw_counts": false,
+  "missing_values": 0,
+  "negative_values": 0,
+  "nonnumeric_values": 0,
+  "duplicate_libraries": 0,
+  "library_sizes": {
+    "DMEM_1": 46177468.956,
+    "DMEM_2": 54866027.925,
+    "DMEM_3": 47900706.936,
+    "DMEM_4": 38368802.909,
+    "DMEM_5": 69206920.035,
+    "DMEM_6": 61427143.944,
+    "DMEM_7": 58674359.804,
+    "DMEM_8": 50633880.005,
+    "EV_1": 44915444.988,
+    "EV_2": 48625090.974,
+    "EV_3": 39674792.9,
+    "EV_4": 51905207.018,
+    "EV_5": 61341207.007,
+    "EV_6": 57186322.048,
+    "EV_7": 53348085.015,
+    "EV_8": 95330727.15
+  },
+  "sample_mapping": {
+    "GSM7988505": {
+      "srr_id": "SRR27319328",
+      "sample_name": "DMEM_1",
+      "condition": "CTRL_DMEM",
+      "batch": "1"
+    },
+    "GSM7988506": {
+      "srr_id": "SRR27319327",
+      "sample_name": "DMEM_2",
+      "condition": "CTRL_DMEM",
+      "batch": "1"
+    },
+    "GSM7988507": {
+      "srr_id": "SRR27319326",
+      "sample_name": "DMEM_3",
+      "condition": "CTRL_DMEM",
+      "batch": "1"
+    },
+    "GSM7988508": {
+      "srr_id": "SRR27319325",
+      "sample_name": "DMEM_4",
+      "condition": "CTRL_DMEM",
+      "batch": "1"
+    },
+    "GSM7988509": {
+      "srr_id": "SRR27319324",
+      "sample_name": "EV_1",
+      "condition": "MSC_sEV",
+      "batch": "1"
+    },
+    "GSM7988510": {
+      "srr_id": "SRR27319323",
+      "sample_name": "EV_2",
+      "condition": "MSC_sEV",
+      "batch": "1"
+    },
+    "GSM7988511": {
+      "srr_id": "SRR27319322",
+      "sample_name": "EV_3",
+      "condition": "MSC_sEV",
+      "batch": "1"
+    },
+    "GSM7988512": {
+      "srr_id": "SRR27319321",
+      "sample_name": "EV_4",
+      "condition": "MSC_sEV",
+      "batch": "1"
+    },
+    "GSM7988517": {
+      "srr_id": "SRR27319316",
+      "sample_name": "DMEM_5",
+      "condition": "CTRL_DMEM",
+      "batch": "2"
+    },
+    "GSM7988518": {
+      "srr_id": "SRR27319315",
+      "sample_name": "DMEM_6",
+      "condition": "CTRL_DMEM",
+      "batch": "2"
+    },
+    "GSM7988519": {
+      "srr_id": "SRR27319314",
+      "sample_name": "DMEM_7",
+      "condition": "CTRL_DMEM",
+      "batch": "2"
+    },
+    "GSM7988520": {
+      "srr_id": "SRR27319313",
+      "sample_name": "DMEM_8",
+      "condition": "CTRL_DMEM",
+      "batch": "2"
+    },
+    "GSM7988521": {
+      "srr_id": "SRR27319312",
+      "sample_name": "EV_5",
+      "condition": "MSC_sEV",
+      "batch": "2"
+    },
+    "GSM7988522": {
+      "srr_id": "SRR27319311",
+      "sample_name": "EV_6",
+      "condition": "MSC_sEV",
+      "batch": "2"
+    },
+    "GSM7988523": {
+      "srr_id": "SRR27319310",
+      "sample_name": "EV_7",
+      "condition": "MSC_sEV",
+      "batch": "2"
+    },
+    "GSM7988524": {
+      "srr_id": "SRR27319309",
+      "sample_name": "EV_8",
+      "condition": "MSC_sEV",
+      "batch": "2"
+    }
+  },
+  "quantification_completeness": {
+    "all_16_official_files_present_and_readable": true,
+    "all_files_have_expected_columns": true,
+    "within_batch_transcript_sets_identical": true,
+    "between_batch_transcript_sets_identical": false
+  },
+  "library_size_min": 38368802.909,
+  "library_size_median": 52626646.016,
+  "library_size_max": 95330727.15,
+  "library_size_ratio": 2.4846,
+  "candidate_design_formula": "~ batch + condition (provisional; only after EV-preparation and culture-unit clarification)",
+  "primary_statistical_unit": "independently cultured recipient NHDF well within one donor lot (provisional)",
+  "major_warnings": [
+    "One recipient NHDF product lot (412Z029.2): 16 libraries are not 16 independent human donors.",
+    "One documented MSC EV-source product lot (438Z012.1); number/assignment of independent EV isolations is not stated.",
+    "Culture-well biological replicates are author-reported, but well-to-library and any within-batch pairing identifiers are not deposited.",
+    "Salmon index transcriptome, annotation release, transcript-to-gene map, and Salmon version are not stated; gene-level estimated counts were not reconstructed.",
+    "NumReads sums are estimated assigned fragments, not raw sequencing library-size/read-depth measurements.",
+    "GEO gene-level supplement contains normalized noninteger values and is unsuitable as raw count input.",
+    "Batch-specific Salmon transcript reference sets differ: 194,142 IDs in batch 1, 194,182 in batch 2, 189,509 shared; exact annotation/index provenance must be resolved before gene-level reconstruction.",
+    "EV_8 has 95,330,727 estimated assigned fragments, 1.81 times the median; sequencing-depth QC is needed in C2."
+  ],
+  "overall_pass": false,
+  "decision": "REVIEW REQUIRED"
+}

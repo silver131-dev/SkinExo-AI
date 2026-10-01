@@ -1,0 +1,361 @@
+{
+  "dataset": "GSE293956",
+  "context_id": "CTX003",
+  "sample_count": 6,
+  "ev_count": 3,
+  "control_count": 3,
+  "source_file": "data/raw/exp003/GSE293956_hDF_total_count.txt.gz",
+  "source_sha256": "f30d382112d04c9e3f147fc350f8f58e6306da414a617b5cd4dd52c1fd8ec76d",
+  "c1_parser_rule_reused": true,
+  "original_physical_data_rows": 1048575,
+  "valid_gene_rows": 60675,
+  "structural_padding_rows": 987900,
+  "genes_before_filtering": 60675,
+  "zero_count_genes": 29470,
+  "filter_candidates": [
+    {
+      "filter_id": "CPM_0.5_IN_3",
+      "rule": "CPM >= 0.5 in at least 3 of 6 samples",
+      "primary": "FALSE",
+      "genes_before_filtering": 60675,
+      "zero_count_genes": 29470,
+      "genes_retained": 15504,
+      "genes_removed": 45171
+    },
+    {
+      "filter_id": "CPM_1_IN_2",
+      "rule": "CPM >= 1 in at least 2 of 6 samples",
+      "primary": "FALSE",
+      "genes_before_filtering": 60675,
+      "zero_count_genes": 29470,
+      "genes_retained": 14235,
+      "genes_removed": 46440
+    },
+    {
+      "filter_id": "CPM_1_IN_3",
+      "rule": "CPM >= 1 in at least 3 of 6 samples",
+      "primary": "TRUE",
+      "genes_before_filtering": 60675,
+      "zero_count_genes": 29470,
+      "genes_retained": 13874,
+      "genes_removed": 46801
+    },
+    {
+      "filter_id": "CPM_2_IN_3",
+      "rule": "CPM >= 2 in at least 3 of 6 samples",
+      "primary": "FALSE",
+      "genes_before_filtering": 60675,
+      "zero_count_genes": 29470,
+      "genes_retained": 12393,
+      "genes_removed": 48282
+    }
+  ],
+  "primary_filter": "CPM >= 1 in at least 3 of 6 samples",
+  "filtered_gene_count": 13874,
+  "qc_transformation": {
+    "transformation": "log2(CPM + 1)",
+    "library_size_denominator": "raw column sum over all 60,675 valid gene rows",
+    "features": "genes passing the frozen primary filter",
+    "purpose": "unsupervised sample QC only",
+    "future_de_input": "untransformed raw integer counts"
+  },
+  "library_qc": [
+    {
+      "matrix_column": "hdfcon-2",
+      "sample": "hDF_con_2",
+      "gsm_id": "GSM8895187",
+      "condition": "CONTROL",
+      "raw_library_size": 16185815,
+      "genes_detected": 23672,
+      "zero_fraction": 0.6098557890399671,
+      "median_nonzero_count": 40.0,
+      "count_q75": 9.0,
+      "count_q90": 380.0,
+      "count_q95": 919.0,
+      "count_q99": 3813.6000000000204,
+      "maximum_count": 711050
+    },
+    {
+      "matrix_column": "hdfcon-3",
+      "sample": "hDF_con_3",
+      "gsm_id": "GSM8895188",
+      "condition": "CONTROL",
+      "raw_library_size": 15651359,
+      "genes_detected": 23532,
+      "zero_fraction": 0.6121631644004945,
+      "median_nonzero_count": 41.0,
+      "count_q75": 8.0,
+      "count_q90": 361.0,
+      "count_q95": 869.0,
+      "count_q99": 3625.780000000006,
+      "maximum_count": 704272
+    },
+    {
+      "matrix_column": "hdfexo10-2",
+      "sample": "hDF_EVs_2",
+      "gsm_id": "GSM8895190",
+      "condition": "HDF_EV",
+      "raw_library_size": 16580504,
+      "genes_detected": 23344,
+      "zero_fraction": 0.6152616398846312,
+      "median_nonzero_count": 45.0,
+      "count_q75": 9.0,
+      "count_q90": 398.0,
+      "count_q95": 946.2999999999956,
+      "count_q99": 3940.1200000000244,
+      "maximum_count": 665681
+    },
+    {
+      "matrix_column": "hdfexo10-3",
+      "sample": "hDF_EVs_3",
+      "gsm_id": "GSM8895191",
+      "condition": "HDF_EV",
+      "raw_library_size": 16735394,
+      "genes_detected": 23364,
+      "zero_fraction": 0.6149320148331273,
+      "median_nonzero_count": 44.0,
+      "count_q75": 9.0,
+      "count_q90": 388.0,
+      "count_q95": 936.0,
+      "count_q99": 3952.260000000002,
+      "maximum_count": 669346
+    },
+    {
+      "matrix_column": "hdfcon",
+      "sample": "hDF_con_1",
+      "gsm_id": "GSM8895186",
+      "condition": "CONTROL",
+      "raw_library_size": 14756355,
+      "genes_detected": 23322,
+      "zero_fraction": 0.6156242274412855,
+      "median_nonzero_count": 42.0,
+      "count_q75": 8.0,
+      "count_q90": 359.0,
+      "count_q95": 870.2999999999956,
+      "count_q99": 3536.9000000000306,
+      "maximum_count": 677814
+    },
+    {
+      "matrix_column": "hdfexo10",
+      "sample": "hDF_EVs_1",
+      "gsm_id": "GSM8895189",
+      "condition": "HDF_EV",
+      "raw_library_size": 15728751,
+      "genes_detected": 23851,
+      "zero_fraction": 0.606905644829007,
+      "median_nonzero_count": 40.0,
+      "count_q75": 9.0,
+      "count_q90": 382.0,
+      "count_q95": 950.0,
+      "count_q99": 3853.040000000008,
+      "maximum_count": 705251
+    }
+  ],
+  "sample_statuses": [
+    {
+      "sample": "hDF_con_2",
+      "condition": "CONTROL",
+      "status": "NO_OBVIOUS_ISSUE",
+      "review_flags": [],
+      "mean_off_diagonal_correlation": 0.9879945910858924,
+      "pca_feature_sets_flagged": 0
+    },
+    {
+      "sample": "hDF_con_3",
+      "condition": "CONTROL",
+      "status": "NO_OBVIOUS_ISSUE",
+      "review_flags": [],
+      "mean_off_diagonal_correlation": 0.9840842861363823,
+      "pca_feature_sets_flagged": 0
+    },
+    {
+      "sample": "hDF_EVs_2",
+      "condition": "HDF_EV",
+      "status": "NO_OBVIOUS_ISSUE",
+      "review_flags": [],
+      "mean_off_diagonal_correlation": 0.9875933317320692,
+      "pca_feature_sets_flagged": 0
+    },
+    {
+      "sample": "hDF_EVs_3",
+      "condition": "HDF_EV",
+      "status": "NO_OBVIOUS_ISSUE",
+      "review_flags": [],
+      "mean_off_diagonal_correlation": 0.9840772555070695,
+      "pca_feature_sets_flagged": 0
+    },
+    {
+      "sample": "hDF_con_1",
+      "condition": "CONTROL",
+      "status": "NO_OBVIOUS_ISSUE",
+      "review_flags": [],
+      "mean_off_diagonal_correlation": 0.9796883994658705,
+      "pca_feature_sets_flagged": 0
+    },
+    {
+      "sample": "hDF_EVs_1",
+      "condition": "HDF_EV",
+      "status": "NO_OBVIOUS_ISSUE",
+      "review_flags": [],
+      "mean_off_diagonal_correlation": 0.9755910907333863,
+      "pca_feature_sets_flagged": 0
+    }
+  ],
+  "correlation_summary": {
+    "within_ev": {
+      "pair_count": 3,
+      "mean": 0.9789886700912945,
+      "minimum": 0.9664004374544204,
+      "maximum": 0.994894954628754
+    },
+    "within_control": {
+      "pair_count": 3,
+      "mean": 0.982743335687645,
+      "minimum": 0.9723951944493366,
+      "maximum": 0.9943945769991211
+    },
+    "between_conditions": {
+      "pair_count": 9,
+      "mean": 0.9847084854794286,
+      "minimum": 0.9657151994089712,
+      "maximum": 0.9946864366037974
+    },
+    "significance_testing": "NOT_PERFORMED"
+  },
+  "pca_pc1_variance": 0.7534120832381519,
+  "pca_pc2_variance": 0.08900228996709178,
+  "pca_coordinates": [
+    {
+      "sample": "hDF_con_2",
+      "matrix_column": "hdfcon-2",
+      "gsm_id": "GSM8895187",
+      "condition": "CONTROL",
+      "PC1": 10.830472312637358,
+      "PC2": -7.44949560563825,
+      "PC1_variance_fraction": 0.7534120832381519,
+      "PC2_variance_fraction": 0.08900228996709178
+    },
+    {
+      "sample": "hDF_con_3",
+      "matrix_column": "hdfcon-3",
+      "gsm_id": "GSM8895188",
+      "condition": "CONTROL",
+      "PC1": 23.05619246031313,
+      "PC2": -9.57775850429135,
+      "PC1_variance_fraction": 0.7534120832381519,
+      "PC2_variance_fraction": 0.08900228996709178
+    },
+    {
+      "sample": "hDF_EVs_2",
+      "matrix_column": "hdfexo10-2",
+      "gsm_id": "GSM8895190",
+      "condition": "HDF_EV",
+      "PC1": 12.529531969128419,
+      "PC2": 9.464605467530872,
+      "PC1_variance_fraction": 0.7534120832381519,
+      "PC2_variance_fraction": 0.08900228996709178
+    },
+    {
+      "sample": "hDF_EVs_3",
+      "matrix_column": "hdfexo10-3",
+      "gsm_id": "GSM8895191",
+      "condition": "HDF_EV",
+      "PC1": 23.495075367286358,
+      "PC2": 8.609546091366308,
+      "PC1_variance_fraction": 0.7534120832381519,
+      "PC2_variance_fraction": 0.08900228996709178
+    },
+    {
+      "sample": "hDF_con_1",
+      "matrix_column": "hdfcon",
+      "gsm_id": "GSM8895186",
+      "condition": "CONTROL",
+      "PC1": -31.614735765128312,
+      "PC2": -8.897804904719159,
+      "PC1_variance_fraction": 0.7534120832381519,
+      "PC2_variance_fraction": 0.08900228996709178
+    },
+    {
+      "sample": "hDF_EVs_1",
+      "matrix_column": "hdfexo10",
+      "gsm_id": "GSM8895189",
+      "condition": "HDF_EV",
+      "PC1": -38.29653634423691,
+      "PC2": 7.850907455751582,
+      "PC1_variance_fraction": 0.7534120832381519,
+      "PC2_variance_fraction": 0.08900228996709178
+    }
+  ],
+  "pca_robustness_summary": {
+    "feature_sets": [
+      {
+        "feature_set": "ALL_FILTERED",
+        "gene_count": 13874,
+        "pc1_variance_fraction": 0.7534120832381519,
+        "pc2_variance_fraction": 0.08900228996709178
+      },
+      {
+        "feature_set": "TOP_5000_VARIABLE",
+        "gene_count": 5000,
+        "pc1_variance_fraction": 0.8089770320440115,
+        "pc2_variance_fraction": 0.0771410340853964
+      },
+      {
+        "feature_set": "TOP_2000_VARIABLE",
+        "gene_count": 2000,
+        "pc1_variance_fraction": 0.8445538902227447,
+        "pc2_variance_fraction": 0.0779686629808707
+      }
+    ],
+    "distance_rank_correlation_vs_all_filtered": {
+      "TOP_5000_VARIABLE": 1.0,
+      "TOP_2000_VARIABLE": 0.9857142857142854
+    },
+    "sample_dominates_two_or_more_feature_sets": false,
+    "interpretation": "STABLE_WITH_NO_SINGLE_SAMPLE_DOMINANCE_BY_FROZEN_CRITERIA"
+  },
+  "batch_status": "NOT_DOCUMENTED",
+  "pairing_status": "NO_EVIDENCE / UNKNOWN",
+  "recommended_de_design": "~ condition",
+  "de_framework": "DESeq2",
+  "de_filter_rule": "CPM >= 1 in at least 3 of 6 samples",
+  "contrast": "hDF-EV vs control",
+  "positive_log2fc_definition": "higher expression in hDF-EV",
+  "de_reporting_thresholds": {
+    "A": "padj < 0.05",
+    "B": "padj < 0.05 AND |log2FC| >= 1"
+  },
+  "gsea_release": "MSigDB 2026.1.Hs",
+  "gsea_databases": [
+    "GO Biological Process",
+    "Reactome",
+    "Hallmark"
+  ],
+  "gsea_ranking": "DESeq2 Wald statistic",
+  "validation_questions": {
+    "P": "Does candidate conserved-component evidence persist in CTX003?",
+    "M": "Does CTX003 support either prior direction, another context-dependent response, or remain not testable?",
+    "E": "Does CTX003 provide evidence where the prior comparison was NULL_NOT_TESTABLE?",
+    "A": "Does CTX003 support either prior context or reinforce discordance/context dependence?",
+    "I": "Does CTX003 share an active component with either context, show axis-only overlap, discordance, or no evidence?"
+  },
+  "phenotype_anchor_rules": {
+    "P": "hDF CCK-8 at 24 h is a separate functional-assay layer from the 72 h transcriptome",
+    "M": "hDF scratch assay at 24 h is a separate functional-assay layer from the 72 h transcriptome",
+    "in_vivo": "Mouse wound, scar, and collagen outcomes are a different-model IN_VIVO layer and are not direct hDF transcriptomic validation"
+  },
+  "limitations": [
+    "n = 3 libraries per condition",
+    "Recipient donor count and donor-to-library mapping are UNKNOWN",
+    "Independent EV preparation count and preparation-to-library mapping are UNKNOWN",
+    "Pairing is UNKNOWN and unsupported by authoritative metadata",
+    "Exact RNA-seq control medium and vehicle are UNKNOWN",
+    "Batch is not documented; no batch covariate can be justified",
+    "PC1 captures a stable two-cluster structure aligned with replicate-1 versus replicate-2/3 labels, but no authoritative factor explains it; it is not assigned as batch or pairing",
+    "The six libraries do not support donor-level or EV-preparation-level generalization",
+    "QC transformations and PCA are descriptive and do not validate phenotype or treatment biology"
+  ],
+  "technical_qc_failure": false,
+  "decision": "PASS_WITH_LIMITATIONS",
+  "overall_pass": true
+}

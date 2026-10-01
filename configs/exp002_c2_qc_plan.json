@@ -1,0 +1,20 @@
+{
+  "dataset": "GSE251807",
+  "checkpoint": "EXP002-C2",
+  "created_before_sample_qc": true,
+  "count_input": "tximport countsFromAbundance=no gene-level estimated counts from 189509 exact-shared transcripts",
+  "candidate_filters": {
+    "A": "estimated gene count >= 10 in at least 4 of 16 samples",
+    "B": "CPM >= 1 in at least 2 of 16 samples",
+    "C": "CPM >= 1 in at least 4 of 16 samples"
+  },
+  "primary_filter": "C",
+  "primary_filter_rationale": "Library-size-aware, unsupervised minimum expression in at least one quarter of the 16 samples; condition and batch labels are not used to select genes",
+  "qc_transformation": "log2(library-size CPM + 1) on genes retained by primary filter",
+  "sample_correlation": "Pearson across filtered genes, descriptive only",
+  "pca": "samples as observations; genes as features; no condition or batch labels in fitting",
+  "pca_robustness": ["all filtered genes", "top 5000 genes by variance", "top 2000 genes by variance"],
+  "sample_removal": "none in C2",
+  "outlier_review_rule": "Flag estimated gene count total >1.75 times or <1/1.75 times the sample median; flag a sample whose mean correlation to its own condition is more than 0.05 below the condition median; inspect PCA descriptively; do not remove automatically",
+  "ev8_status_rule": "NO_OBVIOUS_ISSUE if higher estimated count tracks ENA depth, mean within-condition correlation is no more than 0.05 below the condition median, and nearest PCA neighbor distance is at most twice the across-sample median nearest-neighbor distance; otherwise QC_REVIEW_NEEDED unless an independent technical defect is confirmed"
+}

@@ -1,0 +1,4 @@
+rule,definition,genes_retained,genes_removed,primary
+A,count >= 10 in at least 2 samples,16906,41829,False
+B,count >= 10 in at least 3 samples,16271,42464,False
+C,CPM >= 1 in at least 2 samples,14755,43980,True
