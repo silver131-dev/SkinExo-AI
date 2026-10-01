@@ -70,7 +70,7 @@ The core S2 figures are architecture, Response Atlas, context retrieval, and sim
 ## Link and placeholder audit
 
 - Local Markdown link check: **PASS**, zero broken local links.
-- GitHub URL: `[PUBLIC_GITHUB_URL]` remains intentionally pending.
+- GitHub URL: `https://github.com/silver131-dev/SkinExo-AI` is verified and frozen.
 - Demo video URL: `[DEMO_VIDEO_URL]` remains intentionally pending.
 - Technical Report URL: `[TECHNICAL_REPORT_URL]` remains intentionally pending where needed.
 

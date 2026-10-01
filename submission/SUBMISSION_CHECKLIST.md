@@ -40,7 +40,7 @@
 
 - [ ] Participant approves final title, abstract, pitch, and claims.
 - [ ] Public GitHub repository created from `public-v1`.
-- [ ] Public GitHub URL replaces `[PUBLIC_GITHUB_URL]`.
+- [x] Public GitHub URL frozen: `https://github.com/silver131-dev/SkinExo-AI`.
 - [ ] Anonymous clean-clone Quick Start and Explorer run verified.
 - [ ] Demo video recorded at ≤5:00 with captions and legible UI.
 - [ ] Video URL replaces `[DEMO_VIDEO_URL]`.

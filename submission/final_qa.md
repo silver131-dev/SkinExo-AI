@@ -56,7 +56,7 @@ This is the final pre-publication and pre-submission checklist. Completed local 
 
 ## URLs and accessibility
 
-- [ ] `[PUBLIC_GITHUB_URL]` replaced with the verified public repository URL.
+- [x] Verified public repository URL: `https://github.com/silver131-dev/SkinExo-AI`.
 - [ ] `[DEMO_VIDEO_URL]` replaced with the verified public video URL.
 - [ ] `[TECHNICAL_REPORT_URL]` replaced if a hosted report URL is required.
 - [ ] No placeholder remains in final submitted text.

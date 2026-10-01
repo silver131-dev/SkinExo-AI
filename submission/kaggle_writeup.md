@@ -139,7 +139,7 @@ SkinExo-AI does not include a trained predictive model, foundation model, digita
 
 ## Code
 
-[PUBLIC_GITHUB_URL]
+https://github.com/silver131-dev/SkinExo-AI
 
 ## Technical Report
 
