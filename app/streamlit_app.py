@@ -21,17 +21,11 @@ from components import (
     render_similarity,
 )
 from data_loader import CONTEXT_LABELS, ROOT, load_explorer_data
+from design_tokens import explorer_css
 
 
-st.set_page_config(page_title="SkinExo-AI Explorer", page_icon="🧬", layout="wide")
-st.markdown("""
-<style>
-  .block-container {padding-top: 2rem; padding-bottom: 3rem;}
-  [data-testid="stMetricValue"] {font-size: 1.05rem; white-space: normal;}
-  [data-testid="stMetricLabel"] {font-weight: 650;}
-  div[data-testid="stExpander"] {border: 1px solid #d9e1e8;}
-</style>
-""", unsafe_allow_html=True)
+st.set_page_config(page_title="SkinExo-AI Explorer", page_icon="◌", layout="wide")
+st.markdown(explorer_css(), unsafe_allow_html=True)
 
 
 @st.cache_resource
@@ -49,10 +43,23 @@ except (RuntimeError, ValueError) as exc:
     st.error(f"Explorer cannot start because a validated checkpoint is unavailable: {exc}")
     st.stop()
 
-st.title("SkinExo-AI")
-st.markdown("### Context-Aware Extracellular-Vesicle Response Explorer")
-st.write("Compare EV-induced cellular responses across experimental contexts using component-level transcriptomic evidence, phenotype anchors, and reliability metadata.")
-st.caption("Same recipient cell + different EV contexts = different transcriptomic responses. Context matters.")
+with st.container(border=True):
+    st.markdown('<div class="skinexo-eyebrow">SkinExo Lab · Evidence-led computational biology</div>', unsafe_allow_html=True)
+    st.title("SkinExo-AI")
+    st.markdown(
+        '<div class="skinexo-subtitle">Context-Aware<br>Extracellular-Vesicle<br>Response Explorer</div>',
+        unsafe_allow_html=True,
+    )
+    st.markdown(
+        '<div class="skinexo-support">Compare EV-induced cellular responses across experimental contexts '
+        'with component-level evidence, phenotype anchors, and reliability.</div>',
+        unsafe_allow_html=True,
+    )
+    st.markdown(
+        '<div class="skinexo-principle">◌ Same recipient cell &nbsp;+&nbsp; different EV contexts '
+        '&nbsp;=&nbsp; different transcriptomic responses</div>',
+        unsafe_allow_html=True,
+    )
 
 tabs = st.tabs(["Context Explorer", "Response Atlas", "Context Similarity", "About"])
 
@@ -82,6 +89,7 @@ with tabs[2]:
     render_similarity(data)
 
 with tabs[3]:
+    st.markdown('<div class="section-kicker">System boundary</div>', unsafe_allow_html=True)
     st.header("What SkinExo-AI implements")
     st.markdown("""
 - **Response Atlas:** implemented — F2, three verified study contexts and 339 stable components.

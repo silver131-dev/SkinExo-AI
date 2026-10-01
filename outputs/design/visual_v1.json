@@ -1,0 +1,84 @@
+{
+  "visual_version": "V1",
+  "brand": "SkinExo Lab",
+  "product": "SkinExo-AI",
+  "style": "Korean Medical-Aesthetic × Biotech",
+  "science_ratio": 65,
+  "medical_aesthetic_ratio": 25,
+  "luxury_editorial_ratio": 10,
+  "palette": {
+    "Pearl White": "#F7F5F1",
+    "Warm Ivory": "#EFEAE2",
+    "Soft Blush": "#EEDDD9",
+    "Mist Mint": "#DDEBE5",
+    "Powder Aqua": "#DCE9EC",
+    "Pale Lavender": "#E8E2EE",
+    "Champagne": "#D9C8AE",
+    "Deep Ink": "#173033"
+  },
+  "motion_language": {
+    "preferred": [
+      "slow float",
+      "soft dissolve",
+      "glass slide",
+      "gentle parallax",
+      "liquid morph"
+    ],
+    "ui_easing_ms": "600–900",
+    "avoided": [
+      "glitch",
+      "neon pulse",
+      "rapid zoom",
+      "camera shake",
+      "HUD overload",
+      "fast flashing transitions"
+    ]
+  },
+  "human_imagery_rule": "Optional only in the opening, one brief transition, and ending; never the product protagonist or an efficacy claim.",
+  "accessibility": {
+    "deep_ink_minimum_palette_contrast_ratio": 8.51,
+    "color_independent_state_encoding": true,
+    "reduced_motion_supported": true,
+    "status": "PASS"
+  },
+  "demo_structure": {
+    "scenes": 6,
+    "keyframes": 30,
+    "maximum_duration_minutes": 5,
+    "status": "LOCKED"
+  },
+  "figure_audit": {
+    "fig08": "PRESERVED",
+    "fig09": "PRESERVED",
+    "fig10": "PRESERVED",
+    "fig11": "PRESERVED",
+    "presentation_copies_created": false
+  },
+  "atlas_integrity": {
+    "contexts": 3,
+    "components": 339,
+    "response_records": 1017,
+    "ACTIVE_POSITIVE": 139,
+    "ACTIVE_NEGATIVE": 19,
+    "OBSERVED_NULL": 852,
+    "NOT_TESTED": 7,
+    "UNKNOWN": 0
+  },
+  "retrieval_integrity": {
+    "CTX003_to_CTX002": 0.6052640111,
+    "CTX003_to_CTX001": -0.2754551311,
+    "display_values": {
+      "CTX003_to_CTX002": "+0.6053",
+      "CTX003_to_CTX001": "-0.2755"
+    }
+  },
+  "scientific_values_changed": false,
+  "retrieval_values_changed": false,
+  "tests": {
+    "passed": 17,
+    "failed": 0,
+    "status": "PASS"
+  },
+  "streamlit_health": "PASS",
+  "overall_pass": true
+}

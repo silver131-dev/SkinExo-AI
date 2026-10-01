@@ -13,6 +13,12 @@ streamlit run app/streamlit_app.py
 
 The default query is CTX003. R1 computes the ranking at runtime; CTX002 should appear first and CTX001 second for the frozen F2 Atlas.
 
+## Visual system
+
+VISUAL-V1 applies the SkinExo Lab Korean medical-aesthetic × biotech presentation system. Pearl White and Deep Ink anchor the interface; translucent cards and restrained mint, aqua, blush, lavender, and Champagne accents establish hierarchy. Scientific states always retain text, symbols, and border patterns in addition to color. Presentation tokens live in `app/design_tokens.py`; the visual specification lives in `docs/design/SKINEXO_VISUAL_BIBLE.md`.
+
+The display hierarchy is selected context → P/M/E/A/I profile → retrieved contexts → WHY explanation → phenotype evidence → reliability → provenance.
+
 ## Screens
 
 - **Context Explorer:** context metadata, P/M/E/A/I overview, component evidence, retrieval, “Why this match?”, phenotype, reliability, and provenance.

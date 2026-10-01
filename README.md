@@ -1,10 +1,16 @@
 # SkinExo-AI: A Context-Aware Extracellular-Vesicle Response Platform
 
-SkinExo-AI transforms isolated extracellular-vesicle studies into a context-aware response atlas that retrieves and explains conserved, context-dependent, discordant, and uncertain cellular responses.
+<p align="center"><strong>SKINEXO LAB</strong><br><sub>CONTEXT · EVIDENCE · RESPONSE</sub></p>
+
+> **SkinExo-AI transforms isolated extracellular-vesicle studies into a context-aware response atlas that retrieves and explains conserved, context-dependent, discordant, and uncertain cellular responses.**
 
 The implemented v0.3 platform combines a reproducible transcriptomic evidence engine, context normalization, a three-context Response Atlas, component-level comparison, explicit reliability metadata, interpretable retrieval, deterministic WHY explanations, and an offline interactive Explorer.
 
+`3 verified contexts` · `339 response components` · `1,017 response records` · `offline Explorer`
+
 ![SkinExo-AI platform architecture](submission/figures/fig09_skinexo_platform_architecture.png)
+
+*Platform architecture. Evidence and reliability remain visible through retrieval and the Explorer; predictive AI is not implemented.*
 
 ## The Problem
 
@@ -54,6 +60,8 @@ The F2 Atlas contains **3 independent study contexts**, **339 response component
 
 ![Three-context Response Atlas](submission/figures/fig08_context_aware_response_atlas.png)
 
+*Three-context Response Atlas. Color is accompanied by state text, component counts, phenotype markers, and reliability notes.*
+
 ## Interactive Explorer
 
 The Explorer lets judges select CTX001, CTX002, or CTX003; inspect experimental metadata and P/M/E/A/I components; retrieve the other contexts; open a deterministic “Why this match?” explanation; and review phenotype anchors, reliability dimensions, and provenance separately.
@@ -62,9 +70,10 @@ The default CTX003 query retrieves CTX002 first and CTX001 second using the froz
 
 ## Quick Start
 
-Python 3.12 was used for the public-readiness smoke test. Obtain or clone the repository, then run from its root:
+Python 3.12 was used for the public-readiness smoke test. Clone the public repository, then run from its root:
 
 ```bash
+git clone https://github.com/silver131-dev/SkinExo-AI.git
 cd SkinExo-AI
 python -m venv .venv
 source .venv/bin/activate
@@ -73,8 +82,6 @@ python -m pip install -r requirements.txt
 pytest
 streamlit run app/streamlit_app.py
 ```
-
-No GitHub clone URL is shown because the public repository has not been created.
 
 Run retrieval from the command line:
 
@@ -150,7 +157,7 @@ The Explorer and retrieval CLI use only tracked, small derived artifacts. Normal
 
 The S2 competition narrative is consolidated in the [Technical Report](submission/technical_report.md), [Kaggle Writeup](submission/kaggle_writeup.md), [demo storyboard](submission/demo_storyboard.md), [narrative contract](submission/S2_NARRATIVE_CONTRACT.md), and [claim dictionary](submission/S2_CLAIM_DICTIONARY.md). Claims remain limited to the three analyzed contexts.
 
-A clean public root commit exists locally on `public-v1`. The public GitHub repository and final demo video have not yet been published; their URLs remain pending.
+The audited public snapshot is available at [github.com/silver131-dev/SkinExo-AI](https://github.com/silver131-dev/SkinExo-AI). The final demo video has not yet been recorded or published.
 
 ## Citation / Attribution
 
