@@ -1,16 +1,73 @@
-# SkinExo-AI demo storyboard — maximum 5 minutes
+# SkinExo-AI S2 demo storyboard — maximum 5 minutes
 
-**Draft only; no video has been created.** Use team-generated C2/C3/C4 figures and source credits. Keep cross-dataset validation and predictive AI as planned work.
+**Status:** script ready; video not recorded.
 
-| Time | Screen / narration | Evidence and guardrail |
+**Canonical title:** SkinExo-AI: A Context-Aware Extracellular-Vesicle Response Platform
+
+**Target duration:** 4:50, with a hard maximum of 5:00.
+
+**Center of the video:** live Explorer demonstration.
+
+## Production setup
+
+- Launch locally with `streamlit run app/streamlit_app.py`.
+- Use the repository’s tracked artifacts; no internet or raw data is required during recording.
+- Start at the Explorer default, CTX003.
+- Record at a resolution where context labels, similarities, and reliability text remain legible.
+- Use only project-generated figures and the live project UI.
+- Add captions and retain a clean audio track.
+
+## Timed narrative
+
+| Time | Screen and exact action | Narration and scientific boundary |
 |---|---|---|
-| 0:00–0:30 | The problem: EV signals, multiple recipient cells, and the gap between a gene list and a repair outcome. | Use a team-created schematic; do not show external imagery without rights review. |
-| 0:30–1:00 | Concept: EV source → cargo → recipient cell → molecular response → program → phenotype → evidence. | Say this is the **working framework**, with prediction still planned. |
-| 1:00–1:40 | GSE293186: human dermal fibroblasts, 72 h, CTRL n=3 versus ECEV n=3; C1 data checks. | Cite GEO and the source paper. Show 58,735 rows and six samples without suggesting new data collection. |
-| 1:40–2:20 | C2 [sample PCA](figures/fig01_transcriptomic_pca.png); optional small [robustness view](figures/fig02_pca_robustness.png). | PC1 86.59%, PC2 5.90%; call sample structure exploratory and avoid a causality claim. |
-| 2:20–3:00 | C3 [volcano plot](figures/fig04_differential_expression_volcano.png); optional [MA plot](figures/fig03_ma_plot.png). | DESeq2, 16,271 tested; 2,032 at padj < 0.05 and |log2FC| ≥ 1. No phenotype assignment from a DEG alone. |
-| 3:00–3:40 | C3.5 evidence framework: 16 records, four public datasets, explicit evidence classes and gaps. | Use a team-made evidence diagram. Explain A=0 direct and same-dataset circularity. |
-| 3:40–4:30 | C4 [prespecified pathway figure](figures/fig06_prespecified_pathways.png) and [evidence map](figures/fig07_skinexo_evidence_map.png). | GSEA is primary, ORA secondary. Show ECEV-higher cell-cycle transcription without claiming proliferation. Note no angiogenesis-specific GSEA FDR < 0.05, direct A=0, and Q6 not yet testable. Cross-dataset validation and predictive AI remain TODO. |
-| 4:30–5:00 | Limits and next experiment: n=3/group, one dataset, future skin-on-chip testing. | State clearly that skin-on-chip validation has **not** been performed. |
+| **0:00–0:35** | Title, then a simple problem slide: “Same recipient cell + different EV contexts = different responses.” | “EV studies are usually analyzed in isolation. EV source, dose, duration, and design can change the response, making studies difficult to compare.” |
+| **0:35–1:05** | Show `fig09_skinexo_platform_architecture.png`. | “SkinExo-AI turns public studies into normalized contexts, reproducible evidence, a component-level Response Atlas, interpretable retrieval, and an offline Explorer. It is a research-support platform, not a trained predictor.” |
+| **1:05–1:45** | Show the three context labels and `fig08_context_aware_response_atlas.png`. | “We analyzed three study-level independent fibroblast contexts. A broad universal response was not supported. P remained a two-context component; M and A were context-dependent and discordant; E was null/not testable; I was a conserved broad axis with context-specific components. Same axis does not mean same component.” |
+| **1:45–2:05** | Open the live Explorer. Confirm the default context is **CTX003**. | “The Atlas contains 339 components and 1,017 context-component records, including observed nulls and not-tested states.” |
+| **2:05–2:25** | Show the **CTX003 context card**. Point to hDF-derived EV → human dermal fibroblast, 10 µg/mL, 72 h, 3 EV and 3 control. | “Context is part of the evidence. Unknown control, donor, preparation, batch, or pairing details stay visible instead of being inferred.” |
+| **2:25–2:45** | Show the **P/M/E/A/I response overview**. Select P briefly to expose `OBSERVED_NULL`, then I to show active components. | “CTX003 did not extend the provisional P component from the first two contexts. Its inflammatory response is active, but we still compare exact components rather than broad labels alone.” |
+| **2:45–3:05** | Open **Retrieval / Context Similarity**. | “Retrieval uses mask-aware NES cosine over components tested in both contexts. Missing evidence is never treated as biological zero.” |
+| **3:05–3:20** | Show the computed ranking: **CTX002 rank 1, +0.6053**; **CTX001 rank 2, −0.2755**. | “For CTX003, CTX002 is the closest observed context. These values are response similarities, not prediction scores.” |
+| **3:20–3:35** | Select CTX002 and open **WHY THIS MATCH?** | “The explanation is generated by the R1 engine. CTX002 and CTX003 share nine active components with the same direction, while query-only and target-only components preserve context-specific differences.” |
+| **3:35–3:50** | Expand shared components and axis evidence; point to the inflammatory components and any displayed context-specific or discordant sections. | “Their strongest shared structure is inflammatory, but the Explorer also shows where they differ. Similarity does not erase discordance.” |
+| **3:50–4:05** | Open **Phenotype Evidence**. Show CCK-8 and scratch assay. | “Phenotypes are attached as a separate layer. CCK-8 and scratch assays are at 24 hours, while CTX003 transcriptomics is at 72 hours. Mouse evidence uses a different model.” |
+| **4:05–4:20** | Open **Reliability & Limitations**. Point to unknown recipient-donor and EV-preparation independence, batch/pairing/control uncertainty, and CTX003 model-diagnostic limitation. | “Reliability is shown dimension by dimension and does not alter the similarity score. Study independence does not imply donor or EV-preparation replication.” |
+| **4:20–4:40** | Show provenance panel, test result, and offline launch command. | “Every claim links to a dataset and checkpoint. The Explorer runs from tracked artifacts with no raw data, licensed PDF, institutional network, or internet. Seventeen of seventeen tests pass.” |
+| **4:40–5:00** | Return to architecture or title. End on: **Context matters.** | “SkinExo-AI does not assume a universal EV response. It retrieves and explains context-dependent response patterns. Future work can add versioned contexts and prospective validation.” |
 
-**Production TODO:** script wording, timing rehearsal, spoken source credits, accessibility captions, music/image rights, figure legibility, participant approval, and final video export.
+## Exact live clicks
+
+1. Run `streamlit run app/streamlit_app.py`.
+2. Confirm **Select Context → CTX003**.
+3. Scroll through the **Context** card.
+4. Open the **Response Atlas** view and show P/M/E/A/I.
+5. Select **P** and show the observed-null state.
+6. Select **I** and show component-level evidence.
+7. Open **Context Similarity / Retrieval**.
+8. Confirm **CTX002 — rank 1 — +0.6053**.
+9. Confirm **CTX001 — rank 2 — −0.2755**.
+10. Select CTX002 and expand **WHY THIS MATCH?**.
+11. Show shared active components and directional agreement.
+12. Show query-only, target-only, or discordant/context-specific differences.
+13. Open **Phenotype Evidence** and point to **CCK-8**, **scratch assay**, and **different timepoint**.
+14. Open **Reliability & Limitations** and point to unknown donor and EV-preparation independence.
+15. Open **Evidence Provenance** briefly.
+16. End on the line: **Context matters.**
+
+## Spoken claim guardrails
+
+- Say **response similarity**, never prediction score.
+- Say **study-level independent contexts**, never independent-donor replication.
+- Say **transcriptomic component**, never demonstrated angiogenesis or therapeutic function.
+- Say **phenotype anchor at a different time/model**, never direct validation when time or model differs.
+- Say **17 tests passed**, never predictive accuracy.
+- Do not describe GSE293957 cargo, an agent, predictive modeling, or Organ-on-Chip as implemented.
+
+## Remaining production tasks
+
+- [ ] Rehearse and keep the export at or below five minutes.
+- [ ] Record the live Explorer with the exact frozen ranking.
+- [ ] Add captions and verify text legibility.
+- [ ] Review audio, figure rights, citations, and spoken claim boundaries.
+- [ ] Upload the final video and replace `[DEMO_VIDEO_URL]` in submission material.

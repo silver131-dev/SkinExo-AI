@@ -1,55 +1,146 @@
-# SkinExo-AI
+# SkinExo-AI: A Context-Aware Extracellular-Vesicle Response Platform
 
-**Draft for participant review. This is not a submitted Kaggle Writeup.**
+SkinExo-AI transforms isolated extracellular-vesicle studies into a context-aware response atlas that retrieves and explains conserved, context-dependent, discordant, and uncertain cellular responses.
 
-## Why this problem matters
+## The Problem
 
-Extracellular vesicles (EVs) can transmit molecular signals between cells, but connecting an EV source to a recipient skin-cell response and ultimately to repair outcomes requires evidence across different assays and models. SkinExo-AI is building an auditable chain from molecular observations to biological claims.
+Extracellular-vesicle (EV) studies are usually analyzed in isolation. Differences in EV source, recipient cell, dose, duration, study design, and evidence layer make their biological responses difficult to compare. Broad pathway labels can also hide a crucial distinction: two contexts may involve the same biological axis while different response components drive the evidence.
 
-## Our approach
+We tested whether a broad EV-associated fibroblast response generalized across three public study contexts. It did not. That negative result is the reason SkinExo-AI represents response in context instead of assuming a generic EV signature.
 
-We started with a single public fibroblast RNA-seq comparison and completed dataset integrity checks (C1), sample-level quality assessment (C2), count-based differential expression (C3), a source-verified literature/dataset framework (C3.5), and prespecified pathway analysis (C4). Predictive components remain planned.
+## Our Solution
 
-## Data
+SkinExo-AI v0.3 combines:
 
-[NCBI GEO GSE293186](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE293186): primary human dermal fibroblasts at 72 hours, three CTRL samples and three endothelial-cell-derived EV (ECEV) samples. The official gene-count matrix is the analysis input. The source study's DEG table is used only for analytical concordance, after our result was generated. Raw archives remain outside the public repository.
+1. a reproducible transcriptomic evidence engine;
+2. context normalization;
+3. a three-context Response Atlas;
+4. a 339-component response representation;
+5. explicit evidence and missingness states;
+6. dimension-level reliability metadata;
+7. mask-aware, interpretable retrieval;
+8. deterministic WHY explanations;
+9. separate phenotype anchors and provenance; and
+10. an offline Streamlit Explorer.
 
-## What we have demonstrated
+![SkinExo-AI platform architecture](figures/fig09_skinexo_platform_architecture.png)
 
-- **C1:** 58,735 gene rows and six biological samples; zero missing values, negative counts, or duplicate gene IDs.
-- **C2:** An unsupervised CPM ≥ 1 in at least two samples filter retained 14,755 genes for sample QC. Mean within-group Pearson correlations were 0.9961 (CTRL) and 0.9923 (ECEV); between-group mean was 0.9532. PCA PC1/PC2 explained 86.59%/5.90%. These are exploratory descriptions.
-- **C3:** DESeq2 tested 16,271 genes; 2,032 met adjusted p < 0.05 and |log2FC| ≥ 1 (995 higher and 1,037 lower in ECEV). Agreement with the source study's thresholded DEG table was high among shared genes, but it uses the same dataset and is not independent validation.
-- **C3.5:** 16 literature records verified, nine primary research/methods records, seven reviews, and four public datasets cataloged. Evidence gaps remain explicit.
-- **C4:** All 16,271 C3-tested genes were ranked by DESeq2 Wald statistic. GO Biological Process, Reactome, and Hallmark yielded 4,600 eligible sets; 640 had GSEA FDR < 0.05. GSEA is primary and ORA secondary. The strongest predefined association was an ECEV-higher **cell-cycle transcriptional program** (Hallmark E2F Targets NES +3.18; G2M Checkpoint +3.01; estimated FDR < 0.001). Mapped chemotaxis and ECM terms tended toward ECEV-lower genes. Vascular/endothelial and immune annotations were also represented, but no angiogenesis-named term reached GSEA FDR < 0.05. These are transcriptomic associations, not measured repair phenotypes. Separate external regenerative-like and fibrotic-like signatures are still needed for Q6.
+## How It Works
 
-![Exploratory sample PCA](figures/fig01_transcriptomic_pca.png)
+```text
+Public EV studies
+        ↓
+Reproducible analysis + context normalization
+        ↓
+Component-level Response Atlas
+        ↓
+Evidence states + reliability + provenance
+        ↓
+Mask-aware retrieval + WHY explanations
+        ↓
+Offline interactive Explorer
+```
 
-*Samples are observations. PCA uses filtered log2(CPM + 1) without condition labels during fitting; separation is descriptive, not proof of causality.*
+The Atlas distinguishes `ACTIVE_POSITIVE`, `ACTIVE_NEGATIVE`, `OBSERVED_NULL`, `NOT_TESTED`, and `UNKNOWN`. An observed null means a component was tested but did not qualify as active. It is not missing evidence.
 
-![Differential-expression volcano plot](figures/fig04_differential_expression_volcano.png)
+## Three Independent Contexts
 
-*DESeq2 ECEV-versus-CTRL result. Color denotes adjusted p < 0.05 and |log2FC| ≥ 1, not validated repair function.*
+| Context | Dataset | EV source → recipient | Duration |
+|---|---|---|---:|
+| CTX001 | GSE293186 | Endothelial-cell-derived EV → primary human dermal fibroblast | 72 h |
+| CTX002 | GSE251807 | Bone-marrow MSC small EV → primary human dermal fibroblast | 48 h |
+| CTX003 | GSE293956 | Human dermal fibroblast-derived EV → human dermal fibroblast | 72 h |
 
-![Prespecified pathway associations](figures/fig06_prespecified_pathways.png)
+The studies are independent at the study level. Donor and EV-preparation independence are incomplete or unknown and are not implied.
 
-*GSEA NES, estimated FDR, and leading-edge size for selected predefined terms. At most two terms per question are shown using a documented redundancy rule; full results are available in the C4 tables. Related GO terms are not independent findings.*
+## What We Found
 
-## SkinExo Evidence Framework
+**Broad universal EV transcriptomic response: NOT SUPPORTED.**
 
-The current map records EV source → cargo → recipient cell → molecular response → P/M/E/A/I program → regenerative/fibrotic context → phenotype, with study IDs and evidence classes. Study-level direct evidence counts in the screened set are P=3, M=2, E=3, A=0, I=2. The zero for angiogenesis reflects missing direct measurement in the screened studies. C4 [integrates](../outputs/exp001/c4_evidence_integration.csv) ranked pathway associations with these literature counts, without treating enrichment as phenotype validation. Reviews are synthesis rather than independent experiments. The [full matrix](../data/metadata/skinexo_evidence_matrix.csv) and [C4 report](../reports/EXP001_C4_pathway_analysis.md) document the coding and interpretation.
+- **P — Proliferation / Cell Cycle:** one shared component in CTX001 and CTX002 did not extend to CTX003. This is a two-context result, not universal conservation.
+- **M — Migration / Motility:** context-dependent and discordant.
+- **E — ECM Organization / Remodeling:** null/not testable in the three-context interpretation.
+- **A — Vascular / Endothelial Interaction:** context-dependent and discordant. This does not demonstrate angiogenesis.
+- **I — Inflammation / Immune Signaling:** conserved broad axis with context-varying component structure. CTX002 and CTX003 share exact components; CTX001 shares broader axis direction through different components.
+
+CTX003 provided the strongest validation test. The P hypothesis was defined before the third-context result, and CTX003 returned `OBSERVED_NULL` across the frozen P mapping. SkinExo-AI preserved the failed generalization instead of changing the question after seeing the result.
+
+## Context-Aware Response Atlas
+
+Atlas F2-2026-10-01 contains:
+
+- **3** verified contexts;
+- **5** response axes;
+- **339** stable response components;
+- **1,017** context-component records;
+- **139** active positive;
+- **19** active negative;
+- **852** observed null;
+- **7** not tested; and
+- **0** unknown.
+
+![Three-context Response Atlas](figures/fig08_context_aware_response_atlas.png)
+
+The axis summary makes the Atlas readable, while component records preserve the evidence needed for comparison. Same axis does not automatically mean same component.
+
+## Interpretable Retrieval
+
+R1 uses **mask-aware NES cosine** over components tested in both contexts. `NOT_TESTED` and `UNKNOWN` are excluded rather than imputed as biological zero. A secondary active-union cosine reduces domination by jointly null components. Reliability and phenotype evidence are attached after retrieval and do not enter the similarity score.
+
+| Context pair | Response similarity |
+|---|---:|
+| CTX001–CTX002 | −0.1749 |
+| CTX001–CTX003 | −0.2755 |
+| CTX002–CTX003 | +0.6053 |
+
+For CTX002–CTX003, active-union cosine is +0.8563 with 9 shared active components and directional concordance 1.000. These are descriptive retrieval metrics, not accuracy, AUC, or prediction performance.
+
+![CTX003 retrieval explanation](figures/fig10_context_retrieval.png)
+
+The WHY engine exposes shared positive and negative components, discordant components, query-only and target-only activity, observed-null differences, and axis-specific evidence. The examples are generated by deterministic rules rather than hand-picked for the story.
+
+## Interactive Explorer
+
+The Streamlit 1.64.0 Explorer lets a judge:
+
+- select CTX001, CTX002, or CTX003;
+- inspect experimental context and missing metadata;
+- explore P/M/E/A/I response components;
+- retrieve the other contexts;
+- open WHY explanations;
+- inspect phenotype anchors and reliability dimensions; and
+- trace evidence to provenance.
+
+The default CTX003 query computes CTX002 as rank 1 at +0.6053 and CTX001 as rank 2 at −0.2755. The Explorer runs offline from tracked derived artifacts. It requires no raw omics, licensed PDF, institutional network, or internet at runtime.
+
+## Validation & Reliability
+
+The validation sequence includes EXP001 internal analytical reproducibility, EXP002 independent-study validation and sensitivity analysis, a prospectively frozen EXP003 third-context test, F1/F2 schema validation, seven retrieval sanity tests, and **17/17 passing retrieval and Explorer tests**.
+
+Reliability stays dimension by dimension. Key limits include small samples, incomplete or unknown donor and EV-preparation independence, batch/pairing/control uncertainty where applicable, unexplained CTX003 PC1 structure, and phenotype time/model mismatch. No aggregate confidence percentage hides these limitations.
 
 ## Reproducibility
 
-The repository contains checkpoint scripts, reports, metadata, the exact Python package list, and the R/DESeq2 package manifest. Official source archives can be retrieved from GEO using [data provenance](../docs/compliance/DATA_PROVENANCE.md); raw data are ignored by Git. [Technical report](technical_report.md) details the design and thresholds.
+The project records frozen analysis plans, the MSigDB 2026.1.Hs release, Git checkpoints, source hashes, provenance, scripts, full derived tables, tests, and project-generated figures. A clean MIT-licensed public snapshot exists locally on `public-v1`; publishing is pending. Third-party datasets and resources retain their original licenses and terms.
 
-## Current limitations
+## Impact
 
-This is one bulk RNA-seq dataset with three biological replicates per condition. PCA, DE, and enrichment do not demonstrate wound-healing benefit. Author-table concordance is same-dataset consistency. Literature models and EV sources vary, and 17 of 19 inspected C3 genes lacked sufficient gene-specific evidence in this scoped literature set. GSEA terms overlap and pathway labels may not match a fibroblast phenotype; Q6 was not tested. No independent validation or predictor is available.
+SkinExo-AI helps researchers compare fragmented EV evidence, trace why contexts agree or differ, preserve negative findings, and prioritize follow-up experiments. It is a research-support platform. It does not establish clinical impact or therapeutic efficacy.
 
-## Next steps
+## Limitations
 
-> **TODO — Cross-dataset validation:** Evaluate compatible external EV-response data with documented model differences.
->
-> **TODO — Predictive AI:** Design, train, and test a model before claiming capability or performance.
->
-> **TODO — Demo:** Record and review a video after deciding which completed results can be shown.
+Only three contexts are represented. CTX001 and CTX003 have n=3 per condition. Study-level independence does not establish independent-donor or independent EV-preparation replication. Transcriptomic pathways are not phenotypes, and CTX003’s 24-hour CCK-8 and scratch anchors differ from its 72-hour RNA-seq timepoint. Mouse wound, scar, and collagen evidence uses a different model. Retrieval is descriptive and is not predictive validation.
+
+SkinExo-AI does not include a trained predictive model, foundation model, digital twin, agent, therapeutic predictor, or causal cargo-response model.
+
+## Demo
+
+[DEMO_VIDEO_URL]
+
+## Code
+
+[PUBLIC_GITHUB_URL]
+
+## Technical Report
+
+[TECHNICAL_REPORT_URL]

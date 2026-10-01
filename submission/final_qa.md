@@ -1,63 +1,105 @@
-# SkinExo-AI final submission QA — working checklist
+# SkinExo-AI final submission QA
 
-All checks are initially open for independent participant review. A draft or source file existing in the repository does not complete the final submission check.
+This is the final pre-publication and pre-submission checklist. Completed local checkpoints are marked; publication-dependent items remain open.
 
-## Scientific accuracy
+## Scientific claims
 
-- [ ] Every biological claim is supported by a cited primary study or explicitly marked as a hypothesis.
-- [ ] Pathway, phenotype, and skin-repair claims reflect completed work only.
-- [ ] Skin-on-chip work is described as future validation only.
+- [x] Canonical title and one-line pitch match `S2_NARRATIVE_CONTRACT.md`.
+- [x] Broad universal EV transcriptomic response is stated as **NOT SUPPORTED**.
+- [x] P is described as a two-context shared component that did not extend to CTX003.
+- [x] M is described as context-dependent/discordant.
+- [x] E is described as null/not testable.
+- [x] A is described as context-dependent/discordant without an angiogenesis claim.
+- [x] I is described as conserved at the broad axis with context-varying components.
+- [x] Study-level independence is not generalized to donor or EV-preparation independence.
+- [x] Transcriptomic evidence is not presented as therapeutic efficacy, wound healing, or causal mechanism.
+- [x] Predictive AI, trained machine learning, foundation model, digital twin, and agent claims are absent.
 
-## Statistical accuracy
+## Numbers
 
-- [ ] C1–C3.5 values in the report, Writeup, figures, and demo match checkpoint JSON files.
-- [ ] DE contrast, sign convention, filtering, and adjusted-p thresholds are stated correctly.
-- [ ] PCA and author concordance are not presented as causal or independent validation.
+- [x] Contexts = 3.
+- [x] Axes = 5.
+- [x] Components = 339.
+- [x] Response records = 1,017.
+- [x] Activity states = 139 active positive, 19 active negative, 852 observed null, 7 not tested, 0 unknown.
+- [x] Primary similarities = −0.1749, −0.2755, and +0.6053 for the frozen context pairs.
+- [x] CTX002–CTX003 active-union cosine = +0.8563; shared active = 9; directional concordance = 1.000.
+- [x] Default CTX003 ranking is CTX002 first and CTX001 second.
+- [x] Automated tests = 17/17 pass.
+- [x] Global Pearson/Spearman values, where used, match `framework_f2_atlas.json` and are labeled secondary/descriptive.
 
-## Data provenance
+## Evidence layers and reliability
 
-- [ ] GEO accession and both supplementary file URLs have been checked against the current GEO record.
-- [ ] Author DEG archive is described as QA-only, never as the DE model input.
-- [ ] External dataset accessions and reuse constraints are reviewed.
+- [x] CTX003 CCK-8 and scratch anchors are labeled 24 h; transcriptomics is labeled 72 h.
+- [x] Mouse wound/scar/collagen evidence is labeled in vivo and different model.
+- [x] Phenotype evidence is not merged into NES or retrieval similarity.
+- [x] Reliability is shown by dimension and is not collapsed to a percentage.
+- [x] CTX003 unexplained PC1 structure is retained as a limitation.
+- [x] Donor, EV-preparation, batch, pairing, and control uncertainty is stated where relevant.
+
+## Figures
+
+- [x] S2 core figure set is documented in `S2_FIGURE_SELECTION.md`.
+- [x] Every selected figure is project-generated.
+- [x] Every selected figure has a source artifact, generation script, claim, and limitation in the figure manifest.
+- [x] Figure 09 uses the public-v1 v0.3 architecture status with Retrieval and Explorer implemented.
+- [ ] Final rendered figure text is checked at Kaggle/technical-report display size.
+- [ ] Video capture confirms UI labels and values are readable.
+
+## Narrative consistency
+
+- [x] Technical Report, Kaggle Writeup, storyboard, claim dictionary, and rubric mapping use the same core result.
+- [x] Canonical terminology is used: Response Atlas, response component, activity state, mask-aware NES cosine, response similarity, phenotype anchor, reliability dimension.
+- [x] Similarity values are never labeled accuracy, AUC, or prediction performance.
+- [x] Future cargo integration, prospective validation, Organ-on-Chip, context expansion, and predictive modeling are labeled future.
+- [ ] Participant completes final editorial review after URLs are known.
+
+## URLs and accessibility
+
+- [ ] `[PUBLIC_GITHUB_URL]` replaced with the verified public repository URL.
+- [ ] `[DEMO_VIDEO_URL]` replaced with the verified public video URL.
+- [ ] `[TECHNICAL_REPORT_URL]` replaced if a hosted report URL is required.
+- [ ] No placeholder remains in final submitted text.
+- [ ] Public repository opens without authentication.
+- [ ] Video opens without authentication and captions are enabled.
+- [ ] Alt text/captions and color readability are reviewed.
+
+## License, privacy, and public repository
+
+- [x] Original SkinExo-AI source code is MIT licensed in the clean public snapshot.
+- [x] Third-party datasets, MSigDB, GENCODE, publications, and software retain their own terms.
+- [x] Licensed Wiley PDF is excluded.
+- [x] Raw omics and processed biological input matrices are excluded.
+- [x] Public history audit found no secrets, private registration data, institutional authentication material, or stale local paths.
+- [x] Local `public-v1` is one clean root commit with no master ancestry.
+- [ ] GitHub repository created and `public-v1` pushed.
+- [ ] Clean anonymous clone repeats tests and Explorer launch.
 
 ## Reproducibility
 
-- [ ] Python and R environment records match the actual published scripts.
-- [ ] Clean-checkout instructions work with separately acquired GEO inputs.
-- [ ] Published outputs can be regenerated with documented commands and versions.
+- [x] Frozen analysis plans and MSigDB 2026.1.Hs release are documented.
+- [x] Atlas, retrieval, Explorer, provenance, and reliability artifacts needed at runtime are tracked in the public snapshot.
+- [x] Explorer requires no raw data, licensed PDF, institutional network, or internet at runtime.
+- [x] Local Streamlit health check passed.
+- [ ] Public clean-clone commands are run after publication.
 
-## AI/tool disclosure
+## Demo video
 
-- [ ] Codex assistance and material software tools are disclosed in the required location.
-- [ ] AI-assisted prose, citations, and metadata are independently checked by the participant.
-- [ ] No predictive AI capability or performance is claimed before one exists.
+- [ ] Video recorded.
+- [ ] Duration is at most five minutes.
+- [ ] Live Explorer is the center of the video.
+- [ ] CTX003 → CTX002 +0.6053 and CTX001 −0.2755 appear correctly.
+- [ ] WHY explanation, phenotype time mismatch, reliability limits, and provenance are shown.
+- [ ] Spoken claims match the claim dictionary.
+- [ ] Captions, audio, rights, and final export are reviewed.
 
-## Figure rights
+## Account and deadline
 
-- [ ] Every selected figure is team-generated or has documented reuse permission.
-- [ ] Figure captions state the checkpoint, method, thresholds, and limitations.
-- [ ] No literature image, icon, or video asset is included without rights review.
+- [ ] Kaggle username `crd928` reconfirmed on the submitting account.
+- [ ] Authoritative deadline and timezone reconfirmed in the competition portal.
+- [ ] Required registration and AI/tool disclosures reconfirmed.
+- [ ] Final submission receipt or confirmation captured.
 
-## Repository cleanliness
+## Current finalization status
 
-- [ ] `data/raw/`, `data/processed/`, `.venv/`, `.r-env/`, and temporary files are excluded from publication.
-- [ ] `git status` and intended tracked files have been reviewed before any commit.
-- [ ] Public repository contains no credentials, confidential information, or restricted material.
-
-## Demo accuracy
-
-- [ ] Video is at most five minutes and every result shown exists in a passed checkpoint.
-- [ ] The reserved future-results slot is replaced or clearly marked unfinished.
-- [ ] Spoken claims, captions, citations, and figure rights have been reviewed.
-
-## Writeup consistency
-
-- [ ] Kaggle Writeup agrees with the technical report and final figures.
-- [ ] TODO blocks are replaced only with completed, verified results.
-- [ ] Public visibility and possible CC BY 4.0 terms are checked in official rules.
-
-## Technical report consistency
-
-- [ ] Final abstract and title are approved by the participant.
-- [ ] All referenced scripts, data links, and source citations resolve.
-- [ ] Claims and limitations agree with C1–C3.5 and any later completed checkpoints.
+Scientific narrative and local public snapshot are ready for participant review. GitHub publication, final URLs, demo recording, clean-clone verification, and the actual competition submission remain incomplete.

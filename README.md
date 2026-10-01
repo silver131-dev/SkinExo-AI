@@ -1,8 +1,8 @@
-# SkinExo-AI
+# SkinExo-AI: A Context-Aware Extracellular-Vesicle Response Platform
 
-**A Context-Aware Extracellular-Vesicle Response Platform**
+SkinExo-AI transforms isolated extracellular-vesicle studies into a context-aware response atlas that retrieves and explains conserved, context-dependent, discordant, and uncertain cellular responses.
 
-SkinExo-AI converts heterogeneous extracellular-vesicle (EV) transcriptomic studies into structured, context-aware response representations. It combines a reproducible evidence engine, a three-context Response Atlas, component-level comparison, explicit reliability metadata, interpretable retrieval, and an offline interactive Explorer.
+The implemented v0.3 platform combines a reproducible transcriptomic evidence engine, context normalization, a three-context Response Atlas, component-level comparison, explicit reliability metadata, interpretable retrieval, deterministic WHY explanations, and an offline interactive Explorer.
 
 ![SkinExo-AI platform architecture](submission/figures/fig09_skinexo_platform_architecture.png)
 
@@ -148,7 +148,9 @@ The Explorer and retrieval CLI use only tracked, small derived artifacts. Normal
 
 ## Competition Submission
 
-The repository supports the AI4S competition submission with a technical report, Kaggle writeup draft, demo script, figure manifest, response Atlas, retrieval baseline, and interactive Explorer. Claims remain limited to the three analyzed contexts.
+The S2 competition narrative is consolidated in the [Technical Report](submission/technical_report.md), [Kaggle Writeup](submission/kaggle_writeup.md), [demo storyboard](submission/demo_storyboard.md), [narrative contract](submission/S2_NARRATIVE_CONTRACT.md), and [claim dictionary](submission/S2_CLAIM_DICTIONARY.md). Claims remain limited to the three analyzed contexts.
+
+A clean public root commit exists locally on `public-v1`. The public GitHub repository and final demo video have not yet been published; their URLs remain pending.
 
 ## Citation / Attribution
 
