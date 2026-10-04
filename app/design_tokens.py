@@ -94,8 +94,8 @@ def explorer_css() -> str:
   }}
 
   .block-container {{
-    max-width: 1240px;
-    padding-top: 2.3rem;
+    max-width: 1380px;
+    padding-top: 4.5rem;
     padding-bottom: 4.5rem;
   }}
 
@@ -112,7 +112,7 @@ def explorer_css() -> str:
     margin: 0.15rem 0 0.55rem !important;
   }}
 
-  h2 {{ margin-top: 2.4rem !important; }}
+  h2 {{ margin-top: 1.45rem !important; }}
   p, li, label {{ color: var(--deep-ink); }}
 
   .skinexo-hero {{
@@ -188,7 +188,6 @@ def explorer_css() -> str:
   div[data-testid="stVerticalBlockBorderWrapper"]:hover {{
     border-color: rgba(217, 200, 174, 0.88) !important;
     box-shadow: {SHADOWS['lifted']};
-    transform: translateY(-2px);
   }}
 
   [data-testid="stMetric"] {{
@@ -260,6 +259,14 @@ def explorer_css() -> str:
     letter-spacing: 0;
   }}
 
+  .axis-name {{
+    display: block;
+    min-height: 2.8rem;
+    margin-bottom: 0.45rem;
+    font-size: 1rem;
+    line-height: 1.32;
+  }}
+
   .evidence-badge {{
     display: inline-flex;
     align-items: center;
@@ -301,6 +308,241 @@ def explorer_css() -> str:
   .rank-one {{ border-top: 5px solid var(--champagne) !important; }}
   .rank-two {{ border-top: 5px solid var(--powder-aqua) !important; }}
 
+  .st-key-product_hero {{
+    position: relative;
+    overflow: hidden;
+    padding: 1.05rem 1.4rem 1.15rem;
+    border: 1px solid var(--line);
+    border-radius: {RADII['lg']};
+    background: linear-gradient(112deg, rgba(247,245,241,0.96), rgba(221,235,229,0.70) 62%, rgba(220,233,236,0.72));
+    box-shadow: {SHADOWS['soft']};
+  }}
+
+  .st-key-product_hero::after {{
+    content: "";
+    position: absolute;
+    width: 12rem;
+    height: 12rem;
+    right: -3.2rem;
+    top: -5.3rem;
+    border: 1px solid rgba(217, 200, 174, 0.78);
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 1.7rem rgba(232, 226, 238, 0.22);
+  }}
+
+  .st-key-product_hero h1 {{
+    margin: 0.12rem 0 0.28rem !important;
+    font-size: clamp(2.65rem, 4vw, 4rem) !important;
+    line-height: 0.98 !important;
+  }}
+
+  .product-value {{
+    max-width: 760px;
+    font-size: clamp(1.18rem, 2.1vw, 1.65rem);
+    font-weight: 630;
+    line-height: 1.2;
+    letter-spacing: -0.022em;
+  }}
+
+  .st-key-product_hero .skinexo-support {{
+    margin-top: 0.38rem;
+    font-size: 0.88rem;
+    line-height: 1.35;
+  }}
+
+  .product-journey {{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    margin: 0.55rem 0 0.35rem;
+    color: rgba(23, 48, 51, 0.74);
+  }}
+
+  .journey-step {{
+    padding: 0.25rem 0.58rem;
+    border: 1px solid rgba(23, 48, 51, 0.13);
+    border-radius: {RADII['pill']};
+    background: rgba(247, 245, 241, 0.72);
+    font-size: 0.7rem;
+    font-weight: 760;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+  }}
+
+  .journey-arrow {{ color: rgba(23, 48, 51, 0.36); font-size: 0.8rem; }}
+  .anchor-target {{ scroll-margin-top: 4.2rem; }}
+
+  .st-key-context_hero {{
+    margin-top: 0.2rem;
+    border-top: 4px solid var(--champagne) !important;
+  }}
+
+  .context-id {{
+    margin-top: 0.12rem;
+    font-size: 2rem;
+    font-weight: 790;
+    letter-spacing: -0.04em;
+  }}
+
+  .context-route {{
+    margin-top: 0.05rem;
+    font-size: 1.18rem;
+    font-weight: 620;
+  }}
+
+  .context-condition {{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem 0.8rem;
+    margin-top: 0.65rem;
+    color: rgba(23, 48, 51, 0.76);
+    font-size: 0.88rem;
+  }}
+
+  .context-condition span {{
+    padding-left: 0.8rem;
+    border-left: 1px solid var(--line-strong);
+  }}
+
+  .context-dataset {{
+    font-size: 1.65rem;
+    font-weight: 760;
+    text-align: right;
+  }}
+
+  .status-pair {{ display: flex; justify-content: flex-end; gap: 0.42rem; margin-top: 0.45rem; }}
+  .status-pair span {{
+    padding: 0.28rem 0.58rem;
+    border: 1px solid var(--line-strong);
+    border-radius: {RADII['pill']};
+    background: var(--mist-mint);
+    font-size: 0.7rem;
+    font-weight: 760;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }}
+
+  .summary-copy {{
+    margin: 0.45rem 0 0.75rem;
+    font-size: 1.08rem;
+    font-weight: 520;
+    line-height: 1.58;
+  }}
+
+  .summary-retrieval {{
+    display: flex;
+    flex-direction: column;
+    gap: 0.12rem;
+    padding: 0.68rem 0.78rem;
+    border-left: 4px solid var(--champagne);
+    background: rgba(239, 234, 226, 0.62);
+    border-radius: 0 {RADII['sm']} {RADII['sm']} 0;
+  }}
+
+  .summary-retrieval span {{ font-size: 0.7rem; font-weight: 740; letter-spacing: 0.07em; text-transform: uppercase; }}
+  .summary-retrieval strong {{ font-size: 1.12rem; }}
+
+  .signature-card {{
+    height: 100%;
+    padding: 1rem 1.05rem;
+    border: 1px solid var(--line);
+    border-radius: {RADII['md']};
+    background: rgba(247, 245, 241, 0.80);
+    box-shadow: {SHADOWS['soft']};
+  }}
+
+  .signature-row {{
+    display: grid;
+    grid-template-columns: 1.85rem minmax(10rem, 1fr) auto;
+    align-items: center;
+    gap: 0.48rem;
+    min-height: 2.55rem;
+    margin-top: 0.35rem;
+    padding: 0.42rem 0.58rem;
+    border: 1px solid var(--line);
+    border-radius: {RADII['sm']};
+    background: rgba(255,255,255,0.58);
+  }}
+
+  .signature-positive {{ border-left: 5px solid var(--deep-ink); background: rgba(221,235,229,0.58); }}
+  .signature-negative {{ border-left: 5px double var(--deep-ink); background: rgba(220,233,236,0.58); }}
+  .signature-null {{ border-style: dashed; background: rgba(239,234,226,0.62); }}
+  .signature-not-tested, .signature-unknown {{ border-style: dotted; background: rgba(232,226,238,0.58); }}
+  .signature-mixed {{ border-left: 5px solid var(--champagne); background: rgba(238,221,217,0.58); }}
+  .signature-symbol {{ font-size: 1.28rem; font-weight: 800; text-align: center; }}
+  .signature-name {{ display: flex; align-items: baseline; gap: 0.5rem; }}
+  .signature-name small {{ color: rgba(23,48,51,0.62); font-weight: 760; }}
+  .signature-state {{ font-size: 0.78rem; font-weight: 730; white-space: nowrap; }}
+  .signature-row > small {{ display: none; }}
+  .signature-legend {{ margin-top: 0.45rem; color: rgba(23,48,51,0.64); font-size: 0.68rem; }}
+
+  .st-key-retrieval_hero {{
+    margin-top: 0.7rem;
+    border-top: 5px solid var(--champagne) !important;
+    background: linear-gradient(118deg, rgba(247,245,241,0.92), rgba(220,233,236,0.55)) !important;
+  }}
+
+  .retrieval-context {{ font-size: 2.35rem; font-weight: 800; letter-spacing: -0.045em; }}
+  .retrieval-route {{ margin-top: 0.15rem; font-size: 1.15rem; font-weight: 610; }}
+  .retrieval-metric-label {{ font-size: 0.72rem; font-weight: 760; letter-spacing: 0.1em; text-transform: uppercase; }}
+  .retrieval-value {{ margin: 0.08rem 0; font-size: clamp(3rem, 5vw, 4.5rem); font-weight: 820; line-height: 1; letter-spacing: -0.06em; }}
+
+  .retrieval-evidence-card {{
+    display: flex;
+    flex-direction: column;
+    min-height: 6.2rem;
+    padding: 0.72rem 0.86rem;
+    border: 1px solid var(--line);
+    border-radius: {RADII['sm']};
+    background: rgba(247,245,241,0.76);
+  }}
+  .retrieval-evidence-card strong {{ font-size: 1.62rem; line-height: 1.1; }}
+  .retrieval-evidence-card span {{ margin-top: 0.24rem; font-size: 0.82rem; font-weight: 690; }}
+  .retrieval-evidence-card small {{ margin-top: 0.18rem; color: rgba(23,48,51,0.62); font-size: 0.68rem; }}
+
+  .why-lead {{ margin: 0.2rem 0 0.3rem; font-size: 1.12rem; line-height: 1.45; }}
+  .program-chip {{
+    margin: 0.28rem 0;
+    padding: 0.38rem 0.52rem;
+    border-left: 4px solid var(--deep-ink);
+    border-radius: 0 {RADII['sm']} {RADII['sm']} 0;
+    background: rgba(221,235,229,0.62);
+    font-size: 0.78rem;
+    font-weight: 610;
+  }}
+  .why-number {{ font-size: 2.8rem; font-weight: 810; letter-spacing: -0.05em; }}
+  .difference-line {{ margin: 0.35rem 0; padding: 0.36rem 0.5rem; border: 1px solid var(--line); border-radius: {RADII['sm']}; font-size: 0.78rem; }}
+
+  .snapshot-time {{ margin: 0.18rem 0 0.35rem; font-size: 2.25rem; font-weight: 800; letter-spacing: -0.04em; }}
+
+  .reliability-grid {{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.58rem;
+  }}
+  .reliability-item {{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.18rem 0.7rem;
+    padding: 0.68rem 0.75rem;
+    border: 1px solid var(--line);
+    border-radius: {RADII['sm']};
+    background: rgba(247,245,241,0.74);
+  }}
+  .reliability-item span {{ font-size: 0.76rem; font-weight: 720; }}
+  .reliability-item strong {{ font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; }}
+  .reliability-item small {{ grid-column: 1 / -1; color: rgba(23,48,51,0.68); font-size: 0.67rem; line-height: 1.35; }}
+  .reliability-verified {{ border-left: 5px solid var(--deep-ink); background: rgba(221,235,229,0.55); }}
+  .reliability-limited {{ border-left: 5px solid var(--champagne); background: rgba(238,221,217,0.46); }}
+  .reliability-unknown, .reliability-not-documented {{ border-style: dotted; background: rgba(232,226,238,0.52); }}
+
+  .detail-list {{ display: grid; grid-template-columns: 1fr 1fr; gap: 0.3rem 1.2rem; }}
+  .detail-row {{ display: grid; grid-template-columns: minmax(8rem, 0.42fr) 1fr; gap: 0.7rem; padding: 0.38rem 0; border-bottom: 1px solid rgba(23,48,51,0.10); }}
+  .detail-row span {{ color: rgba(23,48,51,0.68); font-size: 0.76rem; }}
+  .detail-row strong {{ font-size: 0.78rem; font-weight: 620; overflow-wrap: anywhere; }}
+
   [data-testid="stAlert"] {{
     border: 1px solid var(--line);
     border-radius: {RADII['md']};
@@ -313,9 +555,15 @@ def explorer_css() -> str:
   code {{ font-family: {TYPOGRAPHY['mono']}; }}
 
   @media (max-width: 760px) {{
-    .block-container {{ padding: 1.2rem 1rem 3rem; }}
+    .block-container {{ padding: 4rem 1rem 3rem; }}
     .skinexo-hero {{ padding: 1rem; }}
     h1 {{ font-size: 2.65rem !important; }}
+    .product-journey {{ justify-content: flex-start; overflow-x: auto; }}
+    .journey-arrow {{ display: none; }}
+    .signature-row {{ grid-template-columns: 1.7rem 1fr; }}
+    .signature-state {{ grid-column: 2; white-space: normal; }}
+    .reliability-grid, .detail-list {{ grid-template-columns: 1fr; }}
+    .context-dataset, .status-pair {{ text-align: left; justify-content: flex-start; }}
   }}
 
   @media (prefers-reduced-motion: reduce) {{

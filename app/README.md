@@ -1,6 +1,6 @@
-# SkinExo-AI Explorer A1
+# SkinExo-AI Explorer A2
 
-The Explorer is a local Streamlit interface over the frozen F2 Response Atlas and R1 retrieval engine. It lets a user inspect an EV context, response components, retrieved contexts, deterministic explanations, phenotype anchors, reliability dimensions, and provenance.
+The Explorer is a local Streamlit interface over the frozen F2 Response Atlas and R1 retrieval engine. A2 adds a judge-facing Demo Mode while preserving the full A1 research interface.
 
 ## Launch
 
@@ -11,34 +11,60 @@ python -m pip install -r requirements.txt
 streamlit run app/streamlit_app.py
 ```
 
-The default query is CTX003. R1 computes the ranking at runtime; CTX002 should appear first and CTX001 second for the frozen F2 Atlas.
+The default mode is **Demo** and the default query is **CTX003**. The mode and context controls are bound to URL query parameters for shareable views. No new runtime dependency is introduced by A2.
 
-## Visual system
+## Demo Mode
 
-VISUAL-V1 applies the SkinExo Lab Korean medical-aesthetic × biotech presentation system. Pearl White and Deep Ink anchor the interface; translucent cards and restrained mint, aqua, blush, lavender, and Champagne accents establish hierarchy. Scientific states always retain text, symbols, and border patterns in addition to color. Presentation tokens live in `app/design_tokens.py`; the visual specification lives in `docs/design/SKINEXO_VISUAL_BIBLE.md`.
+Demo Mode presents one continuous product story:
 
-The display hierarchy is selected context → P/M/E/A/I profile → retrieved contexts → WHY explanation → phenotype evidence → reliability → provenance.
+1. CTX003 context identity and essential conditions.
+2. Deterministic Biological Summary.
+3. P/M/E/A/I Response Signature and Primary Findings.
+4. Most Similar Observed Context: CTX002 with response similarity `+0.6053`.
+5. WHY THIS MATCH explanation from the existing R1 records.
+6. Separate transcriptomic, phenotype-anchor, and reliability snapshots.
+7. Advanced evidence and provenance on demand.
 
-## Screens
+The summary is generated at runtime from the existing Atlas, retrieval, and reliability structures. It has no stochastic behavior, LLM, external API, predictive model, or aggregate confidence score.
 
-- **Context Explorer:** context metadata, P/M/E/A/I overview, component evidence, retrieval, “Why this match?”, phenotype, reliability, and provenance.
-- **Response Atlas:** all three contexts and the frozen axis interpretations.
-- **Context Similarity:** primary mask-aware and active-union similarity views.
-- **About:** implemented features, scientific boundaries, and version status.
+## Research Mode
 
-## Offline data dependencies
+Research Mode retains the detailed interface:
 
-The application reads tracked files under `data/metadata/` and `outputs/framework/` plus the R1 checkpoint under `outputs/retrieval/`. The reusable retrieval implementation lives in `src/skinexo/retrieval.py`; similarity logic is not duplicated in the UI.
+- complete context metadata and limitations;
+- five-axis response overview;
+- component-level evidence and stored activity states;
+- full retrieval rankings, metrics, and explanations;
+- phenotype anchors with timepoint and model differences;
+- all reliability dimensions;
+- provenance and technical source details.
 
-Normal operation requires no raw GEO files, processed count matrices, licensed publication PDFs, institutional resources, database, API server, notebook, or internet connection.
+Response Atlas, Context Similarity, and About remain available as deeper views.
+
+## Visual and accessibility system
+
+VISUAL-V1 uses the Korean medical-aesthetic × biotech palette defined in `app/design_tokens.py` and `.streamlit/config.toml`. Positive, negative, observed-null, not-tested, unknown, and mixed states are encoded with text, symbols, counts, and border patterns in addition to color. Internal enums are translated into human-facing labels in the primary UI; stored values remain unchanged.
+
+## Scientific boundaries
+
+- Retrieval is descriptive among experimentally observed contexts; it is not a prediction, probability, accuracy, or confidence measure.
+- `+0.6053` is displayed as response similarity, never as a percentage.
+- Phenotype anchors remain separate from transcriptomic response and do not enter similarity.
+- Reliability remains dimension-by-dimension; missing or unresolved evidence stays visible.
+- A shared response axis does not imply identical active components.
+- The interface makes no causal, therapeutic-efficacy, donor-level replication, EV-preparation-level replication, or universal EV-response claim.
+
+## Offline behavior
+
+The application reads tracked files under `data/metadata/`, `outputs/framework/`, and `outputs/retrieval/`. The reusable retrieval implementation remains in `src/skinexo/retrieval.py`; A2 does not duplicate or modify the retrieval algorithm.
+
+Normal operation requires no raw GEO data, processed count matrices, licensed PDFs, database, external API, notebook, internet connection, or locally installed Streamlit development skill.
 
 ## Tests
 
 ```bash
-pytest tests/test_explorer_data.py
-pytest tests/test_retrieval.py
+pytest
+python experiments/explorer/02_validate_explorer_a2.py --server-health-verified
 ```
 
-## Limitations
-
-The Explorer covers three verified contexts. Retrieval is descriptive and does not predict response for new treatments or patients. Phenotype anchors and reliability metadata are explanatory layers and do not change similarity. The interface makes no therapeutic efficacy, donor-level replication, or EV-preparation-level replication claim.
+The framework, Atlas, and retrieval validators are separate frozen-artifact checks. A2 validation does not rerun DESeq2, GSEA, or EXP001–EXP003.

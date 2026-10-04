@@ -16,7 +16,13 @@ htmlcov/
 Thumbs.db
 .idea/
 .vscode/
+.agents/
 *.tmp
 *.part
 *.swp
 *~
+
+# Generated demo video-production assets
+demo/motion/
+demo/renders/
+demo/final/

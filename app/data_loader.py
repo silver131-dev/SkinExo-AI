@@ -90,6 +90,35 @@ class ExplorerData:
             "Key limitations": display_value(feature["major_limitations"]),
         }
 
+    def context_details(self, context_id: str) -> dict[str, str]:
+        """Return presentation-ready experimental metadata without dropping unknowns."""
+
+        self.validate_context(context_id)
+        feature = self.atlas.context_features[context_id]
+        registry = self.context_registry[context_id]
+        return {
+            "EV source": display_value(feature["ev_source"]),
+            "Recipient": display_value(feature["recipient"]),
+            "Species": display_value(feature["species"]),
+            "Dataset": display_value(feature["dataset_id"]),
+            "Dose": display_value(feature["dose"]),
+            "Duration": f"{feature['duration_h']} h" if feature["duration_h"] else "Unknown",
+            "Sample count": display_value(feature["sample_count"]),
+            "Treatment / control": (
+                f"{display_value(registry['treatment'])} / {display_value(registry['control'])}"
+            ),
+            "Study status": display_value(registry["study_status"]),
+            "Data status": display_value(feature["data_status"]),
+            "Batch": display_value(registry["batch_count"]),
+            "Pairing": display_value(feature["pairing_status"]),
+            "Recipient donor": display_value(feature["donor_status"]),
+            "EV preparation": display_value(feature["ev_preparation_status"]),
+            "Experimental system": display_value(registry["experimental_system"]),
+            "Omics": display_value(registry["omics_type"]),
+            "Statistical design": display_value(registry["statistical_design"]),
+            "Key limitations": display_value(feature["major_limitations"]),
+        }
+
     def axes_for_context(self, context_id: str) -> list[dict[str, Any]]:
         self.validate_context(context_id)
         results = []

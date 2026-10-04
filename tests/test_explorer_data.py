@@ -12,6 +12,7 @@ sys.path.insert(0, str(ROOT / "app"))
 sys.path.insert(0, str(ROOT / "src"))
 
 from data_loader import load_explorer_data, required_artifact_paths
+from presentation import build_context_summary, build_response_signature, humanize_activity_state
 
 
 class ExplorerDataTests(unittest.TestCase):
@@ -39,6 +40,48 @@ class ExplorerDataTests(unittest.TestCase):
         ranked = self.data.retrieve("CTX003")
         self.assertEqual((ranked[0]["rank"], ranked[0]["target"]), (1, "CTX002"))
         self.assertEqual((ranked[1]["rank"], ranked[1]["target"]), (2, "CTX001"))
+
+    def test_ctx003_a2_summary_preserves_states_and_counts(self):
+        signature = {row["axis"]: row for row in build_response_signature(self.data, "CTX003")}
+        self.assertEqual(
+            {axis: (row["state"], row["active_count"]) for axis, row in signature.items()},
+            {
+                "P": ("Observed null", 0),
+                "M": ("Positive", 4),
+                "E": ("Observed null", 0),
+                "A": ("Positive", 1),
+                "I": ("Positive", 27),
+            },
+        )
+
+    def test_ctx003_a2_summary_is_descriptive_and_deterministic(self):
+        summary = build_context_summary("CTX003", self.data)
+        self.assertIn("largest active response family (27 active components)", summary["sentence"])
+        self.assertIn("Migration", summary["sentence"])
+        self.assertIn("Vascular / endothelial interaction", summary["sentence"])
+        self.assertIn("Proliferation and ECM remodeling are observed null", summary["sentence"])
+        self.assertNotIn("predict", summary["sentence"].lower())
+
+    def test_ctx003_a2_top_retrieval_metrics_are_frozen(self):
+        top = build_context_summary("CTX003", self.data)["top_retrieval"]
+        self.assertEqual(top["target"], "CTX002")
+        self.assertAlmostEqual(top["primary_similarity"], 0.6053, places=4)
+        self.assertAlmostEqual(top["active_similarity"], 0.8563, places=4)
+        self.assertEqual(top["shared_active_components"], 9)
+        self.assertEqual(top["directional_concordance"], 1.0)
+
+    def test_observed_null_and_not_tested_have_distinct_display_labels(self):
+        self.assertEqual(humanize_activity_state("OBSERVED_NULL"), "Observed null")
+        self.assertEqual(humanize_activity_state("NOT_TESTED"), "Not tested")
+        self.assertNotEqual(
+            humanize_activity_state("OBSERVED_NULL"),
+            humanize_activity_state("NOT_TESTED"),
+        )
+
+    def test_a2_does_not_generate_aggregate_confidence(self):
+        summary = build_context_summary("CTX003", self.data)
+        self.assertFalse(summary["aggregate_confidence_score"])
+        self.assertNotIn("confidence", summary["sentence"].lower())
 
     def test_phenotype_anchors_load(self):
         self.assertEqual(len(self.data.phenotype("CTX003")), 5)
@@ -73,7 +116,10 @@ class ExplorerDataTests(unittest.TestCase):
         self.assertEqual(len(app.exception), 0)
         self.assertEqual([item.value for item in app.title], ["SkinExo-AI"])
         self.assertEqual(next(item for item in app.selectbox if item.label == "Select Context").value, "CTX003")
-        self.assertEqual(next(item for item in app.selectbox if item.label == "Explain retrieved target").value, "CTX002")
+        rendered_markdown = "\n".join(str(item.value) for item in app.markdown)
+        self.assertIn('<div class="retrieval-context">CTX002</div>', rendered_markdown)
+        self.assertIn('<div class="retrieval-value">+0.6053</div>', rendered_markdown)
+        self.assertIn("CTX003 and CTX002 share 9 active response components", rendered_markdown)
 
 
 if __name__ == "__main__":

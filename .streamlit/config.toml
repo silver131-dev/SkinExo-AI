@@ -1,0 +1,37 @@
+[client]
+toolbarMode = "minimal"
+showErrorDetails = "none"
+
+[browser]
+gatherUsageStats = false
+
+[theme]
+base = "light"
+primaryColor = "#173033"
+backgroundColor = "#F7F5F1"
+secondaryBackgroundColor = "#EFEAE2"
+textColor = "#173033"
+linkColor = "#173033"
+borderColor = "#D9C8AE"
+dataframeBorderColor = "#D9C8AE"
+dataframeHeaderBackgroundColor = "#EFEAE2"
+showWidgetBorder = true
+showSidebarBorder = false
+baseRadius = "1rem"
+buttonRadius = "full"
+baseFontSize = 15
+headingFontSizes = ["3.1rem", "2rem", "1.45rem", "1.15rem", "1rem", "0.9rem"]
+headingFontWeights = [700, 700, 650, 600, 600, 600]
+chartCategoricalColors = ["#173033", "#D9C8AE", "#DDEBE5", "#DCE9EC", "#E8E2EE", "#EEDDD9"]
+
+greenColor = "#416C60"
+greenBackgroundColor = "#DDEBE5"
+blueColor = "#45666D"
+blueBackgroundColor = "#DCE9EC"
+violetColor = "#685C75"
+violetBackgroundColor = "#E8E2EE"
+orangeColor = "#7B6043"
+orangeBackgroundColor = "#EFEAE2"
+redColor = "#75504C"
+redBackgroundColor = "#EEDDD9"
+grayColor = "#586D6F"
