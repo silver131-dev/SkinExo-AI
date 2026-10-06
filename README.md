@@ -10,6 +10,7 @@ The implemented v0.3 platform combines a reproducible transcriptomic evidence en
 
 ## Quick links
 
+- [Try the Live App](https://skinexo-ai.streamlit.app/)
 - [Watch the final Demo Video](https://youtu.be/optVRKKDNec)
 - [Read the Technical Report](submission/technical_report.md)
 - [Explore the A2 product and launch instructions](app/README.md)
