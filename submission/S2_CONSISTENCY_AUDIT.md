@@ -71,10 +71,10 @@ The core S2 figures are architecture, Response Atlas, context retrieval, and sim
 
 - Local Markdown link check: **PASS**, zero broken local links.
 - GitHub URL: `https://github.com/silver131-dev/SkinExo-AI` is verified and frozen.
-- Demo video URL: `[DEMO_VIDEO_URL]` remains intentionally pending.
+- Demo video URL: pending at the original S2 audit; subsequently frozen on 2026-10-06 as https://youtu.be/optVRKKDNec (unlisted; user incognito playback PASS).
 - Technical Report URL: `[TECHNICAL_REPORT_URL]` remains intentionally pending where needed.
 
-The final QA and submission checklist require all placeholders to be replaced before submission.
+The final QA and submission checklist still require any remaining non-demo placeholders to be resolved before submission.
 
 ## Frozen-result integrity — PASS
 

@@ -1,6 +1,6 @@
 # SkinExo-AI S2 demo storyboard — maximum 5 minutes
 
-**Status:** script ready; video not recorded.
+**Status:** historical S2 planning storyboard, superseded by the [frozen final demo video](https://youtu.be/optVRKKDNec) (04:58.48). Its planned timings are not the realized Final edit.
 
 **Canonical title:** SkinExo-AI: A Context-Aware Extracellular-Vesicle Response Platform
 
@@ -64,10 +64,10 @@
 - Say **17 tests passed**, never predictive accuracy.
 - Do not describe GSE293957 cargo, an agent, predictive modeling, or Organ-on-Chip as implemented.
 
-## Remaining production tasks
+## Historical production task checklist (superseded by the frozen Final)
 
 - [ ] Rehearse and keep the export at or below five minutes.
 - [ ] Record the live Explorer with the exact frozen ranking.
 - [ ] Add captions and verify text legibility.
 - [ ] Review audio, figure rights, citations, and spoken claim boundaries.
-- [ ] Upload the final video and replace `[DEMO_VIDEO_URL]` in submission material.
+- [x] Upload the frozen final video as unlisted and publish the canonical Demo URL in submission material: https://youtu.be/optVRKKDNec.

@@ -135,7 +135,7 @@ SkinExo-AI does not include a trained predictive model, foundation model, digita
 
 ## Demo
 
-[DEMO_VIDEO_URL]
+Final demo video (04:58.48; unlisted): https://youtu.be/optVRKKDNec
 
 ## Code
 

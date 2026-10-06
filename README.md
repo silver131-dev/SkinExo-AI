@@ -157,7 +157,7 @@ The Explorer and retrieval CLI use only tracked, small derived artifacts. Normal
 
 The S2 competition narrative is consolidated in the [Technical Report](submission/technical_report.md), [Kaggle Writeup](submission/kaggle_writeup.md), [demo storyboard](submission/demo_storyboard.md), [narrative contract](submission/S2_NARRATIVE_CONTRACT.md), and [claim dictionary](submission/S2_CLAIM_DICTIONARY.md). Claims remain limited to the three analyzed contexts.
 
-The audited public snapshot is available at [github.com/silver131-dev/SkinExo-AI](https://github.com/silver131-dev/SkinExo-AI). The final demo video has not yet been recorded or published.
+The audited public snapshot is available at [github.com/silver131-dev/SkinExo-AI](https://github.com/silver131-dev/SkinExo-AI). The [final demo video](https://youtu.be/optVRKKDNec) is available as an unlisted YouTube upload (04:58.48); Kaggle submission remains pending.
 
 ## Citation / Attribution
 

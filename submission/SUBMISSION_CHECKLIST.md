@@ -17,9 +17,9 @@
 | Public release | **READY, NOT YET PUSHED** | Clean local `public-v1` root commit `1e768499c86d52245058059568e4b7a48cf6faa4`; MIT boundary complete; no remote. |
 | Technical Report | **S2 DRAFT** | Narrative consolidated; requires final participant review and packaging. |
 | Kaggle Writeup | **S2 DRAFT** | Narrative consolidated; URLs and final formatting pending. |
-| Demo Video | **NOT RECORDED** | Record and review the ≤5-minute live-Explorer script. |
+| Demo Video | **FROZEN; USER REVIEW PASS** | Final 04:58.48 video and QA are complete; local source SHA-256 is recorded in the Final Video Freeze checkpoint. |
 | GitHub URL | **PENDING** | Create public repository, add remote, push `public-v1`, and verify anonymous access in a later checkpoint. |
-| Video URL | **PENDING** | Upload only after final video QA. |
+| Video URL | **FROZEN** | Unlisted, user-tested playback: https://youtu.be/optVRKKDNec (`optVRKKDNec`). |
 | Final Kaggle submission | **PENDING** | Complete URLs, final QA, and portal submission. |
 
 ## Completed technical gates
@@ -42,8 +42,8 @@
 - [ ] Public GitHub repository created from `public-v1`.
 - [x] Public GitHub URL frozen: `https://github.com/silver131-dev/SkinExo-AI`.
 - [ ] Anonymous clean-clone Quick Start and Explorer run verified.
-- [ ] Demo video recorded at ≤5:00 with captions and legible UI.
-- [ ] Video URL replaces `[DEMO_VIDEO_URL]`.
+- [x] Demo video completed at 04:58.48 with bilingual captions and user Final review PASS.
+- [x] Canonical Demo Video URL frozen: https://youtu.be/optVRKKDNec.
 - [ ] Technical Report packaged and URL replaces `[TECHNICAL_REPORT_URL]` if required.
 - [ ] All three placeholders are absent from final submitted text.
 - [ ] Final figures reviewed at publication resolution.

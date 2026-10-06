@@ -57,11 +57,11 @@ This is the final pre-publication and pre-submission checklist. Completed local 
 ## URLs and accessibility
 
 - [x] Verified public repository URL: `https://github.com/silver131-dev/SkinExo-AI`.
-- [ ] `[DEMO_VIDEO_URL]` replaced with the verified public video URL.
+- [x] Canonical unlisted Demo Video URL frozen: https://youtu.be/optVRKKDNec; user incognito playback PASS.
 - [ ] `[TECHNICAL_REPORT_URL]` replaced if a hosted report URL is required.
 - [ ] No placeholder remains in final submitted text.
 - [ ] Public repository opens without authentication.
-- [ ] Video opens without authentication and captions are enabled.
+- [x] Unlisted video opens in user incognito playback; approved bilingual captions are burned in.
 - [ ] Alt text/captions and color readability are reviewed.
 
 ## License, privacy, and public repository
@@ -85,13 +85,13 @@ This is the final pre-publication and pre-submission checklist. Completed local 
 
 ## Demo video
 
-- [ ] Video recorded.
-- [ ] Duration is at most five minutes.
-- [ ] Live Explorer is the center of the video.
+- [x] Final video frozen after user review PASS.
+- [x] Duration is 04:58.48, below five minutes.
+- [x] Real Explorer footage is preserved as the product-proof section.
 - [ ] CTX003 → CTX002 +0.6053 and CTX001 −0.2755 appear correctly.
-- [ ] WHY explanation, phenotype time mismatch, reliability limits, and provenance are shown.
-- [ ] Spoken claims match the claim dictionary.
-- [ ] Captions, audio, rights, and final export are reviewed.
+- [x] WHY explanation, phenotype/evidence distinctions, reliability, and provenance are shown in the Final review cut.
+- [x] Spoken claims passed Final scientific, numerical, terminology, and maturity audits.
+- [x] Captions, audio, generated-for-project music rights, and final export passed Final QA.
 
 ## Account and deadline
 
@@ -102,4 +102,4 @@ This is the final pre-publication and pre-submission checklist. Completed local 
 
 ## Current finalization status
 
-Scientific narrative and local public snapshot are ready for participant review. GitHub publication, final URLs, demo recording, clean-clone verification, and the actual competition submission remain incomplete.
+The final demo and its canonical URL are frozen; the unlisted YouTube upload passed user incognito playback. Other publication and submission gates—including the Technical Report URL if required, final Kaggle QA, and the actual competition submission—remain open.
