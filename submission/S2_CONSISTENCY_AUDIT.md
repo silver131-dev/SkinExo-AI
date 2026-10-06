@@ -2,6 +2,8 @@
 
 **Audit date:** 2026-10-01
 
+**Historical scope note:** The A1/17-test and pre-publication findings below describe the original S2 audit. Current submission status is Explorer A2, 22/22 passing tests, published `public-v1`, and frozen Demo Video and Technical Report URLs. The original scientific-value audit is unchanged.
+
 ## Scope
 
 This audit covers `README.md`, the S2 Technical Report, Kaggle Writeup, demo storyboard, narrative contract, rubric mapping, claim dictionary, figure selection, figure manifest, submission checklist, and final QA document.
@@ -72,9 +74,9 @@ The core S2 figures are architecture, Response Atlas, context retrieval, and sim
 - Local Markdown link check: **PASS**, zero broken local links.
 - GitHub URL: `https://github.com/silver131-dev/SkinExo-AI` is verified and frozen.
 - Demo video URL: pending at the original S2 audit; subsequently frozen on 2026-10-06 as https://youtu.be/optVRKKDNec (unlisted; user incognito playback PASS).
-- Technical Report URL: `[TECHNICAL_REPORT_URL]` remains intentionally pending where needed.
+- Technical Report URL: pending at the original S2 audit; subsequently frozen as https://github.com/silver131-dev/SkinExo-AI/blob/public-v1/submission/technical_report.md.
 
-The final QA and submission checklist still require any remaining non-demo placeholders to be resolved before submission.
+The current final QA and submission checklist record URL freeze; Kaggle portal rendering and submission remain separate gates.
 
 ## Frozen-result integrity — PASS
 
@@ -86,8 +88,8 @@ No file under `outputs/` or frozen biological metadata under `data/metadata/` wa
 
 ## Public release awareness
 
-The clean local `public-v1` root commit exists at `1e768499c86d52245058059568e4b7a48cf6faa4`. It has not been pushed, no remote exists, and no public GitHub URL has been invented.
+At this audit's 2026-10-01 checkpoint, the clean local `public-v1` root commit existed at `1e768499c86d52245058059568e4b7a48cf6faa4` but had not been pushed. It was subsequently published at https://github.com/silver131-dev/SkinExo-AI.
 
 ## Decision
 
-**S2 narrative consistency: PASS.** Remaining work is publication and submission packaging: participant editorial approval, GitHub publication, clean-clone verification, demo recording, URL replacement, and final portal submission.
+**S2 narrative consistency at the audit checkpoint: PASS.** GitHub publication, the Final Demo Video, and both public URLs have since been completed. Clean-clone verification, final portal QA, and competition submission remain separate gates.

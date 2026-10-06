@@ -13,14 +13,15 @@
 | Framework | **PASS** | F1 schema and F2 three-context framework validations passed. |
 | Atlas | **PASS** | F2-2026-10-01: 3 contexts, 339 components, 1,017 records. |
 | Retrieval | **PASS** | R1 mask-aware retrieval, explanations, masks, and sanity tests complete. |
-| Explorer | **PASS** | A1 offline Streamlit Explorer complete; 17/17 tests passed. |
-| Public release | **READY, NOT YET PUSHED** | Clean local `public-v1` root commit `1e768499c86d52245058059568e4b7a48cf6faa4`; MIT boundary complete; no remote. |
-| Technical Report | **S2 DRAFT** | Narrative consolidated; requires final participant review and packaging. |
-| Kaggle Writeup | **S2 DRAFT** | Narrative consolidated; URLs and final formatting pending. |
+| Explorer | **PASS** | A2 offline Streamlit Explorer complete; 22/22 repository tests passed. |
+| Public release | **PUBLISHED** | Public `public-v1` branch at https://github.com/silver131-dev/SkinExo-AI; MIT and third-party boundaries preserved. |
+| Technical Report | **TRACKED; URL FROZEN** | Current report is at `submission/technical_report.md`; participant/portal review remains. |
+| Kaggle Writeup | **URLS FROZEN; PORTAL QA PENDING** | Narrative consolidated; final Kaggle formatting and accessibility review remain. |
 | Demo Video | **FROZEN; USER REVIEW PASS** | Final 04:58.48 video and QA are complete; local source SHA-256 is recorded in the Final Video Freeze checkpoint. |
-| GitHub URL | **PENDING** | Create public repository, add remote, push `public-v1`, and verify anonymous access in a later checkpoint. |
+| GitHub URL | **FROZEN** | Public repository opens without authentication: https://github.com/silver131-dev/SkinExo-AI. |
 | Video URL | **FROZEN** | Unlisted, user-tested playback: https://youtu.be/optVRKKDNec (`optVRKKDNec`). |
-| Final Kaggle submission | **PENDING** | Complete URLs, final QA, and portal submission. |
+| Technical Report URL | **FROZEN** | https://github.com/silver131-dev/SkinExo-AI/blob/public-v1/submission/technical_report.md |
+| Final Kaggle submission | **PENDING** | Complete final Kaggle QA and portal submission; public URLs are frozen. |
 
 ## Completed technical gates
 
@@ -39,13 +40,14 @@
 ## Publication and submission gates
 
 - [ ] Participant approves final title, abstract, pitch, and claims.
-- [ ] Public GitHub repository created from `public-v1`.
+- [x] Public GitHub repository created from `public-v1`.
 - [x] Public GitHub URL frozen: `https://github.com/silver131-dev/SkinExo-AI`.
 - [ ] Anonymous clean-clone Quick Start and Explorer run verified.
 - [x] Demo video completed at 04:58.48 with bilingual captions and user Final review PASS.
 - [x] Canonical Demo Video URL frozen: https://youtu.be/optVRKKDNec.
-- [ ] Technical Report packaged and URL replaces `[TECHNICAL_REPORT_URL]` if required.
-- [ ] All three placeholders are absent from final submitted text.
+- [x] Technical Report tracked and canonical public-branch URL frozen.
+- [x] Current submission-facing documents contain no unresolved GitHub, Demo Video, or Technical Report URL placeholders.
+- [ ] Final portal submission text matches all three frozen URLs.
 - [ ] Final figures reviewed at publication resolution.
 - [ ] AI/tool disclosure completed according to competition requirements.
 - [ ] Authoritative deadline, timezone, and submission rules rechecked in the portal.

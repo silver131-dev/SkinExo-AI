@@ -1,6 +1,6 @@
 # SkinExo-AI final submission QA
 
-This is the final pre-publication and pre-submission checklist. Completed local checkpoints are marked; publication-dependent items remain open.
+This is the final pre-submission checklist. Public GitHub, Demo Video, and Technical Report URLs are frozen; Kaggle-side review and submission remain open.
 
 ## Scientific claims
 
@@ -13,7 +13,7 @@ This is the final pre-publication and pre-submission checklist. Completed local 
 - [x] I is described as conserved at the broad axis with context-varying components.
 - [x] Study-level independence is not generalized to donor or EV-preparation independence.
 - [x] Transcriptomic evidence is not presented as therapeutic efficacy, wound healing, or causal mechanism.
-- [x] Predictive AI, trained machine learning, foundation model, digital twin, and agent claims are absent.
+- [x] No predictive AI, trained machine learning, foundation model, digital twin, or agent is claimed as implemented; future concepts are explicitly labeled.
 
 ## Numbers
 
@@ -25,7 +25,7 @@ This is the final pre-publication and pre-submission checklist. Completed local 
 - [x] Primary similarities = −0.1749, −0.2755, and +0.6053 for the frozen context pairs.
 - [x] CTX002–CTX003 active-union cosine = +0.8563; shared active = 9; directional concordance = 1.000.
 - [x] Default CTX003 ranking is CTX002 first and CTX001 second.
-- [x] Automated tests = 17/17 pass.
+- [x] Automated tests = 22/22 pass.
 - [x] Global Pearson/Spearman values, where used, match `framework_f2_atlas.json` and are labeled secondary/descriptive.
 
 ## Evidence layers and reliability
@@ -58,9 +58,10 @@ This is the final pre-publication and pre-submission checklist. Completed local 
 
 - [x] Verified public repository URL: `https://github.com/silver131-dev/SkinExo-AI`.
 - [x] Canonical unlisted Demo Video URL frozen: https://youtu.be/optVRKKDNec; user incognito playback PASS.
-- [ ] `[TECHNICAL_REPORT_URL]` replaced if a hosted report URL is required.
-- [ ] No placeholder remains in final submitted text.
-- [ ] Public repository opens without authentication.
+- [x] Canonical Technical Report URL frozen: https://github.com/silver131-dev/SkinExo-AI/blob/public-v1/submission/technical_report.md.
+- [x] No unresolved URL placeholder remains in current submission-facing documents.
+- [ ] Final Kaggle portal text is checked against the frozen URLs.
+- [x] Public repository opens without authentication.
 - [x] Unlisted video opens in user incognito playback; approved bilingual captions are burned in.
 - [ ] Alt text/captions and color readability are reviewed.
 
@@ -71,8 +72,8 @@ This is the final pre-publication and pre-submission checklist. Completed local 
 - [x] Licensed Wiley PDF is excluded.
 - [x] Raw omics and processed biological input matrices are excluded.
 - [x] Public history audit found no secrets, private registration data, institutional authentication material, or stale local paths.
-- [x] Local `public-v1` is one clean root commit with no master ancestry.
-- [ ] GitHub repository created and `public-v1` pushed.
+- [x] `public-v1` descends from a clean root commit with no master ancestry.
+- [x] GitHub repository created and `public-v1` pushed.
 - [ ] Clean anonymous clone repeats tests and Explorer launch.
 
 ## Reproducibility
@@ -102,4 +103,4 @@ This is the final pre-publication and pre-submission checklist. Completed local 
 
 ## Current finalization status
 
-The final demo and its canonical URL are frozen; the unlisted YouTube upload passed user incognito playback. Other publication and submission gates—including the Technical Report URL if required, final Kaggle QA, and the actual competition submission—remain open.
+The final demo, its canonical URL, the public repository, and the Technical Report URL are frozen; the unlisted YouTube upload passed user incognito playback. Final Kaggle QA and the actual competition submission remain open.

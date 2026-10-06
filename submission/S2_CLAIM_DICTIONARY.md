@@ -6,7 +6,7 @@ Use this dictionary to keep the Technical Report, Kaggle Writeup, demo, figures,
 
 | Topic | Canonical wording | Evidence |
 |---|---|---|
-| Platform | SkinExo-AI v0.3 is a Context-Aware Extracellular-Vesicle Response Platform. | F2, R1, and A1 checkpoints |
+| Platform | SkinExo-AI v0.3 is a Context-Aware Extracellular-Vesicle Response Platform. | F2, R1, and A2 checkpoints |
 | Context-aware response | SkinExo-AI represents EV-associated responses in the experimental context defined by EV source, recipient, species, dose, duration, study, and evidence layer. | Context schema and F2 context features |
 | Atlas | The F2 Atlas contains 3 verified contexts, 339 response components, and 1,017 context-component records. | `framework_f2_validation.json` |
 | Activity states | The Atlas preserves active positive, active negative, observed-null, not-tested, and unknown states. | F2 schema and validation |
@@ -17,9 +17,9 @@ Use this dictionary to keep the Technical Report, Kaggle Writeup, demo, figures,
 | A | Vascular/endothelial interaction shows context-dependent, discordant transcriptomic evidence. | F2 Atlas |
 | I | Inflammation/immune signaling is a conserved broad axis with context-varying component structure. CTX002 and CTX003 share exact components; CTX001 does not share that exact structure. | F2 Atlas and R1 explanations |
 | Retrieval | R1 retrieves observed contexts using mask-aware NES cosine over shared-tested response components and produces deterministic WHY explanations. | `retrieval_r1.json` and tests |
-| Default retrieval | For query CTX003, CTX002 ranks first at +0.6053 and CTX001 second at −0.2755. | R1 and A1 artifacts |
+| Default retrieval | For query CTX003, CTX002 ranks first at +0.6053 and CTX001 second at −0.2755. | R1 and A2 artifacts |
 | Reliability | Reliability is represented in separate dimensions and is not folded into response similarity. | Reliability schema and table |
-| Explorer | A1 is an offline Streamlit Explorer that uses tracked derived artifacts and requires no raw data, licensed PDF, or internet at runtime. | `explorer_a1.json` |
+| Explorer | A2 is an offline Streamlit Explorer with a judge-facing Demo Mode and detailed Research Mode; it uses tracked derived artifacts and requires no raw data, licensed PDF, or internet at runtime. | `explorer_a2.json` |
 
 ## SUPPORTED_WITH_LIMITATIONS
 

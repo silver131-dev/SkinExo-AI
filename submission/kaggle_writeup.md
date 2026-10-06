@@ -101,7 +101,7 @@ The WHY engine exposes shared positive and negative components, discordant compo
 
 ## Interactive Explorer
 
-The Streamlit 1.64.0 Explorer lets a judge:
+The Streamlit 1.64.0 Explorer A2 lets a judge:
 
 - select CTX001, CTX002, or CTX003;
 - inspect experimental context and missing metadata;
@@ -115,13 +115,13 @@ The default CTX003 query computes CTX002 as rank 1 at +0.6053 and CTX001 as rank
 
 ## Validation & Reliability
 
-The validation sequence includes EXP001 internal analytical reproducibility, EXP002 independent-study validation and sensitivity analysis, a prospectively frozen EXP003 third-context test, F1/F2 schema validation, seven retrieval sanity tests, and **17/17 passing retrieval and Explorer tests**.
+The validation sequence includes EXP001 internal analytical reproducibility, EXP002 independent-study validation and sensitivity analysis, a prospectively frozen EXP003 third-context test, F1/F2 schema validation, seven retrieval sanity tests, and **22/22 passing repository tests**, including retrieval and Explorer checks.
 
 Reliability stays dimension by dimension. Key limits include small samples, incomplete or unknown donor and EV-preparation independence, batch/pairing/control uncertainty where applicable, unexplained CTX003 PC1 structure, and phenotype time/model mismatch. No aggregate confidence percentage hides these limitations.
 
 ## Reproducibility
 
-The project records frozen analysis plans, the MSigDB 2026.1.Hs release, Git checkpoints, source hashes, provenance, scripts, full derived tables, tests, and project-generated figures. A clean MIT-licensed public snapshot exists locally on `public-v1`; publishing is pending. Third-party datasets and resources retain their original licenses and terms.
+The project records frozen analysis plans, the MSigDB 2026.1.Hs release, Git checkpoints, source hashes, provenance, scripts, full derived tables, tests, and project-generated figures. The MIT-licensed original source and derived public artifacts are published on the `public-v1` branch at https://github.com/silver131-dev/SkinExo-AI. Third-party datasets and resources retain their original licenses and terms.
 
 ## Impact
 
@@ -133,6 +133,8 @@ Only three contexts are represented. CTX001 and CTX003 have n=3 per condition. S
 
 SkinExo-AI does not include a trained predictive model, foundation model, digital twin, agent, therapeutic predictor, or causal cargo-response model.
 
+**Maturity boundary:** TODAY, observed Response Atlas and observed-context retrieval are implemented. NEXT, evidence-guided EV candidate screening is future work for experimental validation and is not currently implemented. FUTURE response prediction requires a larger Atlas, modeling, and prospective validation and is not yet implemented. The Skin–EV Response Digital Twin is a LONG-TERM VISION, not an implemented or clinical capability.
+
 ## Demo
 
 Final demo video (04:58.48; unlisted): https://youtu.be/optVRKKDNec
@@ -143,4 +145,4 @@ https://github.com/silver131-dev/SkinExo-AI
 
 ## Technical Report
 
-[TECHNICAL_REPORT_URL]
+https://github.com/silver131-dev/SkinExo-AI/blob/public-v1/submission/technical_report.md

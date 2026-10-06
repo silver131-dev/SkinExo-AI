@@ -131,9 +131,9 @@ These results demonstrate retrieval behavior among three observed contexts. They
 
 ## 10. Interactive Explorer
 
-Explorer A1 is implemented in Streamlit 1.64.0. A user can select a context, inspect its experimental metadata and P/M/E/A/I profile, explore response components, retrieve the other contexts, open WHY explanations, and inspect phenotype, reliability, and provenance panels.
+Explorer A2 is implemented in Streamlit 1.64.0. Its Demo Mode follows **Context → Response → Retrieve → Explain → Evidence**, with dimension-level reliability and uncertainty visible alongside the results. A user can select a context, inspect its experimental metadata and P/M/E/A/I profile, explore response components, retrieve other **observed** contexts, open deterministic WHY explanations, and inspect phenotype, reliability, and provenance separately. Research Mode retains the detailed A1 interface.
 
-The default query is CTX003. The engine computes CTX002 as rank 1 at +0.6053 and CTX001 as rank 2 at −0.2755. The order is not hard-coded in the interface. The Explorer runs offline from tracked derived artifacts and requires no raw GEO data, licensed publication PDF, institutional network, or internet connection at runtime.
+The default query is CTX003. The engine computes CTX002 as rank 1 at +0.6053 and CTX001 as rank 2 at −0.2755. The order is not hard-coded in the interface. This is retrieval over observed study contexts, **not prediction for unseen contexts**. The Explorer runs offline from tracked derived artifacts and requires no raw GEO data, licensed publication PDF, institutional network, or internet connection at runtime. The [Final Demo Video](https://youtu.be/optVRKKDNec) shows the real Explorer product section.
 
 ## 11. Phenotype Evidence
 
@@ -163,7 +163,7 @@ Validation occurs at several levels:
 - **EXP003:** metadata onboarding, structural count-matrix validation, prospectively frozen QC/design, DE diagnostics, and a third-context pathway test.
 - **Framework:** F1 schema validation and F2 Atlas validation, including component references and null/missing distinctions.
 - **Retrieval:** seven synthetic sanity tests covering identity, sign reversal, insufficient overlap, jointly null states, `NOT_TESTED`, `UNKNOWN`, and deterministic explanations.
-- **Explorer:** 17/17 retrieval and data-loading tests, three-context and 339-component closure, default ranking verification, and local server health.
+- **Explorer:** 22/22 retrieval and Explorer tests, three-context and 339-component closure, default ranking verification, and local server health.
 
 The strongest scientific validation is falsification: CTX003 did not extend the two-context P component, and the framework recorded `OBSERVED_NULL` rather than redefining the axis or threshold.
 
@@ -171,7 +171,7 @@ The strongest scientific validation is falsification: CTX003 did not extend the 
 
 The repository includes frozen analysis plans, study metadata, source and release hashes, analysis scripts, complete derived tables, framework schemas, tests, reports, and project-generated figures. MSigDB is fixed at 2026.1.Hs for the Atlas analyses. Git checkpoints preserve development provenance.
 
-A clean public root commit exists locally on `public-v1` at `1e768499c86d52245058059568e4b7a48cf6faa4`; public GitHub publishing is pending. Original SkinExo-AI source code is MIT licensed in that public snapshot. GEO/NCBI data, MSigDB, GENCODE, publications, third-party software, and other external resources retain their own licenses and terms. The public snapshot excludes raw omics, processed biological input matrices, licensed PDFs, credentials, private registration data, and institutional-only material.
+The clean-root `public-v1` branch is published at https://github.com/silver131-dev/SkinExo-AI; its root commit is `1e768499c86d52245058059568e4b7a48cf6faa4`. Original SkinExo-AI source code is MIT licensed in that public snapshot. GEO/NCBI data, MSigDB, GENCODE, publications, third-party software, and other external resources retain their own licenses and terms. The public snapshot excludes raw omics, processed biological input matrices, licensed PDFs, credentials, private registration data, and institutional-only material.
 
 ## 15. Limitations
 
@@ -191,7 +191,14 @@ SkinExo-AI addresses EV research fragmentation by making context, disagreement, 
 
 ## 17. Future Work
 
-The following are **future directions**, not implemented v0.3 capabilities:
+The maturity boundary is explicit:
+
+- **TODAY — IMPLEMENTED:** observed Response Atlas, observed-context retrieval, component-level explanation, phenotype evidence, dimension-level reliability, and provenance in Explorer A2.
+- **NEXT — FUTURE / NOT CURRENTLY IMPLEMENTED:** evidence-guided EV candidate screening to prioritize experimentally profiled candidates for laboratory validation; this is not efficacy prediction.
+- **FUTURE — NOT YET IMPLEMENTED:** response prediction for unseen contexts, conditional on Atlas expansion, predictive modeling, and prospective validation.
+- **LONG-TERM VISION — NOT IMPLEMENTED:** a conceptual Skin–EV Response Digital Twin for research prioritization, not a clinical, patient-specific, treatment-prescribing, or validated predictive system.
+
+Supporting future research directions include:
 
 - analyze the GSE293957 cargo companion under a separate checkpoint;
 - evaluate cargo → response → phenotype hypotheses without assuming causality;

@@ -8,6 +8,15 @@ The implemented v0.3 platform combines a reproducible transcriptomic evidence en
 
 `3 verified contexts` · `339 response components` · `1,017 response records` · `offline Explorer`
 
+## Quick links
+
+- [Watch the final Demo Video](https://youtu.be/optVRKKDNec)
+- [Read the Technical Report](submission/technical_report.md)
+- [Explore the A2 product and launch instructions](app/README.md)
+- [Review scientific reproducibility](docs/REPRODUCIBILITY.md)
+
+Today, SkinExo-AI retrieves and explains **observed** responses. EV candidate screening, response prediction, and a Skin–EV Response Digital Twin are future work—not implemented product capabilities.
+
 ![SkinExo-AI platform architecture](submission/figures/fig09_skinexo_platform_architecture.png)
 
 *Platform architecture. Evidence and reliability remain visible through retrieval and the Explorer; predictive AI is not implemented.*

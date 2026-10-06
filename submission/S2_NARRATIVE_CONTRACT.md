@@ -18,7 +18,7 @@ These two lines are the canonical competition identity. Public prose may shorten
 6. The F2 Response Atlas represents evidence at the response-component level and preserves broad axis summaries without treating components within an axis as interchangeable.
 7. The Atlas explicitly preserves active positive, active negative, observed-null, not-tested, and unknown states, plus separate phenotype anchors, reliability dimensions, and provenance.
 8. R1 retrieves observed contexts using mask-aware NES cosine over components tested in both contexts. It explains shared, discordant, and context-specific components. Phenotype and reliability evidence remain outside the similarity score.
-9. A1 exposes the Atlas, retrieval, WHY explanations, phenotype evidence, reliability, and provenance in an offline Streamlit Explorer.
+9. Explorer A2 exposes the Atlas, observed-context retrieval, WHY explanations, phenotype evidence, reliability, and provenance in an offline Streamlit Demo Mode, while retaining the detailed Research Mode.
 10. SkinExo-AI v0.3 is a research-support platform. It is not a trained predictive model or a therapeutic predictor.
 
 ## Scientific anchor
@@ -39,7 +39,7 @@ The major representation contribution is the distinction between a broad axis an
 - Pairwise response similarities: CTX001–CTX002 −0.1749; CTX001–CTX003 −0.2755; CTX002–CTX003 +0.6053.
 - CTX002–CTX003 active-union cosine: +0.8563; 9 shared active components; directional concordance 1.000.
 - Explorer: Streamlit 1.64.0; offline; default CTX003 query ranks CTX002 first and CTX001 second.
-- Automated retrieval and Explorer tests: 17/17 pass.
+- Automated repository tests, including retrieval and Explorer: 22/22 pass.
 
 ## Evidence boundaries
 
